@@ -1,4 +1,6 @@
-name: P2UX Developer
+title: P2UX Developer Site
+description: Make smarter prototypes. Make real apps.
 theme: jekyll-theme-slate
 markdown: kramdown
 repository: "P2UX/ClientLibraries"
+show_downloads: false
