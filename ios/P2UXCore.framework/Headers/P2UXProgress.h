@@ -43,4 +43,5 @@ typedef NS_ENUM(NSInteger, ProgressFillMode) {
 - (id)initWithFrame:(CGRect)frame elemInst:(P2UXElementInstance*)elemInst uipath:(NSString *)path ext:(BOOL)ext viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate index:(id)index;
 - (void) layoutControls;
 - (void) setValue:(CGFloat)value updateThumb:(BOOL)updateThumb force:(BOOL)force;
+- (void) parse;
 @end

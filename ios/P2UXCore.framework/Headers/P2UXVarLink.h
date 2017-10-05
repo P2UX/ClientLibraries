@@ -30,7 +30,10 @@ typedef NS_ENUM(NSInteger, P2UXVarLinkType)
     P2UXVarLinkType_TransientGlobal,
     P2UXVarLinkType_AppSecure,
     P2UXVarLinkType_DeviceMediaVariable,
-    P2UXVarLinkType_ArrayNameValue
+    P2UXVarLinkType_ArrayNameValue,
+    P2UXVarLinkType_Static,
+    P2UXVarLinkType_UserEntry,
+    P2UXVarLinkType_AuthValue
 };
 
 typedef NS_ENUM(NSInteger, P2UXDataPolicy)
@@ -63,6 +66,7 @@ extern NSString* const P2UXVarLink_Attrib_Fields;
 extern NSString* const P2UXVarLink_Attrib_FieldValue;
 extern NSString* const P2UXVarLink_Attrib_Src;
 extern NSString* const P2UXVarLink_Attrib_Ctrls;
+extern NSString* const P2UXVarLink_Attrib_Var;
 
 extern NSString* const P2UXVarLink_Message_TwoParam_Fmt;
 extern NSString* const P2UXVarLink_Message_OneParam_Fmt;

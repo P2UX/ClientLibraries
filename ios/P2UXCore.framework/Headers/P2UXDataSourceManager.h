@@ -28,4 +28,7 @@ extern NSString* const P2UXDataSourceType_Rest;
 - (BOOL) addFilter:(id<P2UXDataSourceFilter>)filter;
 - (id<P2UXDataSourceFilter>) filterForType:(P2UXSchemaType)type name:(NSString*)name;
 - (void) clearAllResults:(BOOL)includePersisted;
+- (void) clearAuthForService:(NSString*)service;
+- (void) authenticateForService:(NSString*)service withArgs:(NSDictionary*)args delegate:(id<P2UXDataSourceDelegate>)delegate;
+- (void) registerDataSourceClass:(Class)dsclass forType:(NSString*)type;
 @end

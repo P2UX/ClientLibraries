@@ -37,6 +37,7 @@ extern NSString* const P2UXSpecKey_Refresh;
 extern NSString* const P2UXSpecKey_Object;
 extern NSString* const P2UXSpecKey_Delegate;
 extern NSString* const P2UXSpecKey_KeepAlive;
+extern NSString* const P2UXSpecKey_Headers;
 
 extern NSString* const P2UXSpecKey_UKeys;
 
@@ -51,7 +52,8 @@ typedef NS_ENUM(NSInteger, P2UXDataRequestResult) {
     P2UXRequestResult_Retry,
     P2UXRequestResult_Update,
     P2UXRequestResult_Cancelled,
-    P2UXRequestResult_Deleted
+    P2UXRequestResult_Deleted,
+    P2UXRequestResult_InvalidRequest
 };
 
 extern NSString* const PERSIST_TYPE;
@@ -120,6 +122,9 @@ updatedProgress:(P2UXSourcedData*)progress
         andPersist:(BOOL)persist;
 
 - (P2UXSourcedData*) createData:(id)data forRequest:(NSString*)request;
+
+- (BOOL) clearAuthForService:(NSString*)service;
+- (BOOL) authenticateForService:(NSString*)service withArgs:(NSDictionary*)args delegate:(id<P2UXDataSourceDelegate>)delegate;
 
 // protected
 -(P2UXSourcedData*) createData:(id)data andSchema:(P2UXDataSchema*)schema;

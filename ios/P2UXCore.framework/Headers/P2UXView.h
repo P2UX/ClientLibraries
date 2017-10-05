@@ -144,6 +144,7 @@ extern NSString* const P2UXView_Attribute_DragHandle;
 - (BOOL) handleKeyboardReturn:(id)sender element:(P2UXElementInstance*)element;
 - (BOOL) handleRotaryChange:(id)sender element:(P2UXElementInstance*)element;
 - (BOOL) handleRotaryIncrement:(id)sender element:(P2UXElementInstance*)element inc:(BOOL)inc;
+- (BOOL) handleRadioButtonGroupChange:(id)sender element:(P2UXElementInstance*)element;
 
 - (void) postEventHandler:(P2UXElementInstance*)element actions:(NSArray*)actions;
 - (void) setViewState:(NSString *)viewState;
@@ -179,6 +180,7 @@ extern NSString* const P2UXView_Attribute_DragHandle;
 
 - (void) handleKeyboardVisible:(BOOL)visible;
 
+- (UIView*) contentContainer;
 #pragma mark - P2UXControl
 - (void) cleanup;
 - (void) setData:(NSDictionary *)data;

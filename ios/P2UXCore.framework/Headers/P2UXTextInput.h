@@ -30,6 +30,7 @@
     CGSize                      _margins;
 }
 @property (nonatomic, readonly) BOOL isEditing;
+@property (nonatomic, readonly) BOOL valid;
 
 - (id) initWithFrame:(CGRect)frame elemInst:(P2UXElementInstance*)elemInst uipath:(NSString*)path ext:(BOOL)ext handler:(id<P2UXActionDelegate>)handler  viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate index:(id)index;
 
