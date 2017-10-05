@@ -38,6 +38,7 @@
 - (void) setDataValue:(id)value forKey:(NSString*)key;
 
 - (void) setHotkeys:(NSDictionary*)hotkeys;
+- (void) handleAuthForService:(NSString*)service args:(NSDictionary*)args action:(NSString*)action;
 
 #pragma mark - Data Source methods
 - (P2UXDataSource*) createDataSourceWithId:(NSString*)sourceId type:(NSString*)sourceType andSpec:(NSDictionary*)dataSourceSpec;
@@ -55,6 +56,7 @@
 - (BOOL) handleKeyboardReturn:(id)sender element:(P2UXElementInstance*)element;
 - (BOOL) handleRotaryChange:(id)sender element:(P2UXElementInstance*)element;
 - (BOOL) handleRotaryIncrement:(id)sender element:(P2UXElementInstance*)element inc:(BOOL)inc;
+- (BOOL) handleRadioButtonGroupChange:(id)sender element:(P2UXElementInstance*)element;
 
 #pragma mark - P2UXViewInteractionDelegate
 - (void) pageChange:(NSInteger)page pages:(NSInteger)pages;

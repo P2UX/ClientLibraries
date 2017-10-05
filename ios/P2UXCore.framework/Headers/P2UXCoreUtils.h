@@ -36,6 +36,7 @@
 #import <P2UXCore/P2UXAnimationController.h>
 #import <P2UXCore/P2UXResourceHandler.h>
 #import <P2UXCore/NSURLComponents+P2UXURLComponents.h>
+#import <P2UXCore/P2UXTextToSpeech.h>
 #ifdef MAP_SUPPORT
 #import <P2UXCore/MKMapView+P2UX.h>
 #endif

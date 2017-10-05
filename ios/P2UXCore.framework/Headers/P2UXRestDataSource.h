@@ -8,6 +8,10 @@
 
 #import "P2UXDataSourceSubclass.h"
 
+extern NSString* const HTTPMethod_GET;
+extern NSString* const HTTPMethod_PUT;
+extern NSString* const HTTPMethod_POST;
+
 @interface P2UXRestDownloadHandler : NSObject  <NSURLSessionDownloadDelegate>
 -(id) initWithRequest:(NSString*)request
            serialized:(NSString*)reqWithArgs
@@ -22,6 +26,7 @@
 @property (readonly) NSURL* baseURL;
 @property (readonly) BOOL authRequired;
 @property (readwrite) BOOL pushResponse;
++ (NSString*) buildQuery:(NSString*)query withArgs:(NSMutableDictionary*)args;
 
 -(BOOL) makeRequest:(NSString*)request
               async:(BOOL)async
@@ -30,4 +35,5 @@
         andDelegate:(id<P2UXDataSourceDelegate>)delegate;
 -(void) request:(NSString*)request responsePushed:(id)response;
 
+- (BOOL) authenticateForService:(NSString*)service withArgs:(NSDictionary*)args delegate:(id<P2UXDataSourceDelegate>)delegate;
 @end

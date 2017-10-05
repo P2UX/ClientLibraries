@@ -36,7 +36,6 @@ extern NSString* const kServiceName;
  The definition of the application.
  */
 @property (nonatomic) P2UXAppDefinition* appDef;
-@property (nonatomic,strong) P2UXAuthParamResponse paramCallback;
 
 - (void) cleanup;
 - (void) clearContents;
@@ -181,5 +180,6 @@ extern NSString* const kServiceName;
 - (void) postDataSourceFetch:(NSString *)ident request:(NSString *)request args:(NSDictionary *)args data:(P2UXSourcedData *)data cached:(BOOL)cached;
 - (void) postVarFetch:(NSString *)ident var:(NSString *)var value:(id)value;
 
+- (id) valueForAuthParam:(NSString*)param forService:(NSString*)service;
 @end
 

@@ -29,6 +29,9 @@ typedef NS_ENUM(NSInteger, P2UXScreenNavClass)
 @property (nonatomic, readonly) NSDictionary* headerBackground;
 @property (nonatomic, readonly) id textColor;
 @property (nonatomic, readonly) BOOL hasTitleFont;
+@property (nonatomic, readonly) NSString* backButtonTitle;
+@property (nonatomic, readonly) NSNumber* largeTitle;
+@property (nonatomic, readonly) NSNumber* backTitle;
 
 - (instancetype) initWithSpec:(NSDictionary*)spec title:(id)title;
 - (instancetype) initWithHeaderSpec:(NSDictionary*)headerspec;
