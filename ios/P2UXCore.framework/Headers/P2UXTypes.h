@@ -212,6 +212,7 @@ extern NSString* const P2UXVariable_Attrib_Parent;
 extern NSString* const P2UXVariable_Attrib_Screen;
 extern NSString* const P2UXVariable_Attrib_Container;
 extern NSString* const P2UXVariable_Attrib_DefaultState;
+extern NSString* const P2UXVariable_Attrib_Delimiter;
 
 extern NSString* const P2UXControl_Attrib_Index;
 

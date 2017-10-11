@@ -130,4 +130,5 @@ updatedProgress:(P2UXSourcedData*)progress
 -(P2UXSourcedData*) createData:(id)data andSchema:(P2UXDataSchema*)schema;
 -(P2UXSourcedData*) createData:(id)data andSchema:(P2UXDataSchema*)schema cachedOn:(NSDate *)date;
 -(P2UXDataSchema*) createSchemaWithSpec:(NSDictionary*)spec;
+-(BOOL) persistRequest:(NSString*)request;
 @end

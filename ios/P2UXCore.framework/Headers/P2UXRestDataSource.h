@@ -11,6 +11,8 @@
 extern NSString* const HTTPMethod_GET;
 extern NSString* const HTTPMethod_PUT;
 extern NSString* const HTTPMethod_POST;
+extern NSString* const HTTPMethod_DELETE;
+extern NSString* const HTTPMethod_LIVE;
 
 @interface P2UXRestDownloadHandler : NSObject  <NSURLSessionDownloadDelegate>
 -(id) initWithRequest:(NSString*)request
