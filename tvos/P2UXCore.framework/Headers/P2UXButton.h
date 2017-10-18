@@ -28,6 +28,7 @@ enum {
 extern NSString* const P2UXButtonDisplayState_Normal;
 extern NSString* const P2UXButtonDisplayState_Pressed;
 extern NSString* const P2UXButtonDisplayState_Disabled;
+extern NSString* const P2UXButtonDisplayState_Focused;
 
 extern NSString* const P2UXButtonType_Standard;
 extern NSString* const P2UXButtonType_Toggle;

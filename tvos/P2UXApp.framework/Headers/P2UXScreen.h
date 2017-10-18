@@ -17,4 +17,6 @@ extern NSString* const StatusBarUpdate_Message;
 @interface P2UXScreen : P2UXView
 @property (nonatomic, readonly) P2UXAppBehavior* appBehavior;
 @property (nonatomic, readonly) P2UXStatusBar statusBar;
+
+- (void) setupContainerWithController:(UIViewController*)controller;
 @end

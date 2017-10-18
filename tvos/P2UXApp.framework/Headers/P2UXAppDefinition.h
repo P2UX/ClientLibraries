@@ -41,6 +41,7 @@ typedef NS_ENUM(NSInteger, P2UXStatusBar) {
     NSMutableDictionary*    _appVars;
     NSMutableDictionary*    _appVarLinks;
     NSMutableArray*         _events;
+    NSDictionary*           _staticValues;
     
     NSMutableArray*         _activeFormFactors;
     NSString*               _startScreen;
@@ -82,5 +83,5 @@ typedef NS_ENUM(NSInteger, P2UXStatusBar) {
 - (BOOL)              setVarValue:(id)value forKey:(NSString*)key usingIdent:(NSString *)ident withType:(NSInteger)type notify:(BOOL)notify itemspec:(NSDictionary*)itemspec;
 - (NSDictionary*)     cacheState;
 - (void)              restoreState:(NSDictionary*)state;
-
+- (id)                staticValueForKey:(NSString*)key;
 @end

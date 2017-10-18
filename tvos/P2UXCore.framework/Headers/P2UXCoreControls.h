@@ -37,6 +37,7 @@
 #import <P2UXCore/P2UXCollectionView.h>
 #import <P2UXCore/P2UXScrollContainer.h>
 #import <P2UXCore/P2UXScrollContainerContents.h>
+#import <P2UXCore/P2UXScrollbarDelegate.h>
 #if !TARGET_OS_TV
 #import <P2UXCore/P2UXButtonSelector.h>
 #import <P2UXCore/P2UXPicker.h>

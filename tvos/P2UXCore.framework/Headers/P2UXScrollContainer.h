@@ -14,7 +14,7 @@
 #import <P2UXCore/P2UXEventTransition.h>
 #import <P2UXCore/P2UXScrollContainerContents.h>
 #import <P2UXCore/P2UXScreenState.h>
-
+#import <P2UXCore/P2UXScrollbarDelegate.h>
 @class P2UXApplication;
 @class P2UXView;
 @class P2UXContainerElement;
@@ -27,7 +27,8 @@ extern NSString* const P2UXScrollContainer_Attribute_PageIndex;
 
 @interface P2UXScrollContainer : UIScrollView<P2UXControl,
                                             UIScrollViewDelegate,
-                                            P2UXData>
+                                            P2UXData,
+                                            P2UXScrollbarDelegate>
 {
     P2UXContainerElement*             _elem;
     __weak P2UXScreenStateDefinition* _parentDef;
@@ -88,8 +89,6 @@ extern NSString* const P2UXScrollContainer_Attribute_PageIndex;
 #pragma mark - UIScrollViewDelegate
 - (void) scrollViewDidScroll:(UIScrollView *)scrollView;
 
-#pragma mark - P2UXScrollerDelegate
-- (void) scrollUp:(NSInteger)num;
-- (void) scrollDown:(NSInteger)num;
-
+#pragma mark - P2UXScrollbarDelegate
+- (void) setScrollPos:(NSInteger)pos animated:(BOOL)animated;
 @end

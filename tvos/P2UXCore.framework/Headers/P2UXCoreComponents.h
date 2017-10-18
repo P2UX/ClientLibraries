@@ -55,11 +55,14 @@
 #import <P2UXCore/P2UXDataBatchRequest.h>
 #import <P2UXCore/P2UXVarDelegate.h>
 #import <P2UXCore/P2UXJWSDataAuth.h>
+#import <P2UXCore/P2UXTokenDataAuth.h>
 #import <P2UXCore/P2UXLoginDataAuth.h>
 #import <P2UXCore/P2UXOAuthDataAuth.h>
 #import <P2UXCore/P2UXOAuthDataAuthSubclass.h>
 #import <P2UXCore/P2UXCoreDataVars.h>
 #import <P2UXCore/P2UXDataSourceFilter.h>
+#import <P2UXCore/P2UXDataAuthMissingParam.h>
+
 #ifdef MAP_SUPPORT
 #import <P2UXCore/P2UXLocationManager.h>
 #endif

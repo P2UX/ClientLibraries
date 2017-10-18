@@ -10,4 +10,5 @@
 
 @interface P2UXStringUtil : NSObject
 +(BOOL) containsString:(NSString*)string substring:(NSString*)substring;
++(id) buildStringFromArray:(id)value delimiter:(NSString*)delimiter;
 @end

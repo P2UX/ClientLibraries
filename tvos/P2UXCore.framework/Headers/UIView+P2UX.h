@@ -13,6 +13,7 @@
 @class P2UXVarLinks, P2UXSourcedData, P2UXVarLink, P2UXElement;
 
 void dispatch_uisafe(dispatch_block_t block);
+void dispatch_uisafe_sync(dispatch_block_t block);
 
 @interface UIView (P2UX)
 
@@ -21,8 +22,8 @@ void dispatch_uisafe(dispatch_block_t block);
 - (id) initWithFrame:(CGRect)frame elemInst:(P2UXElementInstance *)elemInst viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate index:(id)index;
 - (id) initWithFrame:(CGRect)frame elemInst:(P2UXElementInstance *)elemInst uipath:(NSString *)path ext:(BOOL)ext viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate index:(id)index;
 
-- (void) setIgnored:(NSNumber*)ignored;
-- (NSNumber*) ignored;
+- (void) setIgnored:(P2UXElementLayoutDim)ignored;
+- (P2UXElementLayoutDim) ignored;
 - (void) setIgnoreInView:(P2UXElementLayoutDim)ignore;
 //- (BOOL) handleVarUpdate:(NSNotification*)notification links:(P2UXVarLinks*)links;
 - (NSDictionary*) handleProgressUpdate:(NSNotification*)notification links:(P2UXVarLinks*)links;
@@ -32,6 +33,7 @@ void dispatch_uisafe(dispatch_block_t block);
 
 - (BOOL) setAttribute:(id)value withName:(NSString*)name relative:(BOOL)relative animated:(id)animated itemspec:(NSDictionary*)itemspec;
 - (id)   valueForAttribute:(NSString*)attribute;
+- (void) updateAttribute:(NSString*)attribute withValue:(id)value;
 - (void) setAnimations:(NSDictionary*)animations;
 - (NSDictionary*) animations;
 - (void) setViewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate;
@@ -51,6 +53,9 @@ void dispatch_uisafe(dispatch_block_t block);
 - (void) setConstraintParent:(UIView*)constraintParent;
 - (void) setExternalData:(id)externalData;
 - (id) externalData;
+- (void) setVisible:(BOOL)visible;
+- (BOOL) visible;
+- (void) setVisible:(BOOL)visible notify:(BOOL)notify;
 - (NSMutableDictionary*) controlsMap;
 - (void) setControlsMap:(NSMutableDictionary*)controlsMap;
 - (void) clearLinkCache;
