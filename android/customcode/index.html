@@ -1,0 +1,725 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.10.1">
+    
+    
+      
+        <title>Custom Code - P2UX Developer</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-e826f8942a.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-a20f419c8e.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-23f75ab9c7.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="blue-grey" data-md-color-accent="">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="P2UX Developer" class="md-header-nav__button md-logo">
+          
+            
+              <img src="../../images/logo.png" width="24" height="24">
+            
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  Android
+                </span>
+              
+            
+            Custom Code
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">&#xE5CD;</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <div class="md-nav__button md-logo">
+      
+        
+          <img src="../../images/logo.png">
+        
+      
+    </div>
+    P2UX Developer
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Latest News" class="md-nav__link">
+      Latest News
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      iOS/tvOS
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        iOS/tvOS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ios/quickstart/" title="Quick Start" class="md-nav__link">
+      Quick Start
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ios/customcode/" title="Custom Code" class="md-nav__link">
+      Custom Code
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Android
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Android
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../quickstart/" title="Quick Start" class="md-nav__link">
+      Quick Start
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Custom Code
+      </label>
+    
+    <a href="./" title="Custom Code" class="md-nav__link md-nav__link--active">
+      Custom Code
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#p2ux-and-android-studio" title="P2UX and Android Studio" class="md-nav__link">
+    P2UX and Android Studio
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-custom-behaviors" title="Adding Custom Behaviors" class="md-nav__link">
+    Adding Custom Behaviors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-custom-screenspanels" title="Adding Custom Screens/Panels" class="md-nav__link">
+    Adding Custom Screens/Panels
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-control-instances-from-p2uxpanel-or-p2uxscreen" title="Accessing Control instances from P2UXPanel or P2UXScreen" class="md-nav__link">
+    Accessing Control instances from P2UXPanel or P2UXScreen
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handling-events-from-p2uxappcontroller" title="Handling Events from P2UXAppController" class="md-nav__link">
+    Handling Events from P2UXAppController
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-custom-ui-controls" title="Adding Custom UI Controls" class="md-nav__link">
+    Adding Custom UI Controls
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Data Sources
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Data Sources
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../datasources/overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#p2ux-and-android-studio" title="P2UX and Android Studio" class="md-nav__link">
+    P2UX and Android Studio
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-custom-behaviors" title="Adding Custom Behaviors" class="md-nav__link">
+    Adding Custom Behaviors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-custom-screenspanels" title="Adding Custom Screens/Panels" class="md-nav__link">
+    Adding Custom Screens/Panels
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-control-instances-from-p2uxpanel-or-p2uxscreen" title="Accessing Control instances from P2UXPanel or P2UXScreen" class="md-nav__link">
+    Accessing Control instances from P2UXPanel or P2UXScreen
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handling-events-from-p2uxappcontroller" title="Handling Events from P2UXAppController" class="md-nav__link">
+    Handling Events from P2UXAppController
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-custom-ui-controls" title="Adding Custom UI Controls" class="md-nav__link">
+    Adding Custom UI Controls
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Custom Code</h1>
+                
+                <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>What follows is a detailed tutorial that walks developers through the steps of writing custom code for an Android application using P2UX. Developers should be familiar with the Android Studio integrated development environment for MacOS and the Java programming languages for custom coding. </p>
+<p>Topics include customizable View and control behaviors, Screen/Panels, and UI controls.</p>
+<div class="admonition note">
+<p class="admonition-title">Terminology</p>
+<p>Throughout the P2UX documentation the “developer” refers to you, the reader who is developing an app with P2UX. The “designer” refers to the individual whose principal job is to create the appearance and style of the app and its visual components. “PRL” refers to the P2UX Rendering Library for iOS, which controls the creation and workflow of content created for the P2UX platform.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Coding examples and code additions</p>
+<p>In the coding examples below and throughout the documentation, changes and additions to be made by the developer are rendered with a blue highlight.</p>
+</div>
+<p><em>P2UX versus the standard Android Studio environment</em></p>
+<p>P2UX based applications are easy to customize and extend for Android. The P2UX Android rendering library is based on the Android Widget package (android.widget) and other Android primitives. This means that writing custom business logic and integrating custom controls works much the same as it does when writing Android applications using Android Studio.
+With the P2UX platform, XML Layout files are no longer required for Android development. Instead, applications use P2UX Portable UX Bundles (PUB) either as embedded or dynamically accessed resources. Additionally, P2UX provides hooks to developers that allow them access to all of the components of P2UX as well as the ability to fully customize instances of the application.</p>
+<div class="admonition note">
+<p class="admonition-title">Create a P2UX enabled project first</p>
+<p>This document assumes a P2UX enabled Android Studio project has already been created. See <a href="../quickstart/">Quick Start</a> for steps to create a project.</p>
+</div>
+<h2 id="p2ux-and-android-studio">P2UX and Android Studio<a class="headerlink" href="#p2ux-and-android-studio" title="Permanent link">&para;</a></h2>
+<p><em>Java</em></p>
+<p>P2UX native rendering libraries for Android can be extended using the Java programming language. The instructions below provide explicit reference to the proper use of Java coding in each applicable step that follows.</p>
+<h2 id="adding-custom-behaviors">Adding Custom Behaviors<a class="headerlink" href="#adding-custom-behaviors" title="Permanent link">&para;</a></h2>
+<p>If desired, customizable behaviors can be added to the project code.</p>
+<p>A subclass of the <code class="codehilite">P2UXAppBehavior</code> class is the starting point for customizing the behavior of the application. From this class, all other parts of the application can be customized. (Common customized behaviors include creation of a Custom Control or overriding a particular View.)</p>
+<p>In Android Studio, create a class to store the customized behaviors. The easiest way to do is by doing a right click on your project package and selecting <mark>New-&gt;Java Class</mark>. (This example uses the name <code class="codehilite">SampleBehavior</code>.) In the <mark>Create New Class</mark> dialog, type in <mark>P2UXAppBehavior</mark> in the Superclass field.</p>
+<p>This will create <code class="codehilite">SampleBehavior</code> class. Put any customized behaviors within the implementation here. Below is a list of available customization methods for <code class="codehilite">P2UXAppBehavior</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Modifier and Type</th>
+<th>Method and Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P2UXScreen</td>
+<td><code class="codehilite">createScreen(Context context, P2UXDefinition def, RectF rect, Object index, Object data, P2UXViewContainerDelegate viewDelegate)</code><br/><br/>Creates a custom screen</td>
+</tr>
+<tr>
+<td>P2UXPanel</td>
+<td><code class="codehilite">createPanel(Context context, P2UXDefinition def, RectF rect, Object index, Object data, P2UXViewContainerDelegate viewDelegate)</code><br/><br/>Creates a custom panel</td>
+</tr>
+<tr>
+<td>View</td>
+<td><code class="codehilite">createControl(String type, P2UXElementInstance elInstance, RectF rect, P2UXViewContainerDelegate viewDelegate, Object index, Object data)</code><br/><br/>Creates a custom control</td>
+</tr>
+</tbody>
+</table>
+<p>In addition, update <code class="codehilite">MainActivity</code> to include the custom behaviors.</p>
+<p>To do this,<code class="codehilite">MainActivity</code> must override the method <code class="codehilite">createBehavior</code>. (This will override any default behaviors.) Edit <code class="codehilite">MainActivity</code> to look like this:</p>
+<div class="codehilite"><pre><span></span><span class="nd">@Override</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span>
+<span class="o">{</span>
+   <span class="n">mAppKey</span> <span class="o">=</span> <span class="s">&quot;xxxxx&quot;</span><span class="o">;</span>      
+   <span class="k">try</span> <span class="o">{</span>
+       <span class="n">mResources</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JSONArray</span><span class="o">();</span>
+       <span class="n">JSONObject</span> <span class="n">resource</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JSONObject</span><span class="o">();</span>
+       <span class="n">resource</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">P2UXAppTypes</span><span class="o">.</span><span class="na">P2UXApp_PackageAttrib_FormFactor</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span>
+       <span class="n">resource</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">P2UXAppTypes</span><span class="o">.</span><span class="na">P2UXApp_PackageAttrib_Type</span><span class="o">,</span> <span class="n">P2UXAppTypes</span><span class="o">.</span><span class="na">P2UXApp_PackageType_Static</span><span class="o">);</span>
+       <span class="n">resource</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">P2UXAppTypes</span><span class="o">.</span><span class="na">P2UXApp_PackageAttrib_Package</span><span class="o">,</span> <span class="s">&quot;shellui_phone&quot;</span><span class="o">);</span>
+       <span class="n">resource</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">P2UXAppTypes</span><span class="o">.</span><span class="na">P2UXApp_PackageAttrib_Update</span><span class="o">,</span> <span class="n">P2UXAppTypes</span><span class="o">.</span><span class="na">P2UXApp_PackageUpdate_None</span><span class="o">);</span>
+       <span class="n">mResources</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">resource</span><span class="o">);</span>
+   <span class="o">}</span>
+   <span class="k">catch</span> <span class="o">(</span><span class="n">JSONException</span> <span class="n">e</span><span class="o">)</span>
+   <span class="o">{</span>
+       <span class="n">P2UXLog</span><span class="o">.</span><span class="na">e</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">&quot;onCreate - &quot;</span> <span class="o">+</span> <span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+   <span class="o">}</span>
+
+   <span class="k">if</span> <span class="o">((</span><span class="n">getApplicationInfo</span><span class="o">().</span><span class="na">flags</span> <span class="o">&amp;</span> <span class="n">ApplicationInfo</span><span class="o">.</span><span class="na">FLAG_DEBUGGABLE</span><span class="o">)</span> <span class="o">==</span> <span class="n">ApplicationInfo</span><span class="o">.</span><span class="na">FLAG_DEBUGGABLE</span><span class="o">)</span> <span class="o">{</span>
+       <span class="k">if</span> <span class="o">(</span><span class="n">savedInstanceState</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+           <span class="n">savedInstanceState</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Bundle</span><span class="o">();</span>
+       <span class="o">}</span>
+       <span class="n">savedInstanceState</span><span class="o">.</span><span class="na">putString</span><span class="o">(</span><span class="n">P2UXAppCreator</span><span class="o">.</span><span class="na">P2UXAppCreator_Opt_Env</span><span class="o">,</span> <span class="n">P2UXAppCreator</span><span class="o">.</span><span class="na">P2UXAppCreator_Opt_Env_Prototype</span><span class="o">);</span>
+       <span class="n">savedInstanceState</span><span class="o">.</span><span class="na">putLong</span><span class="o">(</span><span class="n">P2UXAppCreator</span><span class="o">.</span><span class="na">P2UXAppCreator_Opt_LogLevel</span><span class="o">,</span> <span class="n">P2UXLog</span><span class="o">.</span><span class="na">P2UXCoreLogFlagVerbose</span><span class="o">);</span>
+   <span class="o">}</span>
+
+   <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
+   <span class="n">applyTranslucentStatusBar</span><span class="o">();</span>
+<span class="o">}</span>
+
+<span class="hll"><span class="nd">@Override</span>
+</span><span class="hll"><span class="kd">public</span> <span class="n">P2UXAppBehavior</span> <span class="nf">createBehavior</span><span class="o">(</span><span class="n">String</span> <span class="n">appId</span><span class="o">)</span>
+</span><span class="hll"><span class="o">{</span>
+</span><span class="hll">   <span class="k">return</span> <span class="k">new</span> <span class="n">SampleAppBehavior</span><span class="o">();</span>
+</span><span class="hll"><span class="o">}</span>
+</span></pre></div>
+
+
+<h2 id="adding-custom-screenspanels">Adding Custom Screens/Panels<a class="headerlink" href="#adding-custom-screenspanels" title="Permanent link">&para;</a></h2>
+<p>Developers can override Screen or Panel instances to provide any custom code needed for a hosted <code class="codehilite">View</code>.</p>
+<p>Since the P2UX UI is not based on XML Layout, connecting custom methods for each button click action is unnecessary. Instead, the developer can override the methods of the <code class="codehilite">P2UXScreen</code> class to handle button click and other UI events. (In all other respects, writing code for customized Screen and Panel behavior is the same as for XML layout-based content.)</p>
+<p>The PRL will request an instance from <code class="codehilite">P2UXAppBehavior</code> when it needs to create a new Screen or Panel. If no instance is provided, P2UX will generate a standard instance of the Screen or Panel.</p>
+<p>To provide a custom Screen instance, override the method <code class="codehilite">createScreen</code> from a <code class="codehilite">P2UXAppBehavior</code> subclass and return an instance of <code class="codehilite">P2UXScreen</code>. To provide a custom Panel instance, override the method <code class="codehilite">createPanel</code> and return an instance of <code class="codehilite">P2UXPanel</code>. (Both <code class="codehilite">P2UXScreen</code> and <code class="codehilite">P2UXPanel</code> are <code class="codehilite">View</code> based subclasses that add some additional helper methods. These methods make it easier to access screen components.)</p>
+<p>The name of a chosen Screen or Panel is the value used to identify the item when the PRL creates an instance of this object. The “def” parameter passed to this method contains the member variable <code class="codehilite">systemType</code> that identifies the Screen being created. From this object, the developer determines the requested Screen and the specific <code class="codehilite">P2UXScreen</code> or <code class="codehilite">P2UXPanel</code> subclass to instantiate.</p>
+<p>Creating a custom Screen or Panel instance in a <code class="codehilite">P2UXAppBehavior</code> subclass</p>
+<div class="codehilite"><pre><span></span><span class="nd">@Override</span>
+<span class="kd">public</span> <span class="n">P2UXScreen</span> <span class="nf">createScreen</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="n">P2UXDefinition</span> <span class="n">def</span><span class="o">,</span> <span class="n">RectF</span> <span class="n">rect</span><span class="o">,</span> <span class="n">Object</span> <span class="n">index</span><span class="o">,</span> <span class="n">Object</span> <span class="n">data</span><span class="o">,</span> <span class="n">P2UXViewContainerDelegate</span> <span class="n">viewDelegate</span><span class="o">)</span>
+<span class="o">{</span>
+   <span class="k">if</span> <span class="o">(</span><span class="n">def</span><span class="o">.</span><span class="na">getSystemType</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="s">&quot;xxxxx&quot;</span><span class="o">))</span> <span class="o">{</span>
+       <span class="c1">//return some screen here, for example:</span>
+       <span class="k">return</span> <span class="k">new</span> <span class="n">SampleScreen</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="n">rect</span><span class="o">,</span> <span class="n">def</span><span class="o">,</span> <span class="n">viewDelegate</span><span class="o">,</span> <span class="n">index</span><span class="o">,</span> <span class="n">data</span><span class="o">);</span>
+   <span class="o">}</span>
+   <span class="k">return</span> <span class="kd">super</span><span class="o">.</span><span class="na">createScreen</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="n">def</span><span class="o">,</span> <span class="n">rect</span><span class="o">,</span> <span class="n">index</span><span class="o">,</span> <span class="n">data</span><span class="o">,</span> <span class="n">viewDelegate</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="nd">@Override</span>
+<span class="kd">public</span> <span class="n">P2UXPanel</span> <span class="nf">createPanel</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="n">P2UXDefinition</span> <span class="n">def</span><span class="o">,</span> <span class="n">RectF</span> <span class="n">rect</span><span class="o">,</span> <span class="n">Object</span> <span class="n">index</span><span class="o">,</span> <span class="n">Object</span> <span class="n">data</span><span class="o">,</span> <span class="n">P2UXViewContainerDelegate</span> <span class="n">viewDelegate</span><span class="o">)</span>
+<span class="o">{</span>
+   <span class="k">if</span> <span class="o">(</span><span class="n">def</span><span class="o">.</span><span class="na">getSystemType</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="s">&quot;xxxxx&quot;</span><span class="o">))</span> <span class="o">{</span>
+       <span class="c1">//return some screen here, for example:</span>
+       <span class="k">return</span> <span class="k">new</span> <span class="n">SamplePanel</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="n">rect</span><span class="o">,</span> <span class="n">def</span><span class="o">,</span> <span class="n">viewDelegate</span><span class="o">,</span> <span class="n">index</span><span class="o">,</span> <span class="n">data</span><span class="o">);</span>
+   <span class="o">}</span>
+   <span class="k">return</span> <span class="kd">super</span><span class="o">.</span><span class="na">createPanel</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="n">def</span><span class="o">,</span> <span class="n">rect</span><span class="o">,</span> <span class="n">index</span><span class="o">,</span> <span class="n">data</span><span class="o">,</span> <span class="n">viewDelegate</span><span class="o">);</span>
+<span class="o">}</span>
+</pre></div>
+
+
+<h2 id="accessing-control-instances-from-p2uxpanel-or-p2uxscreen">Accessing Control instances from <code class="codehilite">P2UXPanel</code> or <code class="codehilite">P2UXScreen</code><a class="headerlink" href="#accessing-control-instances-from-p2uxpanel-or-p2uxscreen" title="Permanent link">&para;</a></h2>
+<p>To access instances of controls, <code class="codehilite">P2UXScreen</code> provides a helper method, <code class="codehilite">controlWithElementSystemTypeOrId</code>. This method takes the name or id of the control to be accessed and returns a control instance.</p>
+<p>“System type” references</p>
+<p>After creating a control, the developer can set a “system type” for the control in Builder. This effectively becomes the name for the new control. Referring to the control by its “system type” means that the developer does not need to change any existing custom code when choosing to create an alternate variation of the same control. (Otherwise, if the developer changes the name of the control in Builder, any custom code to referring to the new name would have to be changed as well.)</p>
+<p>Accessing a control in a custom instance of <code class="codehilite">P2UXScreen</code> looks like this:</p>
+<div class="codehilite"><pre><span></span><span class="nd">@Override</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">showView</span><span class="o">(</span><span class="kt">boolean</span> <span class="n">reload</span><span class="o">)</span>
+<span class="o">{</span>
+   <span class="kd">super</span><span class="o">.</span><span class="na">showView</span><span class="o">(</span><span class="n">reload</span><span class="o">);</span>
+   <span class="n">P2UXButton</span> <span class="n">btn</span> <span class="o">=</span> <span class="o">(</span><span class="n">P2UXButton</span><span class="o">)</span> <span class="n">controlWithElementSystemTypeOrId</span><span class="o">(</span><span class="s">&quot;show_btn&quot;</span><span class="o">);</span>
+   <span class="k">if</span> <span class="o">(</span><span class="n">btn</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+       <span class="n">btn</span><span class="o">.</span><span class="na">setEnabled</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span>
+   <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+
+
+<h2 id="handling-events-from-p2uxappcontroller">Handling Events from P2UXAppController<a class="headerlink" href="#handling-events-from-p2uxappcontroller" title="Permanent link">&para;</a></h2>
+<p>End-users of a completed app will interact with controls in a Screen or Panel to generate events. These interactions will, in turn, trigger actions. Typically the PRL handles events directly through event interactions set up in Builder. In some cases, additional custom code may be needed to trigger actions not directly supported by P2UX.</p>
+<p>The PRL provides a chain of event handlers that propagate an event through different components. Handling events at any point in the propagation chain provides a way to trigger custom code and also (optionally) to stop the propagation of the event at any specific handler.</p>
+<p>Event propagation follows a set pattern.</p>
+<p>First, events are relayed to the <code class="codehilite">P2UXScreen</code> for the current Screen or Panel. Next, they pass to <code class="codehilite">P2UXAppBehavior</code>. Finally, events are handled by the custom instance of the <code class="codehilite">View</code> itself. If none of these components halt event propagation, the PRL will then handle any interactions defined for the event in Builder.</p>
+<p>The <code class="codehilite">P2UXScreen</code> contains helper methods that handle a variety of events when they occur. These methods give the developer a chance to integrate any custom code needed from the basic event level without triggering any custom actions.</p>
+<p>Most standard control events are routed through the <code class="codehilite">P2UXScreen</code> instance. Handling these events is a matter of overriding the appropriate event method in your P2UXScreen subclass. Event propagation can be allowed to continue or not depending on the return value from the event handler methods.</p>
+<p>The example below illustrates the code that handles a Button press event.</p>
+<p>Handling a Button press event in P2UXScreen subclass:</p>
+<div class="codehilite"><pre><span></span><span class="nd">@Override</span>
+<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">handleButtonClick</span><span class="o">(</span><span class="n">View</span> <span class="n">ctrl</span><span class="o">,</span> <span class="n">P2UXElementInstance</span> <span class="n">elInstance</span><span class="o">)</span>
+<span class="o">{</span>
+   <span class="k">if</span> <span class="o">(</span><span class="n">elInstance</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="n">elInstance</span><span class="o">.</span><span class="na">getSystemType</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">&quot;button1&quot;</span><span class="o">))</span>
+   <span class="o">{</span>
+       <span class="n">String</span> <span class="n">elId</span> <span class="o">=</span> <span class="n">elInstance</span><span class="o">.</span><span class="na">getElId</span><span class="o">();</span>
+       <span class="k">if</span> <span class="o">(</span><span class="n">elId</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="n">elId</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">&quot;button1&quot;</span><span class="o">))</span> <span class="o">{</span>
+           <span class="c1">// take some custom action here for the &quot;okbtn&quot;</span>
+
+           <span class="c1">// return true to indicate the event was handled and propagation</span>
+           <span class="c1">// shouldn&#39;t continue</span>
+           <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+       <span class="o">}</span>
+   <span class="o">}</span>
+   <span class="k">return</span> <span class="kd">super</span><span class="o">.</span><span class="na">handleButtonClick</span><span class="o">(</span><span class="n">ctrl</span><span class="o">);</span>
+<span class="o">}</span>
+</pre></div>
+
+
+<h2 id="adding-custom-ui-controls">Adding Custom UI Controls<a class="headerlink" href="#adding-custom-ui-controls" title="Permanent link">&para;</a></h2>
+<p>UI Controls are the visual components of a Screen or Panel created in the Builder tool. These can be interactive, like Buttons or Sliders, or non-interactive, like Shapes or Text. Although P2UX offers many different UI Controls directly creatable and usable in Builder, a specific application may require developer-defined UI controls. Builder provides a Custom Control component that can be added to a Screen or Panel and then replaced using custom code.</p>
+<p>Any <code class="codehilite">View</code> based control can be injected into your Screens and Panels via a Custom Control. This allows for existing custom controls or third party custom controls to be used with P2UX based applications.</p>
+<p>The PRL manages the size and position of any custom controls defined using Builder. To provide an instance of a custom control, override the method createControl in your <code class="codehilite">P2UXAppBehavior</code> subclass and return the <code class="codehilite">View</code> subclassed instance of your control. The first parameter passed to this method, type, is the name of the control set when you created the custom control in Builder. P2UX will pass the initial size to use with your Custom Control, as well as a few other components that can be used to access any custom information created with your control in Builder.</p>
+<p>The elementInstance parameter contains all the parameters specified using Builder for the control via its itemSpec member.</p>
+<p>Create a custom control in <code class="codehilite">P2UXAppBehavior</code> subclass like this:</p>
+<div class="codehilite"><pre><span></span><span class="nd">@Override</span>
+<span class="kd">public</span> <span class="n">View</span> <span class="nf">createControl</span><span class="o">(</span><span class="n">String</span> <span class="n">type</span><span class="o">,</span> <span class="n">P2UXElementInstance</span> <span class="n">elemInstance</span><span class="o">,</span> <span class="n">RectF</span> <span class="n">rect</span><span class="o">,</span> <span class="n">P2UXViewContainerDelegate</span> <span class="n">viewDelegate</span><span class="o">,</span> <span class="n">Object</span> <span class="n">index</span><span class="o">,</span> <span class="n">Object</span> <span class="n">data</span><span class="o">)</span>
+<span class="o">{</span>
+   <span class="k">if</span> <span class="o">(</span><span class="n">type</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">type</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">())</span> <span class="o">{</span>
+       <span class="k">if</span> <span class="o">(</span><span class="n">type</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">&quot;calendar&quot;</span><span class="o">))</span> <span class="o">{</span>
+
+           <span class="c1">// Below is an example of implementing a calendar using CalendarView</span>
+           <span class="n">View</span> <span class="n">ctrl</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CalendarView</span><span class="o">(</span><span class="n">mContext</span><span class="o">);</span>
+           <span class="n">RelativeLayout</span><span class="o">.</span><span class="na">LayoutParams</span> <span class="n">params</span> <span class="o">=</span> <span class="k">new</span> <span class="n">RelativeLayout</span><span class="o">.</span><span class="na">LayoutParams</span><span class="o">((</span><span class="kt">int</span><span class="o">)</span><span class="n">rect</span><span class="o">.</span><span class="na">width</span><span class="o">(),</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span><span class="n">rect</span><span class="o">.</span><span class="na">height</span><span class="o">());</span>
+           <span class="n">params</span><span class="o">.</span><span class="na">leftMargin</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span><span class="n">rect</span><span class="o">.</span><span class="na">left</span><span class="o">;</span>
+           <span class="n">params</span><span class="o">.</span><span class="na">topMargin</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span><span class="n">rect</span><span class="o">.</span><span class="na">top</span><span class="o">;</span>
+           <span class="n">ctrl</span><span class="o">.</span><span class="na">setLayoutParams</span><span class="o">(</span><span class="n">params</span><span class="o">);</span>
+           <span class="o">((</span><span class="n">CalendarView</span><span class="o">)</span> <span class="n">ctrl</span><span class="o">).</span><span class="na">setOnDateChangeListener</span><span class="o">(</span><span class="k">new</span> <span class="n">CalendarView</span><span class="o">.</span><span class="na">OnDateChangeListener</span><span class="o">()</span> <span class="o">{</span>
+               <span class="nd">@Override</span>
+               <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onSelectedDayChange</span><span class="o">(</span><span class="nd">@NonNull</span> <span class="n">CalendarView</span> <span class="n">view</span><span class="o">,</span> <span class="kt">int</span> <span class="n">year</span><span class="o">,</span> <span class="kt">int</span> <span class="n">month</span><span class="o">,</span> <span class="kt">int</span> <span class="n">dayOfMonth</span><span class="o">)</span> <span class="o">{</span>
+                   <span class="n">Toast</span><span class="o">.</span><span class="na">makeText</span><span class="o">(</span><span class="n">mContext</span><span class="o">,</span> <span class="n">month</span><span class="o">+</span><span class="mi">1</span> <span class="o">+</span> <span class="s">&quot;/&quot;</span> <span class="o">+</span> <span class="n">dayOfMonth</span> <span class="o">+</span> <span class="s">&quot;/&quot;</span> <span class="o">+</span> <span class="n">year</span><span class="o">,</span> <span class="n">Toast</span><span class="o">.</span><span class="na">LENGTH_SHORT</span><span class="o">).</span><span class="na">show</span><span class="o">();</span>
+               <span class="o">}</span>
+           <span class="o">});</span>
+           <span class="k">return</span> <span class="n">ctrl</span><span class="o">;</span>
+       <span class="o">}</span>
+   <span class="o">}</span>
+   <span class="k">return</span> <span class="kd">super</span><span class="o">.</span><span class="na">createControl</span><span class="o">(</span><span class="n">type</span><span class="o">,</span> <span class="n">elemInstance</span><span class="o">,</span> <span class="n">rect</span><span class="o">,</span> <span class="n">viewDelegate</span><span class="o">,</span> <span class="n">index</span><span class="o">,</span> <span class="n">data</span><span class="o">);</span>
+<span class="o">}</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../quickstart/" title="Quick Start" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Quick Start
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../datasources/overview/" title="Overview" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Overview
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2017 P2UX, Inc.
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-f3ab9e5ff8.js"></script>
+      
+      
+      <script>app.initialize({url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

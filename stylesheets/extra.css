@@ -1,0 +1,11 @@
+.md-typeset mark { 
+    background-color: #a9d1ff;
+    box-shadow: 0.25em 0 0 #a9d1ff, -0.25em 0 0 #a9d1ff;
+}
+
+.codehilite .hll, .md-typeset .highlight .hll {
+    display: block;
+    margin: 0 -1.2rem;
+    padding: 0 1.2rem;
+    background-color: #a9d1ff;
+}
