@@ -212,6 +212,7 @@ extern NSString* const P2UXVariable_Attrib_Parent;
 extern NSString* const P2UXVariable_Attrib_Screen;
 extern NSString* const P2UXVariable_Attrib_Container;
 extern NSString* const P2UXVariable_Attrib_DefaultState;
+extern NSString* const P2UXVariable_Attrib_Delimiter;
 
 extern NSString* const P2UXControl_Attrib_Index;
 
@@ -344,7 +345,7 @@ typedef NS_ENUM(NSInteger, P2UXControlType) {
     P2UXCtrlType_TouchSlider,
     P2UXCtrlType_Picker,
     P2UXCtrlType_Switch,
-    P2UXCtrlType_Line
+    P2UXCtrlType_RadioButtonGroup
 };
 
 typedef NS_ENUM(NSInteger, P2UXScrollStyle) {

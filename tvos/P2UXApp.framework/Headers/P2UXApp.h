@@ -20,6 +20,7 @@ FOUNDATION_EXPORT const unsigned char P2UXAppVersionString[];
 #import <P2UXApp/P2UXAppOS.h>
 #import <P2UXApp/P2UXAppTypes.h>
 #import <P2UXApp/P2UXAppLoader.h>
+#import <P2UXApp/P2UXAppMain.h>
 #import <P2UXApp/P2UXViewController.h>
 #import <P2UXApp/P2UXScreen.h>
 #import <P2UXApp/P2UXAppBehavior.h>

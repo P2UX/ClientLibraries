@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class P2UXAuthPersistData;
+
 extern NSString* const P2UXDataAuth_Field_Username;
 extern NSString* const P2UXDataAuth_Field_Password;
 extern NSString* const P2UXDataAuth_Field_ClientId;
@@ -15,6 +17,8 @@ extern NSString* const P2UXDataAuth_Field_ClientSecret;
 extern NSString* const P2UXDataAuth_Field_Pin;
 extern NSString* const P2UXDataAuth_Field_Scope;
 extern NSString* const P2UXDataAuth_Field_State;
+extern NSString* const P2UXDataAuth_Field_RefreshToken;
+extern NSString* const P2UXDataAuth_Field_Expires;
 
 extern NSString* const P2UXAuthError_Unknown;
 extern NSString* const P2UXAuthError_Params;
@@ -62,7 +66,12 @@ typedef void (^P2UXAuthCallback)(P2UXAuthResult result, NSString* message);
     P2UXAuthType         _type;
     NSString*            _typeName;
     NSString*            _serviceName;
+    NSString*            _method;
     NSURL*               _authURL;
+    NSDictionary*        _defaultArgs;
+    NSDictionary*        _headers;
+    P2UXAuthPersistData* _persistData;
+    NSString*            _persistItem;
 }
 
 @property (readonly) NSURL* authURL;
@@ -73,10 +82,17 @@ typedef void (^P2UXAuthCallback)(P2UXAuthResult result, NSString* message);
 @property (nonatomic, copy) NSString* sourceDir;
 
 +(P2UXDataAuth*)authRequest:(NSDictionary*)authSpec forURL:(NSURL*)URL;
-
--(void)makeRequest:(NSString*)request fromSource:(id)source withOverrides:(NSDictionary *)authOverrides andCallback:(P2UXAuthCallback)callback;
--(void)authorizeRequest:(NSMutableURLRequest*)request forSession:(NSURLSession*)session;
--(void)dispatchPendingForRequest:(NSString*)request withResult:(P2UXAuthResult)result andMessage:(NSString*)message;
--(void)deauthorize;
-
+- (void) initialize;
+- (void)makeRequest:(NSString*)request fromSource:(id)source withOverrides:(NSDictionary *)authOverrides andCallback:(P2UXAuthCallback)callback;
+- (void)authorizeRequest:(NSMutableURLRequest*)request forSession:(NSURLSession*)session;
+- (void)dispatchPendingForRequest:(NSString*)request withResult:(P2UXAuthResult)result andMessage:(NSString*)message;
+- (void)deauthorize;
+- (NSDictionary*) appendToPayload:(NSDictionary*)payload method:(NSString*)method;
+- (void) appendToHeaders:(NSMutableURLRequest*)request method:(NSString*)method;
+- (NSMutableDictionary*) appendToParameters:(NSMutableDictionary*)parameters method:(NSString*)method;
+// Auth data persistance
+- (void) persistResults:(NSDictionary*)results altPaths:(NSDictionary*)altPaths;
+- (void) loadPersistResults;
+- (NSString*) persistName;
+-(NSArray*)clearPendingAuths;
 @end

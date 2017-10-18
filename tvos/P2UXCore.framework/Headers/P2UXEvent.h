@@ -35,6 +35,9 @@ typedef NS_ENUM(NSInteger, P2UXElementEvent) {
     P2UXElementEvent_SystemNotifyTapped,
     P2UXElementEvent_Keyboard_Return,
     P2UXElementEvent_FingerprintAuth,
+    P2UXElementEvent_AuthInput,
+    P2UXElementEvent_AuthComplete,
+    P2UXElementEvent_ShowView,
     P2UXElementEvent_UserAuth = 200
 };
 
@@ -66,6 +69,14 @@ extern NSString* const P2UXEvent_UserAuth_Message;
 extern NSString* const P2UXEvent_UserAuth_Action;
 extern NSString* const P2UXEvent_UserAuth_Result;
 extern NSString* const P2UXEvent_Fingerprint_Result;
+extern NSString* const P2UXEvent_Attrib_Service;
+extern NSString* const P2UXEvent_Attrib_Args;
+extern NSString* const P2UXEvent_Attrib_Action;
+extern NSString* const P2UXEvent_AuthenticateInput;
+extern NSString* const P2UXEvent_AuthenticateComplete;
+extern NSString* const P2UXEvent_AuthAction_Request;
+extern NSString* const P2UXEvent_AuthAction_Cancel;
+extern NSString* const P2UXEvent_AuthAction_Clear;
 
 @interface P2UXEvent : NSObject
 {
@@ -85,6 +96,8 @@ extern NSString* const P2UXEvent_Fingerprint_Result;
 + (void) NotifyFingerprintResult:(BOOL)result data:(id)data sender:(id)sender;
 + (NSArray*) dataEventsWithEventType:(P2UXElementEvent)eventType ident:(NSString*)ident request:(NSString*)request events:(NSArray*)events;
 + (NSArray*) dataEventsWithEventType:(P2UXElementEvent)eventType systemType:(NSString*)systemType request:(NSString*)request events:(NSArray*)events;
++ (NSArray*) dataEventsWithEventType:(P2UXElementEvent)eventType field:(NSString*)field value:(NSString*)value events:(NSArray*)events;
+
 
 - (id) initWithEventSpec:(NSDictionary *)spec;
 - (id) initWithActions:(NSArray*)actions itemspec:(NSDictionary*)itemspec;
@@ -103,5 +116,6 @@ extern NSString* const P2UXEvent_Fingerprint_Result;
 - (BOOL) isAttributeEventForSender:(P2UXElementInstance*)elem named:(NSString*)named value:(id)value;
 - (BOOL) isMediaAttributeEvent:(NSString*)attribute value:(id)value;
 - (BOOL) isValueChangedEvent:(NSString*)msg;
+- (BOOL) isService:(NSString*)service;
 - (void) resetLinks;
 @end

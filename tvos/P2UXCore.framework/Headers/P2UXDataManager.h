@@ -45,7 +45,7 @@
 - (id) transientVarForKey:(NSString*)key;
 - (void) setTransientVar:(id)value forKey:(NSString*)key notify:(BOOL)notify itemspec:(NSDictionary*)itemspec;
 - (void) clearTransientVars;
-
+- (void) clearPendingRequests;
 - (void) setSecureVar:(id)value forKey:(NSString*)key notify:(BOOL)notify action:(P2UXEventAction*)action;
 
 
@@ -79,7 +79,7 @@
 - (NSMutableDictionary*) handleArgs:(NSDictionary*)args event:(P2UXEvent*)event source:(id)source viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate;
 - (void) setFilters:(NSArray*)filters forDataSource:(NSString*)ident request:(NSString*)request itempath:(NSString*)itempath type:(NSString*)type notify:(BOOL)notify;
 - (void) clearFilters:(NSString*)ident request:(NSString*)request itempath:(NSString*)itempath notify:(BOOL)notify;
-
+- (void) authenticateForService:(NSString*)service withArgs:(NSDictionary*)args;
 #pragma mark - P2UXDataSourceDelegate
 -(void) request:(NSString*)request withArgs:(NSDictionary*)args returnedSuccess:(BOOL)success withResults:(P2UXSourcedData*)results forSource:(P2UXDataSource*)source;
 -(id<P2UXDataAuthDelegate>)dataAuthHandler;

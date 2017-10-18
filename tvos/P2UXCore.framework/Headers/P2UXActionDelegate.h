@@ -19,6 +19,7 @@
 - (BOOL) handleButtonRadioState:(id)sender;
 - (BOOL) handleButtonLongPress:(id)sender;
 - (BOOL) handleRotaryChange:(id)sender;
+- (BOOL) handleRadioButtonGroupChange:(id)sender;
 - (BOOL) handleButtonSelectorClick:(id)sender;
 - (BOOL) handleRotaryIncrement:(id)sender;
 - (BOOL) handleSlideIncrement:(id)sender;
