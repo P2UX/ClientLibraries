@@ -1,0 +1,904 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.10.1">
+    
+    
+      
+        <title>Custom Code - P2UX Developer</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-e826f8942a.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-a20f419c8e.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-23f75ab9c7.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="blue-grey" data-md-color-accent="">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="P2UX Developer" class="md-header-nav__button md-logo">
+          
+            
+              <img src="../../images/logo.png" width="24" height="24">
+            
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  iOS/tvOS
+                </span>
+              
+            
+            Custom Code
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">&#xE5CD;</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <div class="md-nav__button md-logo">
+      
+        
+          <img src="../../images/logo.png">
+        
+      
+    </div>
+    P2UX Developer
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Latest News" class="md-nav__link">
+      Latest News
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      iOS/tvOS
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        iOS/tvOS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../quickstart/" title="Quick Start" class="md-nav__link">
+      Quick Start
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Custom Code
+      </label>
+    
+    <a href="./" title="Custom Code" class="md-nav__link md-nav__link--active">
+      Custom Code
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#p2ux-and-xcode" title="P2UX and Xcode" class="md-nav__link">
+    P2UX and Xcode
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-custom-behaviors" title="Adding Custom Behaviors" class="md-nav__link">
+    Adding Custom Behaviors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-custom-view-controllers" title="Adding Custom View Controllers" class="md-nav__link">
+    Adding Custom View Controllers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-control-instances-from-p2uxviewcontroller" title="Accessing Control Instances from P2UXViewController" class="md-nav__link">
+    Accessing Control Instances from P2UXViewController
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handling-events-from-p2uxviewcontroller" title="Handling Events from P2UXViewController" class="md-nav__link">
+    Handling Events from P2UXViewController
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-custom-ui-controls" title="Adding Custom UI Controls" class="md-nav__link">
+    Adding Custom UI Controls
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-custom-screenspanels" title="Adding Custom Screens/Panels" class="md-nav__link">
+    Adding Custom Screens/Panels
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Android
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Android
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../android/quickstart/" title="Quick Start" class="md-nav__link">
+      Quick Start
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../android/customcode/" title="Custom Code" class="md-nav__link">
+      Custom Code
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Data Sources
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Data Sources
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../datasources/overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#p2ux-and-xcode" title="P2UX and Xcode" class="md-nav__link">
+    P2UX and Xcode
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-custom-behaviors" title="Adding Custom Behaviors" class="md-nav__link">
+    Adding Custom Behaviors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-custom-view-controllers" title="Adding Custom View Controllers" class="md-nav__link">
+    Adding Custom View Controllers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-control-instances-from-p2uxviewcontroller" title="Accessing Control Instances from P2UXViewController" class="md-nav__link">
+    Accessing Control Instances from P2UXViewController
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handling-events-from-p2uxviewcontroller" title="Handling Events from P2UXViewController" class="md-nav__link">
+    Handling Events from P2UXViewController
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-custom-ui-controls" title="Adding Custom UI Controls" class="md-nav__link">
+    Adding Custom UI Controls
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-custom-screenspanels" title="Adding Custom Screens/Panels" class="md-nav__link">
+    Adding Custom Screens/Panels
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Custom Code</h1>
+                
+                <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>What follows is a tutorial that walks developers through the steps of writing custom code for an iOS or tvOS application using P2UX. Developers should be familiar with the Xcode integrated development environment for MacOS and either the Swift or the Objective-C programming languages for custom coding.</p>
+<p>Topics include customizable View Controllers, UI controls, and Screens/Panels.</p>
+<div class="admonition note">
+<p class="admonition-title">Terminology</p>
+<p>Throughout the P2UX documentation the “developer” refers to you, the reader who is developing an app with P2UX. The “designer” refers to the individual whose principal job is to create the appearance and style of the app and its visual components. “PRL” refers to the P2UX Rendering Library for iOS, which controls the creation and workflow of content created for the P2UX platform.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Coding examples and code additions</p>
+<p>In the coding examples below and throughout the documentation, changes and additions to be made by the developer are rendered with a blue highlight.</p>
+</div>
+<p><em>P2UX versus the standard Xcode environment</em></p>
+<p>P2UX based applications for iOS are easy to customize and extend. Since the P2UX iOS rendering library is based on the native UIKit and other iOS primitives, writing custom business logic and integrating custom controls works much the same as it does when writing iOS applications using Xcode.
+With the P2UX platform, Storyboards and XIB based User Interface (UI) definitions are no longer required. Instead, applications use P2UX Portable UX Bundles (PUB) either as embedded or dynamically accessed resources. Additionally, P2UX provides hooks to developers that allow them access to all of the components of P2UX, as well as the ability to fully customize instances of the application.</p>
+<div class="admonition note">
+<p class="admonition-title">Create a P2UX enabled project first</p>
+<p>This document assumes a P2UX enabled Xcode project has already been created. See <a href="../quickstart/">Quick Start</a> for steps to create a project.</p>
+</div>
+<h2 id="p2ux-and-xcode">P2UX and Xcode<a class="headerlink" href="#p2ux-and-xcode" title="Permanent link">&para;</a></h2>
+<p><em>Objective-C or Swift</em></p>
+<p>P2UX native rendering libraries for iOS can be extended using either Objective-C or Swift. Developers are free to choose one or the other of these coding languages at any stage during the development process. The instructions below provide explicit reference to the proper use of either language in each applicable step that follows.</p>
+<h2 id="adding-custom-behaviors">Adding Custom Behaviors<a class="headerlink" href="#adding-custom-behaviors" title="Permanent link">&para;</a></h2>
+<p>If desired, customizable behaviors can be added to the project code.</p>
+<p>A subclass of the <code class="codehilite">P2UXAppBehavior</code> class is the starting point for customizing the behavior of the application. From this class, all other parts of the application can be customized. (Common customized behaviors include creation of a Custom Control or overriding a particular View Controller.)</p>
+<p>In Objective-C, create a header and module file for your project to store the customized behaviors. The easiest way to do is by making a <mark>New File</mark> in your project –  a <mark>Cocoa Touch Class</mark>, which in this example is called <code class="codehilite">SampleBehavior</code>.  In Xcode, create a new class from the drop down box labeled <mark>Subclass of:</mark> and enter <mark>P2UXAppBehavior</mark> in the field. 
+<img alt="project wizard" src="../images/quickstartios/image9.png" />
+This will create two files: <code class="codehilite">SampleBehavior.h</code> and <code class="codehilite">SampleBehavior.m</code>.</p>
+<div class="codehilite"><pre><span></span><span class="hll"><span class="p">@</span><span class="n">import</span> <span class="n">P2UXApp</span><span class="p">;</span>
+</span><span class="k">@interface</span> <span class="nc">SampleBehavior</span> : <span class="nc">P2UXAppBehavior</span>
+<span class="k">@end</span>
+</pre></div>
+
+
+<p>Put any customized behaviors within the implementation here. (Behaviors available for customization are found within the P2UXApp framework, under the file <code class="codehilite">P2UXAppBehavior</code>.)</p>
+<p>In addition, update <code class="codehilite">AppDelegate.m</code> to include the custom behaviors.</p>
+<p>To do this, <code class="codehilite">AppDelegate</code> must include an instance of the method createBehavior from <code class="codehilite">P2UXAppCreatorDelegate</code> protocol. (This will override any default behaviors.) Also, import the <code class="codehilite">SampleBehavior.h</code> file so that this class can be instantiated.</p>
+<p>Edit <code class="codehilite">AppDelegate.m</code> to look like this:</p>
+<div class="codehilite"><pre><span></span><span class="cp">#import &quot;AppDelegate.h&quot;</span>
+<span class="hll"><span class="cp">#import &quot;SampleBehavior.h&quot;</span>
+</span><span class="k">@interface</span> <span class="nc">AppDelegate</span> <span class="p">()</span>
+<span class="k">@end</span>
+<span class="k">@implementation</span> <span class="nc">AppDelegate</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">application:</span><span class="p">(</span><span class="bp">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span> <span class="nf">didFinishLaunchingWithOptions:</span><span class="p">(</span><span class="bp">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">launchOptions</span> <span class="p">{</span>
+    <span class="bp">NSString</span><span class="o">*</span> <span class="n">appKey</span><span class="p">;</span>
+    <span class="n">appKey</span> <span class="o">=</span> <span class="s">@&quot;xxxxx&quot;</span><span class="p">;</span>
+    <span class="bp">NSDictionary</span> <span class="o">*</span><span class="n">opts</span><span class="p">;</span>
+<span class="cp">#if DEBUG</span>
+    <span class="n">opts</span> <span class="o">=</span> <span class="l">@{</span><span class="nl">P2UXAppCreator_Opt_Env</span><span class="p">:</span> <span class="n">P2UXAppCreator_Opt_Env_Prototype</span><span class="l">}</span><span class="p">;</span>
+<span class="cp">#endif    </span>
+    <span class="bp">NSDictionary</span> <span class="o">*</span><span class="n">resources</span> <span class="o">=</span> <span class="l">@[@{</span><span class="nl">P2UXApp_PackageAttrib_FormFactor</span><span class="p">:</span> <span class="p">[</span><span class="bp">NSNumber</span> <span class="nl">numberWithInteger</span><span class="p">:</span><span class="n">P2UXFormFactor_Phone</span><span class="p">],</span> <span class="nl">P2UXApp_PackageAttrib_Type</span><span class="p">:</span><span class="n">P2UXApp_PackageType_Static</span><span class="p">,</span> <span class="nl">P2UXApp_PackageAttrib_Package</span><span class="p">:</span><span class="s">@&quot;phone_pub&quot;</span><span class="p">,</span><span class="nl">P2UXApp_PackageAttrib_Update</span><span class="p">:</span><span class="n">P2UXApp_PackageUpdate_None</span><span class="l">}]</span><span class="p">;</span>
+
+    <span class="p">[</span><span class="n">P2UXAppCreator</span> <span class="nl">createApplicationWithKey</span><span class="p">:</span><span class="n">appKey</span> <span class="nl">opts</span><span class="p">:</span><span class="n">opts</span> <span class="nl">resources</span><span class="p">:</span><span class="n">resources</span> <span class="nl">delegate</span><span class="p">:</span><span class="nb">self</span><span class="p">];</span>
+    <span class="k">return</span> <span class="nb">YES</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="hll"><span class="p">-</span> <span class="p">(</span><span class="n">P2UXAppBehavior</span><span class="o">*</span><span class="p">)</span> <span class="nf">createBehaviorForApplication:</span><span class="p">(</span><span class="bp">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">appid</span>
+</span><span class="hll"><span class="p">{</span>
+</span><span class="hll">    <span class="k">return</span> <span class="p">[[</span><span class="n">SampleBehavior</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
+</span><span class="hll"><span class="p">}</span>
+</span><span class="k">@end</span>
+</pre></div>
+
+
+<p>If working in Swift, create a swift file for your project to store new behaviors.</p>
+<p>Create a <mark>New File</mark> in your project – a <mark>Swift File</mark>, in this example called <code class="codehilite">SampleBehavior</code>. In Xcode, create a new class from the drop down box labeled <mark>Subclass of:</mark> and enter <mark>P2UXAppBehavior</mark> in the field. </p>
+<p>Edit the <code class="codehilite">SampleBehavior.swift</code> file to look like this:</p>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">UIKit</span>
+<span class="hll"><span class="kn">import</span> <span class="nn">P2UXApp</span>
+</span><span class="k">class</span> <span class="nc">SampleBehavior</span><span class="p">:</span> <span class="n">P2UXAppBehavior</span> <span class="p">{</span>
+
+<span class="o">//</span> <span class="n">override</span> <span class="n">methods</span> <span class="n">here</span>
+
+<span class="p">}</span>
+</pre></div>
+
+
+<p>Place any customized behaviors within the implementation. Behaviors available for customization are found within the P2UXApp framework, under the file <code class="codehilite">P2UXAppBehavior</code>.</p>
+<p>Next, update <code class="codehilite">AppDelegate.swift</code> to include the custom behaviors. </p>
+<p>To do this, <code class="codehilite">AppDelegate</code> must must include an instance of the method <code class="codehilite">createBehavior</code> from the <code class="codehilite">P2UXAppCreatorDelegate</code> protocol. (This will override any default behaviors.)</p>
+<p>Edit <code class="codehilite">AppDelegate.swift</code> to look like this:</p>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">UIKit</span>
+<span class="kn">import</span> <span class="nn">P2UXApp</span>
+<span class="nd">@UIApplicationMain</span>
+<span class="k">class</span> <span class="nc">AppDelegate</span><span class="p">:</span> <span class="n">UIResponder</span><span class="p">,</span> <span class="n">UIApplicationDelegate</span><span class="p">,</span> <span class="n">P2UXAppCreatorDelegate</span> <span class="p">{</span>
+    <span class="n">var</span> <span class="n">window</span><span class="p">:</span> <span class="n">UIWindow</span><span class="err">?</span>
+    <span class="n">func</span> <span class="n">application</span><span class="p">(</span><span class="n">_</span> <span class="n">application</span><span class="p">:</span> <span class="n">UIApplication</span><span class="p">,</span> <span class="n">didFinishLaunchingWithOptions</span> <span class="n">launchOptions</span><span class="p">:</span> <span class="p">[</span><span class="n">UIApplicationLaunchOptionsKey</span><span class="p">:</span> <span class="n">Any</span><span class="p">]</span><span class="err">?</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Bool</span> <span class="p">{</span>
+        <span class="n">let</span> <span class="n">appKey</span> <span class="o">=</span> <span class="s2">&quot;xxxxx&quot;</span><span class="p">;</span>
+        <span class="n">var</span> <span class="n">opts</span> <span class="p">:</span> <span class="p">[</span><span class="n">AnyHashable</span> <span class="p">:</span> <span class="n">Any</span><span class="p">];</span>
+<span class="c1">#if DEBUG</span>
+        <span class="n">opts</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">P2UXAppCreator_Opt_Env</span><span class="p">:</span> <span class="n">P2UXAppCreator_Opt_Env_Prototype</span><span class="p">,</span>
+            <span class="n">P2UXAppCreator_Opt_LogLevel</span><span class="p">:</span> <span class="n">P2UXCoreLogLevel</span><span class="o">.</span><span class="n">verbose</span><span class="o">.</span><span class="n">rawValue</span> <span class="k">as</span>  
+            <span class="n">NSNumber</span>
+        <span class="p">]</span>
+<span class="c1">#endif</span>
+        <span class="n">var</span> <span class="n">phoneResources</span><span class="p">:</span> <span class="p">[</span><span class="n">AnyHashable</span> <span class="p">:</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">P2UXApp_PackageAttrib_FormFactor</span><span class="p">:</span> <span class="n">P2UXFormFactor</span><span class="o">.</span><span class="n">phone</span><span class="p">,</span>
+            <span class="n">P2UXApp_PackageAttrib_Type</span><span class="p">:</span> <span class="n">P2UXApp_PackageType_Static</span><span class="p">,</span>
+            <span class="n">P2UXApp_PackageAttrib_Package</span><span class="p">:</span> <span class="s2">&quot;phone_pub&quot;</span><span class="p">,</span>
+            <span class="n">P2UXApp_PackageAttrib_Update</span><span class="p">:</span> <span class="n">P2UXApp_PackageUpdate_None</span>
+        <span class="p">]</span>
+
+        <span class="n">var</span> <span class="n">resources</span> <span class="p">:</span> <span class="p">[</span><span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">phoneResources</span>
+        <span class="p">]</span>
+        <span class="n">P2UXAppCreator</span><span class="o">.</span><span class="n">createApplication</span><span class="p">(</span><span class="n">withKey</span><span class="p">:</span> <span class="n">appKey</span><span class="p">,</span> <span class="n">opts</span><span class="p">:</span> <span class="n">opts</span><span class="p">,</span>
+        <span class="n">resources</span><span class="p">:</span> <span class="n">resources</span><span class="p">,</span> <span class="n">delegate</span><span class="p">:</span> <span class="bp">self</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="hll">    <span class="n">func</span> <span class="n">createBehavior</span><span class="p">(</span><span class="n">forApplication</span> <span class="n">appid</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">P2UXAppBehavior</span> <span class="p">{</span>
+</span><span class="hll">        <span class="k">return</span> <span class="n">SampleBehavior</span><span class="p">();</span>
+</span><span class="hll">    <span class="p">}</span>
+</span><span class="p">}</span>
+</pre></div>
+
+
+<h2 id="adding-custom-view-controllers">Adding Custom View Controllers<a class="headerlink" href="#adding-custom-view-controllers" title="Permanent link">&para;</a></h2>
+<p>Just like writing traditional Storyboard based iOS applications, writing custom code to interact with the User Interface is done using a subclass of <code class="codehilite">UIViewController</code>. Instead of subclassing directly from <code class="codehilite">UIViewController</code>, P2UX provides the class <code class="codehilite">P2UXViewController</code>, which itself is a subclass of <code class="codehilite">UIViewController</code> with a few added helper methods that interface with P2UX generated controls and events.</p>
+<p><em>The <code class="codehilite">P2UXViewController</code> subclass</em></p>
+<p>Since the P2UX UI is not based on Storyboards, connecting custom methods for each button click action is unnecessary. Instead, the user can override the methods of the <code class="codehilite">P2UXViewController</code> class to handle button click and other UI events. (In all other respects, writing code for customized Screen and Panel behavior is the same as for Storyboard-based content.)</p>
+<p>The name of a chosen View Controller, such as a Screen or Panel, is the value used to identify the item when the P2UX rendering library creates an instance of this object. (To create an instance of a <code class="codehilite">P2UXViewController</code> for a Screen, for example, override the <code class="codehilite">P2UXAppBehavior</code> method <code class="codehilite">createViewControllerWithDef</code>.) The <code class="codehilite">def</code> parameter passed to this method contains the member variable <code class="codehilite">systemType</code> that identifies the Screen that is being created. From this object, the developer determines the requested Screen and the specific <code class="codehilite">P2UXViewController</code> subclass to be instantiated. </p>
+<p>Objective-C example: creating a custom <code class="codehilite">P2UXViewController</code></p>
+<div class="codehilite"><pre><span></span><span class="cp">#import &quot;SampleBehavior.h&quot;</span>
+<span class="cp">#import &quot;SampleViewController.h&quot;</span>
+<span class="p">@</span><span class="n">import</span> <span class="n">P2UXApp</span><span class="p">;</span>
+
+<span class="k">@implementation</span> <span class="nc">SampleBehavior</span>
+
+<span class="p">-</span> <span class="p">(</span><span class="n">P2UXViewController</span><span class="o">*</span><span class="p">)</span> <span class="nf">createViewControllerWithDef:</span><span class="p">(</span><span class="n">P2UXDefinition</span><span class="o">*</span><span class="p">)</span><span class="nv">def</span>
+         <span class="nf">cache:</span><span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nv">cache</span> <span class="nf">index:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">index</span> <span class="nf">data:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">data</span>
+         <span class="nf">viewDelegate:</span><span class="p">(</span><span class="kt">id</span><span class="o">&lt;</span><span class="n">P2UXViewContainerDelegate</span><span class="o">&gt;</span><span class="p">)</span><span class="nv">viewDelegate</span>  <span class="p">{</span>
+
+    <span class="c1">// Determine which screen is being requested, the systemType of the P2UXDefinition class has the name of the screen as given in Builder</span>
+    <span class="k">if</span> <span class="p">([</span><span class="n">def</span><span class="p">.</span><span class="n">systemType</span> <span class="nl">isEqualToString</span><span class="p">:@</span><span class="err">”</span><span class="n">home</span><span class="err">”</span><span class="p">])</span>
+    <span class="p">{</span>
+        <span class="c1">// This is our custom home screen controller instance</span>
+        <span class="k">return</span> <span class="p">[[</span><span class="n">MyHomeController</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithView</span><span class="p">:</span><span class="n">def</span> <span class="nl">behavior</span><span class="p">:</span><span class="nb">self</span> <span class="nl">cache</span><span class="p">:</span><span class="n">cache</span> <span class="nl">index</span><span class="p">:</span><span class="n">index</span> <span class="nl">data</span><span class="p">:</span><span class="n">data</span> <span class="nl">viewDelegate</span><span class="p">:</span><span class="n">viewDelegate</span><span class="p">];</span>
+    <span class="p">}</span>
+    <span class="c1">// Make sure to call the superclass if a instance is not created</span>
+    <span class="k">return</span> <span class="p">[</span><span class="nb">super</span> <span class="nl">createViewControllerWithDef</span><span class="p">:</span><span class="n">def</span> <span class="nl">cache</span><span class="p">:</span><span class="n">cache</span> <span class="nl">index</span><span class="p">:</span><span class="n">index</span> <span class="nl">data</span><span class="p">:</span><span class="n">data</span> <span class="nl">viewDelegate</span><span class="p">:</span><span class="n">viewDelegate</span><span class="p">];</span>
+<span class="p">}</span>
+<span class="k">@end</span>
+</pre></div>
+
+
+<p>Swift example: creating a custom <code class="codehilite">P2UXViewController</code></p>
+<div class="codehilite"><pre><span></span><span class="kr">override</span> <span class="kd">func</span> <span class="nf">createViewController</span><span class="p">(</span><span class="n">withDef</span> <span class="n">def</span><span class="p">:</span> <span class="n">P2UXDefinition</span><span class="p">!,</span> <span class="n">cache</span><span class="p">:</span> <span class="nb">Bool</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="nb">Any</span><span class="p">!,</span> <span class="n">data</span><span class="p">:</span> <span class="nb">Any</span><span class="p">!,</span> <span class="n">viewDelegate</span><span class="p">:</span> <span class="n">P2UXViewContainerDelegate</span><span class="p">!)</span> <span class="p">-&gt;</span> <span class="n">P2UXViewController</span><span class="p">!</span> <span class="p">{</span>
+
+    <span class="c1">// Determine which screen is being requested, the systemType of the P2UXDefinition class has the name of the screen as given in Builder</span>
+    <span class="k">if</span> <span class="n">def</span><span class="p">.</span><span class="n">systemType</span> <span class="p">==</span> <span class="s">&quot;home&quot;</span> <span class="p">{</span>
+        <span class="c1">// This is our custom home screen controller instance</span>
+        <span class="k">return</span> <span class="n">MyHomeController</span><span class="p">(</span><span class="n">view</span><span class="p">:</span> <span class="n">def</span><span class="p">,</span> <span class="n">behavior</span><span class="p">:</span> <span class="kc">self</span><span class="p">,</span> <span class="n">cache</span><span class="p">:</span> <span class="n">cache</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="n">index</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">data</span><span class="p">,</span> <span class="n">viewDelegate</span><span class="p">:</span> <span class="n">viewDelegate</span><span class="p">)</span>
+    <span class="p">}</span>        
+    <span class="c1">// Make sure to call the superclass if a instance is not created</span>
+    <span class="k">return</span> <span class="kc">super</span><span class="p">.</span><span class="n">createViewController</span><span class="p">(</span><span class="n">withDef</span><span class="p">:</span> <span class="n">def</span><span class="p">,</span> <span class="n">cache</span><span class="p">:</span> <span class="n">cache</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="n">index</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">data</span><span class="p">,</span> <span class="n">viewDelegate</span><span class="p">:</span> <span class="n">viewDelegate</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>The <code class="codehilite">P2UXViewController</code> view instance managed by your controller is created automatically based on the <code class="codehilite">P2UXDefinition</code>.</p>
+<p>Just as Screens can have custom <code class="codehilite">UIViewController</code> instances to override their behavior, so too can Panels. The <code class="codehilite">UIViewController</code> based subclass <code class="codehilite">P2UXPanelController</code> manages Panel instances. To create a custom <code class="codehilite">P2UXPanelController</code> instance, override the <code class="codehilite">P2UXAppBehavior</code> method <code class="codehilite">createPanelControllerWithDef</code> and return an instance of a <code class="codehilite">P2UXPanelController</code> subclass.</p>
+<p>Objective-C example: creating a custom P2UXPanelController</p>
+<div class="codehilite"><pre><span></span><span class="p">-</span> <span class="p">(</span><span class="n">P2UXViewController</span><span class="o">*</span><span class="p">)</span> <span class="nf">createPanelControllerWithDef:</span><span class="p">(</span><span class="n">P2UXDefinition</span><span class="o">*</span><span class="p">)</span><span class="nv">def</span>
+      <span class="nf">cache:</span><span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nv">cache</span> <span class="nf">index:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">index</span> <span class="nf">data:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">data</span>
+      <span class="nf">viewDelegate:</span><span class="p">(</span><span class="kt">id</span><span class="o">&lt;</span><span class="n">P2UXViewContainerDelegate</span><span class="o">&gt;</span><span class="p">)</span><span class="nv">viewDelegate</span> <span class="p">{</span>
+
+   <span class="c1">// Determine which screen is being requested, the systemType of the P2UXDefinition class has the name of the screen as given in Builder</span>
+   <span class="k">if</span> <span class="p">([</span><span class="n">def</span><span class="p">.</span><span class="n">systemType</span> <span class="nl">isEqualToString</span><span class="p">:@</span><span class="err">”</span><span class="n">userprofile</span><span class="err">”</span><span class="p">])</span> <span class="p">{</span>
+      <span class="c1">// This is our custom panel controller instance</span>
+      <span class="k">return</span> <span class="p">[[</span><span class="n">UserProfilePanelController</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithView</span><span class="p">:</span><span class="n">def</span> <span class="nl">behavior</span><span class="p">:</span><span class="nb">self</span> <span class="nl">cache</span><span class="p">:</span><span class="n">cache</span> <span class="nl">index</span><span class="p">:</span><span class="n">index</span> <span class="nl">data</span><span class="p">:</span><span class="n">data</span> <span class="nl">viewDelegate</span><span class="p">:</span><span class="n">viewDelegate</span><span class="p">];</span>
+   <span class="p">}</span>
+   <span class="c1">// Make sure to call the superclass if a instance is not created</span>
+   <span class="k">return</span> <span class="p">[</span><span class="nb">super</span> <span class="nl">createPanelControllerWithDef</span><span class="p">:</span><span class="n">def</span> <span class="nl">cache</span><span class="p">:</span><span class="n">cache</span> 
+      <span class="nl">index</span><span class="p">:</span><span class="n">index</span> <span class="nl">data</span><span class="p">:</span><span class="n">data</span> <span class="nl">viewDelegate</span><span class="p">:</span><span class="n">viewDelegate</span><span class="p">];</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>Swift example: creating a custom P2UXPanelController</p>
+<div class="codehilite"><pre><span></span><span class="kr">override</span> <span class="kd">func</span> <span class="nf">createPanelController</span><span class="p">(</span><span class="n">withDef</span> <span class="n">def</span><span class="p">:</span> <span class="n">P2UXDefinition</span><span class="p">!,</span> 
+      <span class="n">cache</span><span class="p">:</span> <span class="nb">Bool</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="nb">Any</span><span class="p">!,</span> <span class="n">data</span><span class="p">:</span> <span class="nb">Any</span><span class="p">!,</span> 
+      <span class="n">viewDelegate</span><span class="p">:</span> <span class="n">P2UXViewContainerDelegate</span><span class="p">!)</span> <span class="p">-&gt;</span> <span class="n">P2UXViewController</span><span class="p">!</span> <span class="p">{</span>
+
+   <span class="c1">// Determine which screen is being requested, the systemType of the</span>
+   <span class="c1">// P2UXDefinition class has the name of the screen as given in Builder</span>
+   <span class="k">if</span> <span class="n">def</span><span class="p">.</span><span class="n">systemType</span> <span class="p">==</span> <span class="s">&quot;userprofile&quot;</span> <span class="p">{</span>
+       <span class="c1">// This is our custom panel controller instance</span>
+       <span class="k">return</span> <span class="n">UserProfilePanelController</span><span class="p">(</span><span class="n">view</span><span class="p">:</span> <span class="n">def</span><span class="p">,</span> <span class="n">behavior</span><span class="p">:</span> <span class="kc">self</span><span class="p">,</span> <span class="n">cache</span><span class="p">:</span> <span class="n">cache</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="n">index</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">data</span><span class="p">,</span> <span class="n">viewDelegate</span><span class="p">:</span> <span class="n">viewDelegate</span><span class="p">)</span>
+   <span class="p">}</span>
+
+   <span class="k">return</span> <span class="kc">super</span><span class="p">.</span><span class="n">createPanelController</span><span class="p">(</span><span class="n">withDef</span><span class="p">:</span> <span class="n">def</span><span class="p">,</span> <span class="n">cache</span><span class="p">:</span> <span class="n">cache</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="n">index</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">data</span><span class="p">,</span> <span class="n">viewDelegate</span><span class="p">:</span> <span class="n">viewDelegate</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h2 id="accessing-control-instances-from-p2uxviewcontroller">Accessing Control Instances from <code class="codehilite">P2UXViewController</code><a class="headerlink" href="#accessing-control-instances-from-p2uxviewcontroller" title="Permanent link">&para;</a></h2>
+<p>To access instances of controls, <code class="codehilite">P2UXViewController</code> provides a helper method, <code class="codehilite">controlWithElementSystemTypeOrId</code>. This method takes the name or ID of the desired control and returns access to the control instance.</p>
+<p>Upon creating a new control, such as a new Button, Builder assigns it a “system type.” (Builder generates the system type from the designer’s name for the Button.) Later, the designer might decide to create an alternative variation of the Button. To prevent altering any existing controls, the developer should refer to the new version of the Button by its system type to eliminate overwriting or rewriting any code.</p>
+<p>Objective-C example: accessing a control in a <code class="codehilite">P2UXViewController</code></p>
+<div class="codehilite"><pre><span></span><span class="p">-(</span><span class="kt">void</span><span class="p">)</span> <span class="nf">viewDidLoad</span> <span class="p">{</span>
+   <span class="p">[</span><span class="nb">super</span> <span class="n">viewDidLoad</span><span class="p">];</span>
+
+   <span class="bp">UIButton</span><span class="o">*</span> <span class="n">btn</span> <span class="o">=</span> <span class="p">(</span><span class="bp">UIButton</span><span class="o">*</span><span class="p">)[</span><span class="nb">self</span> <span class="nl">controlWithElementSystemTypeOrId</span><span class="p">:@</span><span class="err">”</span><span class="n">show</span> <span class="n">btn</span><span class="err">”</span><span class="p">];</span>
+   <span class="k">if</span> <span class="p">(</span><span class="n">btn</span> <span class="o">!=</span> <span class="nb">nil</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">btn</span><span class="p">.</span><span class="n">enabled</span> <span class="o">=</span> <span class="nb">NO</span><span class="p">;</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>Swift example: accessing a control in a <code class="codehilite">P2UXViewController</code></p>
+<div class="codehilite"><pre><span></span><span class="kr">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kc">super</span><span class="p">.</span><span class="n">viewDidLoad</span><span class="p">()</span>
+
+   <span class="k">if</span> <span class="kd">let</span> <span class="nv">btn</span> <span class="p">=</span> <span class="kc">self</span><span class="p">.</span><span class="n">control</span><span class="p">(</span><span class="n">withElementSystemTypeOrId</span><span class="p">:</span> <span class="s">&quot;show btn&quot;</span><span class="p">)</span> <span class="k">as</span><span class="p">?</span> <span class="bp">UIButton</span> <span class="p">{</span>
+      <span class="n">btn</span><span class="p">.</span><span class="n">isEnabled</span> <span class="p">=</span> <span class="kc">false</span><span class="p">;</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h2 id="handling-events-from-p2uxviewcontroller">Handling Events from P2UXViewController<a class="headerlink" href="#handling-events-from-p2uxviewcontroller" title="Permanent link">&para;</a></h2>
+<p>End-users of a completed app will interact with controls in a Screen or Panel to generate events. These interactions will, in turn, trigger actions. Typically the PRL handles events directly through event interactions set up in Builder. In some cases, additional custom code may be needed to trigger actions not directly supported by P2UX.</p>
+<p>The PRL provides a chain of event handlers that propagate an event through different components. Handling events at any point in the propagation chain provides a way to trigger custom code and also (optionally) to stop the propagation of the event at any specific handler.</p>
+<p>Event propagation follows a set pattern.</p>
+<p>First, events are relayed to the <code class="codehilite">P2UXViewController</code> for the current Screen or Panel. Next, they pass to <code class="codehilite">P2UXAppBehavior</code>. Finally, events are handled by the custom instance of the <code class="codehilite">UIView</code> itself. If none of these components halt event propagation, the PRL will then handle any interactions defined for the event in Builder.</p>
+<p>The <code class="codehilite">P2UXViewController</code> contains helper methods that handle a variety of events when they occur. These methods give the developer a chance to integrate any custom code needed from the basic event level without triggering any custom actions.</p>
+<p>Most standard control events are routed through the <code class="codehilite">P2UXViewController</code> instance. Handling these events is a matter of overriding the appropriate event method in your <code class="codehilite">P2UXViewController</code> subclass. Event propagation can be allowed to continue or not depending on the return value from the event handler methods.</p>
+<p>Objective-C example: handling a Button press event in <code class="codehilite">P2UXViewController</code> subclass</p>
+<div class="codehilite"><pre><span></span><span class="p">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span> <span class="nf">handleButtonClick:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">sender</span> <span class="nf">element:</span><span class="p">(</span><span class="n">P2UXElementInstance</span> <span class="o">*</span><span class="p">)</span><span class="nv">element</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">([</span><span class="n">element</span><span class="p">.</span><span class="n">systemType</span> <span class="nl">isEqualToString</span><span class="p">:</span><span class="s">@&quot;okbtn&quot;</span><span class="p">])</span> <span class="p">{</span>
+        <span class="c1">// take some custom action here for the &quot;okbtn&quot;</span>
+
+        <span class="c1">// return YES to indicate the event was handled and propagation </span>
+        <span class="c1">// shouldn&#39;t continue</span>
+        <span class="k">return</span> <span class="nb">YES</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nb">NO</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>Swift example: handling a Button press event in <code class="codehilite">P2UXViewController</code> subclass</p>
+<div class="codehilite"><pre><span></span><span class="kr">override</span> <span class="kd">func</span> <span class="nf">handleButtonClick</span><span class="p">(</span><span class="kc">_</span> <span class="n">sender</span><span class="p">:</span> <span class="nb">Any</span><span class="p">!,</span> <span class="n">element</span><span class="p">:</span> <span class="n">P2UXElementInstance</span><span class="p">!)</span> <span class="p">-&gt;</span> <span class="nb">Bool</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="n">element</span><span class="p">.</span><span class="n">systemType</span> <span class="p">==</span> <span class="s">&quot;okbtn&quot;</span> <span class="p">{</span>
+        <span class="c1">// take some custom action here for the &quot;okbtn&quot;</span>
+
+        <span class="c1">// return true to indicate the event was handled and propagation </span>
+        <span class="c1">// shouldn&#39;t continue</span>
+        <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h2 id="adding-custom-ui-controls">Adding Custom UI Controls<a class="headerlink" href="#adding-custom-ui-controls" title="Permanent link">&para;</a></h2>
+<p>UI Controls are the visual components of a Screen or Panel created in the Builder tool. These can be interactive, like Buttons or Sliders, or non-interactive, like Shapes or Text. Although P2UX offers many different UI Controls directly creatable and usable in Builder, a specific application may require developer-defined UI controls. Builder provides a Custom Control component that can be added to a Screen or Panel and then replaced using custom code.</p>
+<p>Any <code class="codehilite">UIView</code> based control can be injected into your Screens and Panels via a Custom Control. This allows for existing custom controls or third party custom controls to be used with your P2UX based applications.</p>
+<p>The PRL manages the size and position of any custom controls defined using Builder. To provide an instance of a custom control, override the method <code class="codehilite">createControlWithType</code> in your <code class="codehilite">P2UXAppBehavior</code> subclass and return the <code class="codehilite">UIView</code> subclassed instance of your control. The first parameter passed to this method, type, is the name of the control set when you created the custom control in Builder. P2UX will pass you the initial size to use with your Custom Control as well as a few other components that can be used to access any custom information created with your control in Builder.</p>
+<p>The <code class="codehilite">elementInstance</code> parameter contains all the parameters specified using Builder for the control via its <code class="codehilite">itemSpec</code> member. Even though the parent <code class="codehilite">UIView</code> is passed to the create method, you should not add the instance of your <code class="codehilite">UIView</code> control to the parent as this is managed by P2UX when you return the instance of the control.</p>
+<p>Objective-C example: creating a custom control in <code class="codehilite">P2UXAppBehavior</code> subclass:</p>
+<div class="codehilite"><pre><span></span><span class="p">-</span> <span class="p">(</span><span class="bp">UIView</span><span class="o">*</span><span class="p">)</span> <span class="nf">createControlWithType:</span><span class="p">(</span><span class="bp">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">type</span> <span class="nf">elementInstance:</span><span class="p">(</span><span class="n">P2UXElementInstance</span> <span class="o">*</span><span class="p">)</span><span class="nv">elementInstance</span> <span class="nf">frame:</span><span class="p">(</span><span class="bp">CGRect</span><span class="p">)</span><span class="nv">frame</span> <span class="nf">viewDelegate:</span><span class="p">(</span><span class="kt">id</span><span class="o">&lt;</span><span class="n">P2UXViewContainerDelegate</span><span class="o">&gt;</span><span class="p">)</span><span class="nv">viewDelegate</span> <span class="nf">index:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">index</span> <span class="nf">data:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">data</span> <span class="nf">parent:</span><span class="p">(</span><span class="bp">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">parent</span> <span class="p">{</span>
+
+    <span class="k">if</span> <span class="p">([</span><span class="n">type</span> <span class="nl">isEqualToString</span><span class="p">:</span><span class="s">@&quot;graphcontrol&quot;</span><span class="p">])</span> <span class="p">{</span>
+
+        <span class="n">CustomGraph</span><span class="o">*</span> <span class="n">graph</span> <span class="o">=</span> <span class="p">[[</span><span class="n">CustomGraph</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithFrame</span><span class="p">:</span><span class="n">frame</span><span class="p">];</span>
+        <span class="bp">NSDictionary</span><span class="o">*</span> <span class="n">graphOpts</span> <span class="o">=</span> <span class="p">[</span><span class="n">elementInstance</span><span class="p">.</span><span class="n">itemSpec</span> <span class="nl">objectForKey</span><span class="p">:</span><span class="s">@&quot;graphopts&quot;</span><span class="p">];</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">graphOpts</span> <span class="o">!=</span> <span class="nb">nil</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">// handle extra parameters here, for this example we defined an object</span>
+            <span class="c1">// in the itemspec of the control</span>
+            <span class="c1">// in Builder named &#39;graphopts&#39; which has information specific to </span>
+            <span class="c1">// our graph object</span>
+            <span class="n">graph</span><span class="p">.</span><span class="n">opts</span> <span class="o">=</span> <span class="n">graphOpts</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">graph</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="p">[</span><span class="nb">super</span> <span class="nl">createControlWithType</span><span class="p">:</span><span class="n">type</span> <span class="nl">elementInstance</span><span class="p">:</span><span class="n">elementInstance</span> <span class="nl">frame</span><span class="p">:</span><span class="n">frame</span> <span class="nl">viewDelegate</span><span class="p">:</span><span class="n">viewDelegate</span> <span class="nl">index</span><span class="p">:</span><span class="n">index</span> <span class="nl">data</span><span class="p">:</span><span class="n">data</span> <span class="nl">parent</span><span class="p">:</span><span class="n">parent</span><span class="p">];</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>Swift example: creating a custom control in <code class="codehilite">P2UXAppBehavior</code> subclass:</p>
+<div class="codehilite"><pre><span></span><span class="kr">override</span> <span class="kd">func</span> <span class="nf">createControl</span><span class="p">(</span><span class="n">withType</span> <span class="n">type</span><span class="p">:</span> <span class="nb">String</span><span class="p">!,</span> <span class="n">elementInstance</span><span class="p">:</span> <span class="n">P2UXElementInstance</span><span class="p">!,</span> <span class="n">frame</span><span class="p">:</span> <span class="bp">CGRect</span><span class="p">,</span> <span class="n">viewDelegate</span><span class="p">:</span> <span class="n">P2UXViewContainerDelegate</span><span class="p">!,</span> <span class="n">index</span><span class="p">:</span> <span class="nb">Any</span><span class="p">!,</span> <span class="n">data</span><span class="p">:</span> <span class="nb">Any</span><span class="p">!,</span> <span class="n">parent</span><span class="p">:</span> <span class="bp">UIView</span><span class="p">!)</span> <span class="p">-&gt;</span> <span class="bp">UIView</span><span class="p">!</span> <span class="p">{</span>
+
+    <span class="k">if</span> <span class="n">type</span> <span class="p">==</span> <span class="s">&quot;graphcontrol&quot;</span> <span class="p">{</span>
+        <span class="kd">let</span> <span class="nv">graph</span> <span class="p">:</span> <span class="n">CustomGraph</span> <span class="p">=</span> <span class="n">CustomGraph</span><span class="p">(</span><span class="n">frame</span><span class="p">:</span> <span class="n">frame</span><span class="p">);</span>
+        <span class="k">if</span> <span class="kd">let</span> <span class="nv">graphOpts</span> <span class="p">=</span> <span class="n">elementInstance</span><span class="p">.</span><span class="n">itemSpec</span><span class="p">[</span><span class="s">&quot;graphopts&quot;</span><span class="p">]</span> <span class="k">as</span><span class="p">?</span> <span class="bp">NSDictionary</span> <span class="p">{</span>
+            <span class="c1">// handle extra parameters here, for this example we defined an object </span>
+            <span class="c1">// in the itemspec of the control</span>
+            <span class="c1">// in Builder named &#39;graphopts&#39; which has information specific to </span>
+            <span class="c1">// our graph object</span>
+            <span class="n">graph</span><span class="p">.</span><span class="n">opts</span> <span class="p">=</span> <span class="n">graphOpts</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">graph</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="kc">super</span><span class="p">.</span><span class="n">createControl</span><span class="p">(</span><span class="n">withType</span><span class="p">:</span> <span class="n">type</span><span class="p">,</span> <span class="n">elementInstance</span><span class="p">:</span> <span class="n">elementInstance</span><span class="p">,</span> <span class="n">frame</span><span class="p">:</span> <span class="n">frame</span><span class="p">,</span> <span class="n">viewDelegate</span><span class="p">:</span> <span class="n">viewDelegate</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="n">index</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">data</span><span class="p">,</span> <span class="n">parent</span><span class="p">:</span> <span class="n">parent</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h2 id="adding-custom-screenspanels">Adding Custom Screens/Panels<a class="headerlink" href="#adding-custom-screenspanels" title="Permanent link">&para;</a></h2>
+<p>In addition to using a <code class="codehilite">UIViewController</code> based class to override behavior for an application Screen or Panel, the actual Screen or Panel instance can also be overridden to provide any custom code needed for the hosted <code class="codehilite">UIView</code> itself.</p>
+<p>P2UX will request an instance from <code class="codehilite">P2UXAppBehavior</code> when the Screen or Panel is created. If no instance is provided, P2UX will generate a standard instance of the Screen or Panel.</p>
+<p>To provide a custom Screen instance, override the method <code class="codehilite">createScreenWithDef</code> from a <code class="codehilite">P2UXAppBehavior</code> subclass and return an instance of <code class="codehilite">P2UXScreen</code>. To provide a custom Panel instance, override the method <code class="codehilite">createPanelWithDef</code> and return an instance of <code class="codehilite">P2UXPanel</code>. (Both <code class="codehilite">P2UXScreen</code> and <code class="codehilite">P2UXPanel</code> are <code class="codehilite">UIView</code> based subclasses that add some additional helper methods. These methods make it easier to access screen components.)</p>
+<p>Objective-C example: creating a custom Screen or Panel instance in P2UXAppBehavior subclass</p>
+<div class="codehilite"><pre><span></span><span class="c1">// For custom Screen instances</span>
+<span class="p">-(</span><span class="n">P2UXScreen</span><span class="o">*</span><span class="p">)</span> <span class="nf">createScreenWithDef:</span><span class="p">(</span><span class="n">P2UXDefinition</span> <span class="o">*</span><span class="p">)</span><span class="nv">def</span> <span class="nf">rect:</span><span class="p">(</span><span class="bp">CGRect</span><span class="p">)</span><span class="nv">rect</span> <span class="nf">index:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">index</span> <span class="nf">data:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">data</span> <span class="nf">viewDelegate:</span><span class="p">(</span><span class="kt">id</span><span class="o">&lt;</span><span class="n">P2UXViewContainerDelegate</span><span class="o">&gt;</span><span class="p">)</span><span class="nv">viewDelegate</span> <span class="p">{</span>
+
+    <span class="c1">// If the screen “systemType” matches the name of the screen, return</span>
+    <span class="c1">// the custom screen instance</span>
+    <span class="k">if</span> <span class="p">([</span><span class="n">def</span><span class="p">.</span><span class="n">systemType</span> <span class="nl">isEqualToString</span><span class="p">:</span><span class="s">@&quot;home&quot;</span><span class="p">])</span> <span class="p">{</span>
+        <span class="c1">// Here we return an instance of HomeScreen which is a </span>
+        <span class="c1">// subclass of P2UXScreen</span>
+        <span class="k">return</span> <span class="p">[[</span><span class="n">HomeScreen</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithFrame</span><span class="p">:</span><span class="n">rect</span> <span class="nl">contents</span><span class="p">:</span><span class="n">def</span> <span class="nl">viewDelegate</span><span class="p">:</span><span class="n">viewDelegate</span> <span class="nl">index</span><span class="p">:</span><span class="n">index</span> <span class="nl">data</span><span class="p">:</span><span class="n">data</span><span class="p">];</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="p">[</span><span class="nb">super</span> <span class="nl">createScreenWithDef</span><span class="p">:</span><span class="n">def</span> <span class="nl">rect</span><span class="p">:</span><span class="n">rect</span> <span class="nl">index</span><span class="p">:</span><span class="n">index</span> <span class="nl">data</span><span class="p">:</span><span class="n">data</span> <span class="nl">viewDelegate</span><span class="p">:</span><span class="n">viewDelegate</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="c1">// For custom panel instances</span>
+<span class="p">-</span> <span class="p">(</span><span class="n">P2UXPanel</span><span class="o">*</span><span class="p">)</span> <span class="nf">createPanelWithDef:</span><span class="p">(</span><span class="n">P2UXDefinition</span> <span class="o">*</span><span class="p">)</span><span class="nv">def</span> <span class="nf">rect:</span><span class="p">(</span><span class="bp">CGRect</span><span class="p">)</span><span class="nv">rect</span> <span class="nf">index:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">index</span> <span class="nf">data:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">data</span> <span class="nf">viewDelegate:</span><span class="p">(</span><span class="kt">id</span><span class="o">&lt;</span><span class="n">P2UXViewContainerDelegate</span><span class="o">&gt;</span><span class="p">)</span><span class="nv">viewDelegate</span> <span class="p">{</span>
+
+    <span class="c1">// if this is the userinfo panel, return the custom UserInfoPanel instance</span>
+    <span class="k">if</span> <span class="p">([</span><span class="n">def</span><span class="p">.</span><span class="n">systemType</span> <span class="nl">isEqualToString</span><span class="p">:</span><span class="s">@&quot;userinfo&quot;</span><span class="p">])</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">[[</span><span class="n">UserInfoPanel</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithFrame</span><span class="p">:</span><span class="n">rect</span> <span class="nl">contents</span><span class="p">:</span><span class="n">def</span> <span class="nl">viewDelegate</span><span class="p">:</span><span class="n">viewDelegate</span> <span class="nl">index</span><span class="p">:</span><span class="n">index</span> <span class="nl">data</span><span class="p">:</span><span class="n">data</span><span class="p">];</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="p">[</span><span class="nb">super</span> <span class="nl">createPanelWithDef</span><span class="p">:</span><span class="n">def</span> <span class="nl">rect</span><span class="p">:</span><span class="n">rect</span> <span class="nl">index</span><span class="p">:</span><span class="n">index</span> <span class="nl">data</span><span class="p">:</span><span class="n">data</span> <span class="nl">viewDelegate</span><span class="p">:</span><span class="n">viewDelegate</span><span class="p">];</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>Swift example: creating a custom Screen or Panel instance in <code class="codehilite">P2UXAppBehavior</code> subclass</p>
+<div class="codehilite"><pre><span></span><span class="c1">// For custom Screen instances</span>
+<span class="kr">override</span> <span class="kd">func</span> <span class="nf">createScreen</span><span class="p">(</span><span class="n">withDef</span> <span class="n">def</span><span class="p">:</span> <span class="n">P2UXDefinition</span><span class="p">!,</span> <span class="n">rect</span><span class="p">:</span> <span class="bp">CGRect</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="nb">Any</span><span class="p">!,</span> <span class="n">data</span><span class="p">:</span> <span class="nb">Any</span><span class="p">!,</span> <span class="n">viewDelegate</span><span class="p">:</span> <span class="n">P2UXViewContainerDelegate</span><span class="p">!)</span> <span class="p">-&gt;</span> <span class="n">P2UXScreen</span><span class="p">!</span> <span class="p">{</span>
+
+    <span class="c1">// If the screen “systemType” matches the name of the screen, return</span>
+    <span class="c1">// the custom screen instance.</span>
+    <span class="k">if</span> <span class="n">def</span><span class="p">.</span><span class="n">systemType</span> <span class="p">==</span> <span class="s">&quot;home&quot;</span> <span class="p">{</span>   
+       <span class="c1">// Here we return an instance of HomeScreen which is a </span>
+       <span class="c1">// subclass of P2UXScreen</span>
+       <span class="k">return</span> <span class="n">HomeScreen</span><span class="p">(</span><span class="n">frame</span><span class="p">:</span> <span class="n">rect</span><span class="p">,</span> <span class="n">contents</span><span class="p">:</span> <span class="n">def</span><span class="p">,</span> <span class="n">viewDelegate</span><span class="p">:</span> <span class="n">viewDelegate</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="n">index</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">data</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="kc">super</span><span class="p">.</span><span class="n">createScreen</span><span class="p">(</span><span class="n">withDef</span><span class="p">:</span> <span class="n">def</span><span class="p">,</span> <span class="n">rect</span><span class="p">:</span> <span class="n">rect</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="n">index</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">data</span><span class="p">,</span> <span class="n">viewDelegate</span><span class="p">:</span> <span class="n">viewDelegate</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// For custom panel instances</span>
+<span class="kr">override</span> <span class="kd">func</span> <span class="nf">createPanel</span><span class="p">(</span><span class="n">withDef</span> <span class="n">def</span><span class="p">:</span> <span class="n">P2UXDefinition</span><span class="p">!,</span> <span class="n">rect</span><span class="p">:</span> <span class="bp">CGRect</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="nb">Any</span><span class="p">!,</span> <span class="n">data</span><span class="p">:</span> <span class="nb">Any</span><span class="p">!,</span> <span class="n">viewDelegate</span><span class="p">:</span> <span class="n">P2UXViewContainerDelegate</span><span class="p">!)</span> <span class="p">-&gt;</span> <span class="n">P2UXPanel</span><span class="p">!</span> <span class="p">{</span>
+
+    <span class="c1">// If the panel “systemType” matches the name of the screen, return</span>
+    <span class="c1">// the custom panel instance.</span>
+    <span class="k">if</span> <span class="n">def</span><span class="p">.</span><span class="n">systemType</span> <span class="p">==</span> <span class="s">&quot;userinfo&quot;</span> <span class="p">{</span>
+           <span class="c1">// Here we return an instance of HomeScreen which is a </span>
+           <span class="c1">// subclass of P2UXScreen</span>
+           <span class="k">return</span> <span class="n">UserInfoPanel</span><span class="p">(</span><span class="n">frame</span><span class="p">:</span> <span class="n">rect</span><span class="p">,</span> <span class="n">contents</span><span class="p">:</span> <span class="n">def</span><span class="p">,</span> <span class="n">viewDelegate</span><span class="p">:</span> <span class="n">viewDelegate</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="n">index</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">data</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="kc">super</span><span class="p">.</span><span class="n">createPanel</span><span class="p">(</span><span class="n">withDef</span><span class="p">:</span> <span class="n">def</span><span class="p">,</span> <span class="n">rect</span><span class="p">:</span> <span class="n">rect</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="n">index</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">data</span><span class="p">,</span> <span class="n">viewDelegate</span><span class="p">:</span> <span class="n">viewDelegate</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../quickstart/" title="Quick Start" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Quick Start
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../android/quickstart/" title="Quick Start" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Quick Start
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2017 P2UX, Inc.
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-f3ab9e5ff8.js"></script>
+      
+      
+      <script>app.initialize({url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
