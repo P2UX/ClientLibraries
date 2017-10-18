@@ -1,0 +1,43 @@
+site_name: P2UX Developer
+
+# Copyright
+copyright: 'Copyright &copy; 2017 P2UX, Inc.'
+
+theme: 'material'
+
+markdown: kramdown
+    
+markdown_extensions:
+  - admonition
+  - codehilite  
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.tasklist(custom_checkbox=true)
+  - pymdownx.tilde      
+  - toc(permalink=true)
+  
+extra:
+  logo: 'images/logo.png' 
+  palette:
+    primary: 'blue grey'
+    
+extra_css:
+  - 'stylesheets/extra.css'
+  
+pages:
+  - Latest News: 'index.md'
+  - iOS/tvOS:
+      - Quick Start: 'ios/quickstart.md'
+      - Custom Code: 'ios/customcode.md'
+  - Android:
+      - Quick Start: 'android/quickstart.md'
+      - Custom Code: 'android/customcode.md'
+  - Data Sources:
+      - Overview: 'datasources/overview.md'
