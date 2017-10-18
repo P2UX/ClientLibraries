@@ -51,7 +51,7 @@ typedef NS_ENUM(NSInteger, ContentManagerError) {
 }
 @property (nonatomic) id<P2UXContentManagerDelegate> delegate;
 @property (nonatomic, readonly) NSInteger count;
-@property (nonatomic) BOOL locked;
+@property (nonatomic) NSString* env;
 
 - (void) addDownloadFromURL:(NSString*)downloadURL;
 - (void) addDownloadRequest:(P2UXContentItem*)item;

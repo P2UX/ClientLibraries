@@ -14,4 +14,5 @@
 - (BOOL) setVarValue:(id)value forKey:(NSString*)key usingIdent:(NSString *)ident withType:(NSInteger)type notify:(BOOL)notify itemspec:(NSDictionary*)itemspec;
 - (BOOL) setAppState:(NSString*)appState usingIdent:(NSString*) ident;
 - (NSString*) appStateForIdent:(NSString*)ident;
+- (id)   staticValueForKey:(NSString*)key;
 @end

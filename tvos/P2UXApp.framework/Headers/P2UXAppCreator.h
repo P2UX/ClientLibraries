@@ -12,6 +12,7 @@
 extern NSString* _Nonnull const P2UXAppCreator_Opt_Env;
 extern NSString* _Nonnull const P2UXAppCreator_Opt_Env_Production;
 extern NSString* _Nonnull const P2UXAppCreator_Opt_Env_Stage;
+extern NSString* _Nonnull const P2UXAppCreator_Opt_Env_Recent;
 extern NSString* _Nonnull const P2UXAppCreator_Opt_LogLevel;
 
 @protocol P2UXAppCreatorDelegate <NSObject>
@@ -21,6 +22,7 @@ extern NSString* _Nonnull const P2UXAppCreator_Opt_LogLevel;
 - (P2UXAppLoadingViewController* _Nonnull) createLoadingViewController;
 - (P2UXAppErrorViewController* _Nonnull) createErrorViewController;
 - (void) loadedApplication:(nonnull P2UXAppDefinition*)appDef;
+- (BOOL) updateComplete:(BOOL)success manual:(BOOL)manual;
 @end
 
 @interface P2UXAppCreator : NSObject<P2UXAppLoaderDelegate>

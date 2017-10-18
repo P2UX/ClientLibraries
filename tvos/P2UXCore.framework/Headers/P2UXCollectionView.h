@@ -11,6 +11,7 @@
 #import <P2UXCore/P2UXActionDelegate.h>
 #import <P2UXCore/P2UXBaseCtrl.h>
 #import <P2UXCore/P2UXControl.h>
+#import <P2UXCore/P2UXScrollbarDelegate.h>
 
 @class P2UXElementInstance, P2UXContainerElement;
 
@@ -25,13 +26,13 @@ typedef NS_ENUM(NSInteger, P2UXCollectionView_DataType) {
     P2UXCollectionView_DataType_Static
 };
 
-@interface P2UXCollectionView : UICollectionView <P2UXControl, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+@interface P2UXCollectionView : UICollectionView <P2UXControl, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, P2UXScrollbarDelegate>
 {
-    P2UXContainerElement*         _elem;
+    P2UXContainerElement*       _elem;
 
     NSInteger                   _selectedItem;
     NSInteger                   _highlightItem;
-    P2UXScrollStyle               _scrollStyle;
+    P2UXScrollStyle             _scrollStyle;
     CGFloat                     _scrollRefreshRange;
     BOOL                        _grid;
     CGSize                      _itemSize;
@@ -53,5 +54,9 @@ typedef NS_ENUM(NSInteger, P2UXCollectionView_DataType) {
 - (id) initAsGridWithFrame:(CGRect)frame elemInst:(P2UXElementInstance*)elemInst uipath:(NSString*)path ext:(BOOL)ext handler:(id<P2UXActionDelegate>)handler viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate index:(id) index;
 - (void) handleReorderItem:(UILongPressGestureRecognizer*)recognizer;
 - (UICollectionViewLayout*) layoutForContents;
+
+#pragma mark - P2UXScrollbarDelegate;
+- (void) setScrollPos:(NSInteger)pos animated:(BOOL)animated;
+- (void) endScrollPagingAnimated:(BOOL)animated;
 
 @end

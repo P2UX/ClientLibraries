@@ -19,7 +19,7 @@
 + (BOOL)            deleteFileWithFullPath:(NSString*)path;
 + (NSString*)       createAppDirectory:(NSString*)name;
 + (NSURL*)          createAppDirectoryURL:(NSString*)name;
-+ (NSString*)       getPathForType:(NSString*)type itemId:(NSString*)itemId;
++ (NSString*)       getPathForType:(NSString*)type itemId:(NSString*)itemId user:(NSString*)user;
 + (BOOL)            contentExists:(NSString*)type itemId:(NSString*)itemId;
 + (BOOL)            contentExists:(NSString*)type itemId:(NSString*)itemId ext:(NSString*)ext;
 

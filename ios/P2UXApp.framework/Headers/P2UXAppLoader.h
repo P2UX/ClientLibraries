@@ -52,7 +52,7 @@ typedef enum {
 @property (nonatomic) NSArray* resources;
 @property (nonatomic) NSString* contentKey;
 @property (nonatomic, weak) id<P2UXAppLoaderDelegate> delegate;
-@property (nonatomic) BOOL locked;
+@property (nonatomic) NSString* env;
 
 - (void) reauth;
 - (void) requestUpdateCheck;

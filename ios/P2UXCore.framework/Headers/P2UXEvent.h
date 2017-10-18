@@ -37,6 +37,7 @@ typedef NS_ENUM(NSInteger, P2UXElementEvent) {
     P2UXElementEvent_FingerprintAuth,
     P2UXElementEvent_AuthInput,
     P2UXElementEvent_AuthComplete,
+    P2UXElementEvent_ShowView,
     P2UXElementEvent_UserAuth = 200
 };
 
