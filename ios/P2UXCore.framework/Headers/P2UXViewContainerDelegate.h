@@ -26,6 +26,8 @@
 - (void)        handleEvents:(NSArray*)events element:(P2UXElementInstance*)element source:(id)source result:(NSInteger)result;
 - (BOOL)        setCurrentView:(NSString*)viewId backHistory:(BOOL)backHistory;
 - (BOOL)        setCurrentView:(NSString*)viewId backHistory:(BOOL)backHistory replace:(BOOL)replace data:(id)data transition:(P2UXEventTransition*)transition toggle:(BOOL)toggle index:(id)index clearDefault:(BOOL)clearDefault rect:(NSDictionary*)rect modal:(BOOL)modal;
+- (void)        peekScreen:(NSString*)ident spec:(NSDictionary*)spec index:(id)index data:(id)data transition:(P2UXEventTransition*)transition;
+
 - (void)        handleBackToView:(NSString*)viewId transition:(P2UXEventTransition *)transition;
 - (void)        reloadContents;
 - (void)        addLayoutToBackStack:(UIView*)view layout:(NSString*)layout transient:(BOOL)transient duration:(float)duration replace:(BOOL)replace clear:(BOOL)clear;

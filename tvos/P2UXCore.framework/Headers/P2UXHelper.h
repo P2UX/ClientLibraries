@@ -66,4 +66,5 @@ extern NSString* const CreateViewKey_RequiresSizeUpdate;
 + (NSShadow*) shadowFromSpec:(NSDictionary*)spec size:(CGSize)size viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate;
 + (NSDictionary*) reverseGradientColors:(NSDictionary*)gradient;
 
++(UIImage*) imageFromSVGData:(NSData*)data size:(CGSize)size colorize:(id)colorize viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate;
 @end
