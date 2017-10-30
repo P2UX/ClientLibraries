@@ -51,6 +51,8 @@ typedef NS_ENUM(NSInteger,P2UXElementAction) {
     P2UXElementAction_CancelAnimate,
     P2UXElementAction_Fingerprint,
     P2UXElementAction_AuthUser,
+    P2UXElementAction_TextToSpeech,
+    P2UXElementAction_PeekScreen,
     P2UXElementAction_UserAuthCode = 200,
     P2UXElementAction_UserAuthPwd = 201
 };

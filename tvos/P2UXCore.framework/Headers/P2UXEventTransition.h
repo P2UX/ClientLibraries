@@ -61,9 +61,11 @@ typedef void (^TransitionComplete)(UIView* view, BOOL reverse);
 @property (nonatomic) BOOL      valid;
 @property (nonatomic) BOOL      isDefault;
 @property (nonatomic) BOOL      isFullScreen;
+@property (nonatomic, readonly) P2UXTransitionEasing easing;
 
 + (AHEasingFunction) easing:(NSDictionary*)transition;
 + (P2UXEventTransition*) transitionForLayout:(NSString*)layout duration:(float)duration easing:(P2UXTransitionEasing)easing;
++ (UIViewAnimationOptions) optionsFromEasing:(P2UXTransitionEasing)easing;
 
 - (id)   initWithDictionary:(NSDictionary*)desc;
 - (void) cleanup;
@@ -73,4 +75,6 @@ typedef void (^TransitionComplete)(UIView* view, BOOL reverse);
 - (void) addDelegate:(__weak id<P2UXEventTransitionDelegate>)delegate;
 - (void) removeDelegate:(id<P2UXEventTransitionDelegate>)delegate;
 - (void) applyTransitionsToAttribute:(UICollectionViewLayoutAttributes*)attr parentBounds:(CGRect)parentBounds;
+- (void) animateWithAnimations:(void (^)(void))animations completion:(void (^)(BOOL finished))completion;
+- (void) animateWithDuration:(CGFloat)duration options:(UIViewAnimationOptions)options animations:(void (^)(void))animations completion:(void (^)(BOOL finished))completion;
 @end
