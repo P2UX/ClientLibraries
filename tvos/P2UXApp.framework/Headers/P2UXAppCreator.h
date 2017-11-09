@@ -1,5 +1,5 @@
 //
-//  P2UXAppP2UXAppCreator.h
+//  P2UXAppCreator.h
 //  P2UXApp
 //
 //  Created by Stephen Schalkhauser on 6/9/17.
@@ -27,7 +27,7 @@ extern NSString* _Nonnull const P2UXAppCreator_Opt_LogLevel;
 
 @interface P2UXAppCreator : NSObject<P2UXAppLoaderDelegate>
 @property (nonnull, nonatomic, readonly) P2UXAppController* appController;
-
+@property (nonnull, nonatomic, readonly) UIWindow* window;
 
 /**
  Create a new application instance from an application authorization key. This should be called from the AppDelegate application didFinishLaunchingWithOptions method to 
@@ -37,9 +37,8 @@ extern NSString* _Nonnull const P2UXAppCreator_Opt_LogLevel;
  @param opts A dictionary of options for the application. Allows customization of the app by providing different settings for the Environment (Stage or Production) and the logging level. If omitted, the default is Production environment and log level of Error.
  @param resources Allows for specification of how the application resources are to be handled. Each item in the supplied NSArray is a NSDictionary that defines how the resources for a particular form factor are managed. Options exist for specifying embedded versus remote resources as well for how to update the resources.
  @param delegate A P2UXAppCreatorDelegate instance. Delegate methods are called during application creation to allow for providing custom code.
- @return Returns an instance of a UIWindow. This window is automatically setup to be the current active window for the application.
  */
-+ (UIWindow* _Nonnull) createApplicationWithKey:(nonnull NSString*)appkey opts:(nullable NSDictionary*)opts resources:(nullable NSArray*)resources delegate:(nullable id<P2UXAppCreatorDelegate>)delegate;
++ (void) createApplicationWithKey:(nonnull NSString*)appkey opts:(nullable NSDictionary*)opts resources:(nullable NSArray*)resources delegate:(nullable id<P2UXAppCreatorDelegate>)delegate;
 /// :nodoc:
 + (BOOL) openURL:(nonnull NSURL*)url withAnnotation:(nullable id)annotation;
 /// :nodoc:
@@ -47,6 +46,7 @@ extern NSString* _Nonnull const P2UXAppCreator_Opt_LogLevel;
 /// :nodoc:
 + (void) reloadCurrentApplicationAndForceUpdate:(BOOL)forceLoad;
 
++ (nonnull P2UXAppController*) currentAppController;
 #if !TARGET_OS_TV
 /// :nodoc:
 + (UIInterfaceOrientationMask) supportedInterfaceOrientationsForWindow:(nonnull UIWindow *)window;

@@ -22,7 +22,7 @@ extern NSString* const UPDATE_CONTENTS_NOW;
  The Application controller
  @discussion Provides management of the screen workflow for a screen window, application level event handlers and application data. All screen/panel level event requests are funneled back through this object.
  */
-@interface P2UXAppController : UIWindow<P2UXViewContainerDelegate, P2UXEventHandlerDelegate,
+@interface P2UXAppController : UIViewController<P2UXViewContainerDelegate, P2UXEventHandlerDelegate,
     UINavigationControllerDelegate,
     P2UXModalLayerDelegate,
     P2UXPanelDelegate>
@@ -56,8 +56,10 @@ extern NSString* const UPDATE_CONTENTS_NOW;
  */
 @property (nonatomic) BOOL primary;
 @property (nonatomic, readonly) P2UXScreenNavigation* headerNavigation;
+@property (nonatomic) CGFloat scale;
 
 - (instancetype) initWithFrame:(CGRect)frame;
+- (instancetype) initWithExplicitSize:(CGRect)frame;
 - (instancetype) initWithFormFactor:(P2UXAppFormFactor*)ff def:(P2UXAppDefinition*)def;
 - (instancetype) initWithFormFactor:(P2UXAppFormFactor*)ff def:(P2UXAppDefinition*)def size:(CGSize)size;
 
@@ -142,13 +144,13 @@ extern NSString* const UPDATE_CONTENTS_NOW;
 - (CGRect)  containerBounds;
 - (OSColorClass*) colorWithId:(NSString*)colorWithId;
 - (NSDictionary*) gradientWithId:(NSString*)gradientWithId;
-- (CGFloat) scale;
 - (UIView*) overlayParent;
 - (P2UXView*) createViewItemWithDef:(P2UXDefinition*)def rect:(CGRect)rect cache:(BOOL)cache index:(id)index data:(id)data;
 - (void) handleTimeUpdate;
 - (id<P2UXHelperDelegate>) helperDelegate;
 - (void) showOverlaysForCurrentView;
 - (void) removeOverlay:(NSString*)removeOverlay;
+- (void) peekScreen:(NSString*)ident spec:(NSDictionary*)spec index:(id)index data:(id)data transition:(P2UXEventTransition*)transition;
 
 #pragma mark - P2UXPanelDelegate
 - (void) viewDidClose:(id)view;

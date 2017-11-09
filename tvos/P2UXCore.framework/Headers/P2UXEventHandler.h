@@ -74,6 +74,7 @@ extern NSString* const P2UXNotification_CheckForUpdates;
 - (void) handleFingerprintAuth:(P2UXEventAction*)action element:(P2UXElementInstance*)elem sender:(id)sender;
 - (void) replaceArgs:(NSMutableDictionary*)args key:(NSString*)key value:(NSString*)value;
 - (void) evalArgs:(NSMutableDictionary*)args linkValues:(NSDictionary*)linkValues conditionals:(NSDictionary*)conditionals;
+- (BOOL) handlePeekScreen:(P2UXEventAction *)action sender:(id)sender transition:(P2UXEventTransition*)transition;
 
 - (P2UXView*) viewFromSender:(id)sender;
 - (P2UXView*) viewFromSender:(id)sender context:(NSString*)context;;

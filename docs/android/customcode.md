@@ -38,6 +38,7 @@ This will create `SampleBehavior` class. Put any customized behaviors within the
 
 | Modifier and Type | Method and Description |
 | --- | --- |
+| P2UXFragment  | `createViewFragment(int type, Context context, P2UXDefinition def, P2UXFragment.UXFragmentDelegate fragmentDelegate, RectF rect, boolean cache, Object index, Object data, P2UXViewContainerDelegate viewDelegate)`<br/><br/>Creates a custom fragment |
 | P2UXScreen  | `createScreen(Context context, P2UXDefinition def, RectF rect, Object index, Object data, P2UXViewContainerDelegate viewDelegate)`<br/><br/>Creates a custom screen |
 | P2UXPanel   | `createPanel(Context context, P2UXDefinition def, RectF rect, Object index, Object data, P2UXViewContainerDelegate viewDelegate)`<br/><br/>Creates a custom panel |
 | View        | `createControl(String type, P2UXElementInstance elInstance, RectF rect, P2UXViewContainerDelegate viewDelegate, Object index, Object data)`<br/><br/>Creates a custom control |
@@ -81,6 +82,60 @@ public void onCreate(Bundle savedInstanceState)
 public P2UXAppBehavior createBehavior(String appId)
 {
    return new SampleAppBehavior();
+}
+```
+
+## Adding Custom Fragment
+
+Developers can override Fragment instances to provide any custom code needed for a fragment lifecycle/behavior and its hosted `View`.
+
+The PRL will request an instance from `P2UXAppBehavior` when it needs to create a new fragment. If no instance is provided, P2UX will generate a standard instance of the Fragment.
+
+To provide a custom Fragment instance, override the method `createViewFragment` from a `P2UXAppBehavior` subclass and return an instance of `P2UXFragment`. 
+
+To handle button click action, override the method `handleButtonClick` from `P2UXAppFragment`. To access a control in the fragment, override the method `viewCreated` from `P2UXAppFragment`. 
+
+The name of a chosen Fragment is the value used to identify the screen when the PRL creates an instance of this object. The “def” parameter passed to this method contains the member variable `systemType` that identifies the Screen being created. From this object, the developer determines the requested Screen and the specific `P2UXFragment` subclass to instantiate.
+
+Creating a custom Fragment instance in a `P2UXAppBehavior` subclass
+
+``` Java
+@Override
+public P2UXFragment createViewFragment(int type, Context context, P2UXDefinition def, P2UXFragment.UXFragmentDelegate fragmentDelegate, RectF rect, boolean cache, Object index, Object data, P2UXViewContainerDelegate viewDelegate)
+{
+   if (def.getSystemType().equals("xxxxx")) {
+       //return a fragment here, for example:
+       return new SampleFragment(context, def, fragmentDelegate, rect, cache, index, data, viewDelegate);
+   }
+   return super.createViewFragment(type, context, def, fragmentDelegate, rect, cache, index, data, viewDelegate);
+}
+
+@Override
+public void viewCreated()
+{
+    super.viewCreated();
+    P2UXButton btn = (P2UXButton) controlWithElementSystemTypeOrId("show_btn");
+    if (btn != null) {
+       btn.setEnabled(false);
+    }
+}
+
+@Override
+public boolean handleButtonClick(View ctrl) 
+{
+    P2UXElementInstance elementInstance = P2UXControlHelper.getElementInstance(ctrl);
+    if (elInstance != null && elInstance.getSystemType.equals("button1"))
+    {
+        String elId = elInstance.getElId();
+        if (elId != null && elId.equals("button1")) {
+           // take some custom action here for the "okbtn"
+           
+           // return true to indicate the event was handled and propagation
+           // shouldn't continue
+           return true;
+        }
+    }
+    return super.handleButtonClick(ctrl);
 }
 ```
 

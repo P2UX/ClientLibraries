@@ -7,4 +7,4 @@ Supported Platforms:
 * tvOS
 * Android
 
-For documentation and help, visit [https://developer.p2ux.com](https://github.com/P2UX/ClientLibraries)
+For documentation and help, visit [http://developer.p2ux.com](http://developer.p2ux.com)
