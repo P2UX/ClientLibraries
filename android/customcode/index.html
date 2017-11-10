@@ -286,6 +286,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#adding-custom-fragment" title="Adding Custom Fragment" class="md-nav__link">
+    Adding Custom Fragment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#adding-custom-screenspanels" title="Adding Custom Screens/Panels" class="md-nav__link">
     Adding Custom Screens/Panels
   </a>
@@ -337,10 +344,82 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
-      Data Sources
+      General
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
+        General
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../general/envandpublish/" title="Application Environments" class="md-nav__link">
+      Application Environments
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Dynamic Application Bundles
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Dynamic Application Bundles
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../general/startupscreen/" title="Customizing Startup Screen" class="md-nav__link">
+      Customizing Startup Screen
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Data Sources
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
         Data Sources
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -398,6 +477,13 @@
         <li class="md-nav__item">
   <a href="#adding-custom-behaviors" title="Adding Custom Behaviors" class="md-nav__link">
     Adding Custom Behaviors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-custom-fragment" title="Adding Custom Fragment" class="md-nav__link">
+    Adding Custom Fragment
   </a>
   
 </li>
@@ -482,6 +568,10 @@ With the P2UX platform, XML Layout files are no longer required for Android deve
 </thead>
 <tbody>
 <tr>
+<td>P2UXFragment</td>
+<td><code class="codehilite">createViewFragment(int type, Context context, P2UXDefinition def, P2UXFragment.UXFragmentDelegate fragmentDelegate, RectF rect, boolean cache, Object index, Object data, P2UXViewContainerDelegate viewDelegate)</code><br/><br/>Creates a custom fragment</td>
+</tr>
+<tr>
 <td>P2UXScreen</td>
 <td><code class="codehilite">createScreen(Context context, P2UXDefinition def, RectF rect, Object index, Object data, P2UXViewContainerDelegate viewDelegate)</code><br/><br/>Creates a custom screen</td>
 </tr>
@@ -533,6 +623,53 @@ With the P2UX platform, XML Layout files are no longer required for Android deve
 </span><span class="hll">   <span class="k">return</span> <span class="k">new</span> <span class="n">SampleAppBehavior</span><span class="o">();</span>
 </span><span class="hll"><span class="o">}</span>
 </span></pre></div>
+
+
+<h2 id="adding-custom-fragment">Adding Custom Fragment<a class="headerlink" href="#adding-custom-fragment" title="Permanent link">&para;</a></h2>
+<p>Developers can override Fragment instances to provide any custom code needed for a fragment lifecycle/behavior and its hosted <code class="codehilite">View</code>.</p>
+<p>The PRL will request an instance from <code class="codehilite">P2UXAppBehavior</code> when it needs to create a new fragment. If no instance is provided, P2UX will generate a standard instance of the Fragment.</p>
+<p>To provide a custom Fragment instance, override the method <code class="codehilite">createViewFragment</code> from a <code class="codehilite">P2UXAppBehavior</code> subclass and return an instance of <code class="codehilite">P2UXFragment</code>. </p>
+<p>To handle button click action, override the method <code class="codehilite">handleButtonClick</code> from <code class="codehilite">P2UXAppFragment</code>. To access a control in the fragment, override the method <code class="codehilite">viewCreated</code> from <code class="codehilite">P2UXAppFragment</code>. </p>
+<p>The name of a chosen Fragment is the value used to identify the screen when the PRL creates an instance of this object. The “def” parameter passed to this method contains the member variable <code class="codehilite">systemType</code> that identifies the Screen being created. From this object, the developer determines the requested Screen and the specific <code class="codehilite">P2UXFragment</code> subclass to instantiate.</p>
+<p>Creating a custom Fragment instance in a <code class="codehilite">P2UXAppBehavior</code> subclass</p>
+<div class="codehilite"><pre><span></span><span class="nd">@Override</span>
+<span class="kd">public</span> <span class="n">P2UXFragment</span> <span class="nf">createViewFragment</span><span class="o">(</span><span class="kt">int</span> <span class="n">type</span><span class="o">,</span> <span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="n">P2UXDefinition</span> <span class="n">def</span><span class="o">,</span> <span class="n">P2UXFragment</span><span class="o">.</span><span class="na">UXFragmentDelegate</span> <span class="n">fragmentDelegate</span><span class="o">,</span> <span class="n">RectF</span> <span class="n">rect</span><span class="o">,</span> <span class="kt">boolean</span> <span class="n">cache</span><span class="o">,</span> <span class="n">Object</span> <span class="n">index</span><span class="o">,</span> <span class="n">Object</span> <span class="n">data</span><span class="o">,</span> <span class="n">P2UXViewContainerDelegate</span> <span class="n">viewDelegate</span><span class="o">)</span>
+<span class="o">{</span>
+   <span class="k">if</span> <span class="o">(</span><span class="n">def</span><span class="o">.</span><span class="na">getSystemType</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="s">&quot;xxxxx&quot;</span><span class="o">))</span> <span class="o">{</span>
+       <span class="c1">//return a fragment here, for example:</span>
+       <span class="k">return</span> <span class="k">new</span> <span class="n">SampleFragment</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="n">def</span><span class="o">,</span> <span class="n">fragmentDelegate</span><span class="o">,</span> <span class="n">rect</span><span class="o">,</span> <span class="n">cache</span><span class="o">,</span> <span class="n">index</span><span class="o">,</span> <span class="n">data</span><span class="o">,</span> <span class="n">viewDelegate</span><span class="o">);</span>
+   <span class="o">}</span>
+   <span class="k">return</span> <span class="kd">super</span><span class="o">.</span><span class="na">createViewFragment</span><span class="o">(</span><span class="n">type</span><span class="o">,</span> <span class="n">context</span><span class="o">,</span> <span class="n">def</span><span class="o">,</span> <span class="n">fragmentDelegate</span><span class="o">,</span> <span class="n">rect</span><span class="o">,</span> <span class="n">cache</span><span class="o">,</span> <span class="n">index</span><span class="o">,</span> <span class="n">data</span><span class="o">,</span> <span class="n">viewDelegate</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="nd">@Override</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">viewCreated</span><span class="o">()</span>
+<span class="o">{</span>
+    <span class="kd">super</span><span class="o">.</span><span class="na">viewCreated</span><span class="o">();</span>
+    <span class="n">P2UXButton</span> <span class="n">btn</span> <span class="o">=</span> <span class="o">(</span><span class="n">P2UXButton</span><span class="o">)</span> <span class="n">controlWithElementSystemTypeOrId</span><span class="o">(</span><span class="s">&quot;show_btn&quot;</span><span class="o">);</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">btn</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+       <span class="n">btn</span><span class="o">.</span><span class="na">setEnabled</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="nd">@Override</span>
+<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">handleButtonClick</span><span class="o">(</span><span class="n">View</span> <span class="n">ctrl</span><span class="o">)</span> 
+<span class="o">{</span>
+    <span class="n">P2UXElementInstance</span> <span class="n">elementInstance</span> <span class="o">=</span> <span class="n">P2UXControlHelper</span><span class="o">.</span><span class="na">getElementInstance</span><span class="o">(</span><span class="n">ctrl</span><span class="o">);</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">elInstance</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="n">elInstance</span><span class="o">.</span><span class="na">getSystemType</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">&quot;button1&quot;</span><span class="o">))</span>
+    <span class="o">{</span>
+        <span class="n">String</span> <span class="n">elId</span> <span class="o">=</span> <span class="n">elInstance</span><span class="o">.</span><span class="na">getElId</span><span class="o">();</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">elId</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="n">elId</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">&quot;button1&quot;</span><span class="o">))</span> <span class="o">{</span>
+           <span class="c1">// take some custom action here for the &quot;okbtn&quot;</span>
+
+           <span class="c1">// return true to indicate the event was handled and propagation</span>
+           <span class="c1">// shouldn&#39;t continue</span>
+           <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="kd">super</span><span class="o">.</span><span class="na">handleButtonClick</span><span class="o">(</span><span class="n">ctrl</span><span class="o">);</span>
+<span class="o">}</span>
+</pre></div>
 
 
 <h2 id="adding-custom-screenspanels">Adding Custom Screens/Panels<a class="headerlink" href="#adding-custom-screenspanels" title="Permanent link">&para;</a></h2>
@@ -672,13 +809,13 @@ With the P2UX platform, XML Layout files are no longer required for Android deve
           </a>
         
         
-          <a href="../../datasources/overview/" title="Overview" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../general/envandpublish/" title="Application Environments" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Overview
+                Application Environments
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
