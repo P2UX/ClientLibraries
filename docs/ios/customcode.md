@@ -61,7 +61,7 @@ Edit `AppDelegate.m` to look like this:
     appKey = @"xxxxx";
     NSDictionary *opts;
 #if DEBUG
-    opts = @{P2UXAppCreator_Opt_Env: P2UXAppCreator_Opt_Env_Prototype};
+    opts = @{P2UXAppCreator_Opt_Env: P2UXAppCreator_Opt_Env_Stage};
 #endif    
     NSDictionary *resources = @[@{P2UXApp_PackageAttrib_FormFactor: [NSNumber numberWithInteger:P2UXFormFactor_Phone], P2UXApp_PackageAttrib_Type:P2UXApp_PackageType_Static, P2UXApp_PackageAttrib_Package:@"phone_pub",P2UXApp_PackageAttrib_Update:P2UXApp_PackageUpdate_None}];
    
@@ -109,7 +109,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, P2UXAppCreatorDelegate {
         var opts : [AnyHashable : Any];
 #if DEBUG
         opts = [
-            P2UXAppCreator_Opt_Env: P2UXAppCreator_Opt_Env_Prototype,
+            P2UXAppCreator_Opt_Env: P2UXAppCreator_Opt_Env_Stage,
             P2UXAppCreator_Opt_LogLevel: P2UXCoreLogLevel.verbose.rawValue as  
             NSNumber
         ]
