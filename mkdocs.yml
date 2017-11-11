@@ -5,8 +5,6 @@ copyright: 'Copyright &copy; 2017 P2UX, Inc.'
 
 theme: 'material'
 
-markdown: kramdown
-    
 markdown_extensions:
   - admonition
   - codehilite  
@@ -39,5 +37,9 @@ pages:
   - Android:
       - Quick Start: 'android/quickstart.md'
       - Custom Code: 'android/customcode.md'
+  - General:
+      - Application Environments: 'general/envandpublish.md'
+  - Dynamic Application Bundles:
+      - Customizing Startup Screen: 'general/startupscreen.md'
   - Data Sources:
       - Overview: 'datasources/overview.md'
