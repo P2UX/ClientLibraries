@@ -67,7 +67,6 @@ extern NSString* const P2UXVarLink_Attrib_FieldValue;
 extern NSString* const P2UXVarLink_Attrib_Src;
 extern NSString* const P2UXVarLink_Attrib_Ctrls;
 extern NSString* const P2UXVarLink_Attrib_Var;
-extern NSString* const P2UXVarLink_Attrib_VarType;
 
 extern NSString* const P2UXVarLink_Message_TwoParam_Fmt;
 extern NSString* const P2UXVarLink_Message_OneParam_Fmt;

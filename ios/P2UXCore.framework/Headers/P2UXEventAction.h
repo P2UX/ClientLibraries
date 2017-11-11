@@ -60,9 +60,7 @@ typedef NS_ENUM(NSInteger,P2UXElementAction) {
 typedef NS_ENUM(NSInteger,P2UXEventBackHistory) {
     P2UXEventBackHistory_No = 0,
     P2UXEventBackHistory_Yes,
-    P2UXEventBackHistory_Replace,
-    P2UXEventBackHistory_Clear,
-    P2UXEventBackHistory_Home
+    P2UXEventBackHistory_Replace
 };
 
 extern NSString* const P2UXAction_Attrib_Action;

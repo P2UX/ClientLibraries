@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <P2UXCore/P2UXPanel.h>
 #import <P2UXApp/P2UXPanelController.h>
-#import <P2UXApp/P2UXPeekViewController.h>
 #ifdef LOCAL_NOTIFICATION_SUPPORT
 #import <UserNotifications/UserNotifications.h>
 #endif
@@ -26,8 +25,7 @@ extern NSString* const UPDATE_CONTENTS_NOW;
 @interface P2UXAppController : UIViewController<P2UXViewContainerDelegate, P2UXEventHandlerDelegate,
     UINavigationControllerDelegate,
     P2UXModalLayerDelegate,
-    P2UXPanelDelegate,
-    P2UXPeekViewControllerDelegate>
+    P2UXPanelDelegate>
 {
     P2UXAppDefinition*          _def;
     NSMutableArray*             _eventHandlers;
@@ -80,6 +78,17 @@ extern NSString* const UPDATE_CONTENTS_NOW;
 - (void) handleSystemLocalNotification:(UNNotificationRequest*)notification;
 #endif
 
+- (BOOL) setCurrentView:(NSString*)viewId
+            backHistory:(BOOL)backHistory
+                replace:(BOOL)replace
+                   data:(id)data
+             transition:(P2UXEventTransition*)transition
+                 toggle:(BOOL)toggle
+                  index:(id)index
+           clearDefault:(BOOL)clearDefault
+                   rect:(NSDictionary*)rect
+                  modal:(BOOL)modal;
+
 - (void) resetEvents;
 
 - (void) presentViewController:(UIViewController *)viewControllerToPresent animated:(BOOL)flag completion:(void (^)(void))completion;
@@ -95,9 +104,9 @@ extern NSString* const UPDATE_CONTENTS_NOW;
 - (BOOL) setVarValue:(id)value forKey:(NSString*)key usingIdent:(NSString*)ident notify:(BOOL)notify itemspec:(NSDictionary*)itemspec;
 
 #pragma mark - Current View methods
-- (BOOL) setCurrentView:(NSString*)viewId history:(P2UXEventBackHistory)history;
-- (BOOL) setCurrentView:(NSString*)viewId history:(P2UXEventBackHistory)history transition:(P2UXEventTransition*)transition;
-- (BOOL) setCurrentView:(NSString*)viewId history:(P2UXEventBackHistory)history data:(id)data transition:(P2UXEventTransition*)transition toggle:(BOOL)toggle index:(id)index rect:(NSDictionary*)rect modal:(BOOL)modal;
+- (BOOL) setCurrentView:(NSString*)viewId backHistory:(BOOL)backHistory;
+- (BOOL) setCurrentView:(NSString*)viewId backHistory:(BOOL)backHistory transition:(P2UXEventTransition*)transition;
+- (BOOL) setCurrentView:(NSString*)viewId backHistory:(BOOL)backHistory replace:(BOOL)replace data:(id)data transition:(P2UXEventTransition*)transition toggle:(BOOL)toggle index:(id)index rect:(NSDictionary*)rect modal:(BOOL)modal;
 
 #pragma mark - Overlay methods
 - (P2UXPanel*) showPanel:(NSString*)ident timeout:(NSNumber*)timeout show:(NSInteger)show pos:(NSDictionary*)pos size:(NSDictionary*)size modalColor:(NSString*)modalColor transition:(P2UXEventTransition*)transition;

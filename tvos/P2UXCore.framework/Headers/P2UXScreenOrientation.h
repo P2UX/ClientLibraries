@@ -24,7 +24,6 @@
 @property (nonatomic, readonly) NSDictionary* background;
 
 - (instancetype) initWithSpec:(P2UXScreenStateDefinition*)statedef;
-- (instancetype) initWithSpec:(P2UXScreenStateDefinition*)statedef baseState:(P2UXScreenState*)baseState;
 - (void) cleanup;
 
 - (P2UXScreenState*) changeState:(NSString*)stateName parent:(UIView*)parent force:(BOOL)force;

@@ -8,19 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <P2UXCore/easing.h>
-#import <P2UXCore/P2UXTransition.h>
 
-extern NSString* const P2UXEventTransition_FadeIn;
-extern NSString* const P2UXEventTransition_FadeOut;
-extern NSString* const P2UXEventTransition_Slide;
-extern NSString* const P2UXEventTransition_Frame;
-extern NSString* const P2UXEventTransition_State;
-extern NSString* const P2UXEventTransition_Layout;
-extern NSString* const P2UXEventTransition_Reveal;
-extern NSString* const P2UXEventTransition_Zoom;
-extern NSString* const P2UXEventTransition_Default;
-extern NSString* const P2UXEventTransition_Parallax;
-extern NSString* const P2UXEventTransition_Peek;
+typedef NS_ENUM(NSInteger, P2UXTransitionEasing) {
+    P2UXTransitionEasing_None = 0,
+    P2UXTransitionEasing_In,
+    P2UXTransitionEasing_Out,
+    P2UXTransitionEasing_InOut
+};
 
 typedef NS_ENUM(NSInteger, P2UXTransitionAttribute) {
     kP2UXTransitionAttribute_frame = 0,
@@ -49,8 +43,10 @@ typedef void (^TransitionComplete)(UIView* view, BOOL reverse);
 
 @interface P2UXEventTransition : NSObject
 {
+    NSDictionary*           _desc;
     P2UXTransitionSequence  _sequence;
     NSMutableArray*         _delegates;
+    NSMutableDictionary*    _transitionData;
 }
 @property (nonatomic, readonly) NSDictionary* desc;
 @property (nonatomic, weak)     OSViewClass* source;
@@ -58,6 +54,7 @@ typedef void (^TransitionComplete)(UIView* view, BOOL reverse);
 @property (nonatomic)           BOOL outgoing;
 @property (nonatomic, readonly) CGFloat duration;
 @property (nonatomic)           id data;
+@property (nonatomic)           CGFloat delay;
 @property (nonatomic, readonly) P2UXTransitionBackHistory backHistory;
 @property (nonatomic) BOOL      below;
 @property (nonatomic) NSDictionary* rect;
@@ -68,6 +65,7 @@ typedef void (^TransitionComplete)(UIView* view, BOOL reverse);
 
 + (AHEasingFunction) easing:(NSDictionary*)transition;
 + (P2UXEventTransition*) transitionForLayout:(NSString*)layout duration:(float)duration easing:(P2UXTransitionEasing)easing;
++ (UIViewAnimationOptions) optionsFromEasing:(P2UXTransitionEasing)easing;
 
 - (id)   initWithDictionary:(NSDictionary*)desc;
 - (void) cleanup;
@@ -78,7 +76,5 @@ typedef void (^TransitionComplete)(UIView* view, BOOL reverse);
 - (void) removeDelegate:(id<P2UXEventTransitionDelegate>)delegate;
 - (void) applyTransitionsToAttribute:(UICollectionViewLayoutAttributes*)attr parentBounds:(CGRect)parentBounds;
 - (void) animateWithAnimations:(void (^)(void))animations completion:(void (^)(BOOL finished))completion;
-- (void) animateWithDuration:(CGFloat)duration delay:(CGFloat)delay bounces:(NSString*)bounces options:(UIViewAnimationOptions)options animations:(void (^)(void))animations completion:(void (^)(BOOL finished))completion;
 - (void) animateWithDuration:(CGFloat)duration options:(UIViewAnimationOptions)options animations:(void (^)(void))animations completion:(void (^)(BOOL finished))completion;
-- (UIView*) primaryScreen:(UIView*)incoming outgoing:(UIView*)outgoing;
 @end

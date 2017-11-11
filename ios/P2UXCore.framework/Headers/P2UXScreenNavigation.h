@@ -25,6 +25,7 @@ typedef NS_ENUM(NSInteger, P2UXScreenNavClass)
 @property (nonatomic, readonly) P2UXScreenNavClass navClass;
 @property (nonatomic, readonly) NSString* headerTemplate;
 @property (nonatomic, readonly) BOOL hasHeader;
+@property (nonatomic, readonly) NSString* title;
 @property (nonatomic, readonly) NSDictionary* headerBackground;
 @property (nonatomic, readonly) id textColor;
 @property (nonatomic, readonly) BOOL hasTitleFont;
@@ -32,7 +33,7 @@ typedef NS_ENUM(NSInteger, P2UXScreenNavClass)
 @property (nonatomic, readonly) NSNumber* largeTitle;
 @property (nonatomic, readonly) NSNumber* backTitle;
 
-- (instancetype) initWithSpec:(NSDictionary*)spec;
+- (instancetype) initWithSpec:(NSDictionary*)spec title:(id)title;
 - (instancetype) initWithHeaderSpec:(NSDictionary*)headerspec;
 - (void) cleanup;
 - (OSFontClass*) fontWithParent:(CGFloat)height scale:(CGFloat)scale;
