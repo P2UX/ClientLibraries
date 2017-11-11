@@ -71,7 +71,6 @@ extern NSString* const P2UXScrollContainer_Attribute_PageIndex;
 - (void) decrementPage:(BOOL)animated;
 
 #pragma mark - Internal Methods
-- (void) parseContents;
 - (void) sortViews;
 - (void) measureContent;
 - (void) updatePaging;

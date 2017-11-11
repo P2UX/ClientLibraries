@@ -24,5 +24,5 @@ extern NSString* const P2UXDefault_Language;
 + (instancetype) instance;
 
 - (void) checkForLocaleChange;
-
+- (void) resetToDefault;
 @end
