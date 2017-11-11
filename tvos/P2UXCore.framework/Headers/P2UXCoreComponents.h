@@ -20,6 +20,7 @@
 #import <P2UXCore/P2UXEvent.h>
 #import <P2UXCore/P2UXEventAction.h>
 #import <P2UXCore/P2UXEventHandler.h>
+#import <P2UXCore/P2UXEventTransition.h>
 #import <P2UXCore/P2UXMacroManager.h>
 #import <P2UXCore/P2UXState.h>
 #import <P2UXCore/P2UXFontManager.h>
@@ -30,11 +31,6 @@
 #import <P2UXCore/P2UXScreenState.h>
 #import <P2UXCore/P2UXScreenOrientation.h>
 #import <P2UXCore/P2UXScreenNavigation.h>
-
-#pragma mark - Transitions
-#import <P2UXCore/P2UXEventTransition.h>
-#import <P2UXCore/P2UXTransition.h>
-#import <P2UXCore/P2UXTransitionManager.h>
 
 #pragma mark - Analytics
 #import <P2UXCore/P2UXAnalytics.h>
@@ -66,7 +62,6 @@
 #import <P2UXCore/P2UXCoreDataVars.h>
 #import <P2UXCore/P2UXDataSourceFilter.h>
 #import <P2UXCore/P2UXDataAuthMissingParam.h>
-#import <P2UXCore/P2UXDataValueRepeater.h>
 
 #ifdef MAP_SUPPORT
 #import <P2UXCore/P2UXLocationManager.h>

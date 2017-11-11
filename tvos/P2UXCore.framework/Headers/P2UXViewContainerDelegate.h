@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import <P2UXCore/P2UXActionDelegate.h>
-#import <P2UXCore/P2UXEventAction.h>
 
 @class P2UXEventAction, P2UXElementInstance, P2UXEventTransition, P2UXDefinition, P2UXPanel, P2UXViewController;
 @protocol P2UXHelperDelegate;
@@ -25,8 +24,8 @@
 - (P2UXPanel*)  panelWithIdent:(NSString*)ident rect:(CGRect)rect cache:(BOOL)cache index:(NSString*)index data:(id)data;
 - (void)        handleEvents:(NSArray*)events element:(P2UXElementInstance*)element source:(id)source;
 - (void)        handleEvents:(NSArray*)events element:(P2UXElementInstance*)element source:(id)source result:(NSInteger)result;
-- (BOOL)        setCurrentView:(NSString*)viewId history:(P2UXEventBackHistory)history;
-- (BOOL)        setCurrentView:(NSString*)viewId history:(P2UXEventBackHistory)history data:(id)data transition:(P2UXEventTransition*)transition toggle:(BOOL)toggle index:(id)index rect:(NSDictionary*)rect modal:(BOOL)modal;
+- (BOOL)        setCurrentView:(NSString*)viewId backHistory:(BOOL)backHistory;
+- (BOOL)        setCurrentView:(NSString*)viewId backHistory:(BOOL)backHistory replace:(BOOL)replace data:(id)data transition:(P2UXEventTransition*)transition toggle:(BOOL)toggle index:(id)index clearDefault:(BOOL)clearDefault rect:(NSDictionary*)rect modal:(BOOL)modal;
 - (void)        peekScreen:(NSString*)ident spec:(NSDictionary*)spec index:(id)index data:(id)data transition:(P2UXEventTransition*)transition;
 
 - (void)        handleBackToView:(NSString*)viewId transition:(P2UXEventTransition *)transition;
