@@ -36,8 +36,8 @@
 @property (nonatomic, readonly) NSMutableArray* controlsOrder;
 @property (nonatomic) NSDictionary*   background;
 
-
 + (instancetype) createScreenStateFromDef:(P2UXScreenStateDefinition*)def;
++ (instancetype) createScreenStateFromDef:(P2UXScreenStateDefinition*)def baseState:(P2UXScreenState*)baseState;
 
 - (instancetype) initWithDef:(P2UXScreenStateDefinition*)def;
 - (instancetype) initWithDef:(P2UXScreenStateDefinition*)def defaults:(P2UXScreenState*)defaults;
