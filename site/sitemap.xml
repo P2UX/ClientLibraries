@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-10-17</lastmod>
+     <lastmod>2017-11-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,13 +13,13 @@
         
     <url>
      <loc>/ios/quickstart/</loc>
-     <lastmod>2017-10-17</lastmod>
+     <lastmod>2017-11-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/ios/customcode/</loc>
-     <lastmod>2017-10-17</lastmod>
+     <lastmod>2017-11-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -29,13 +29,33 @@
         
     <url>
      <loc>/android/quickstart/</loc>
-     <lastmod>2017-10-17</lastmod>
+     <lastmod>2017-11-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/android/customcode/</loc>
-     <lastmod>2017-10-17</lastmod>
+     <lastmod>2017-11-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/general/envandpublish/</loc>
+     <lastmod>2017-11-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/general/startupscreen/</loc>
+     <lastmod>2017-11-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -45,7 +65,7 @@
         
     <url>
      <loc>/datasources/overview/</loc>
-     <lastmod>2017-10-17</lastmod>
+     <lastmod>2017-11-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         

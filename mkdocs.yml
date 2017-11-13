@@ -39,7 +39,9 @@ pages:
       - Custom Code: 'android/customcode.md'
   - General:
       - Application Environments: 'general/envandpublish.md'
-  - Dynamic Application Bundles:
-      - Customizing Startup Screen: 'general/startupscreen.md'
+  - Application Bundles:
+      - Dynamic Application Bundle: 'general/dynamicappbundle.md'
+      - Static Application Bundle: 'general/staticappbundle.md'
+      - Application Bundle Updates: 'general/appbundleupdates.md'
   - Data Sources:
       - Overview: 'datasources/overview.md'
