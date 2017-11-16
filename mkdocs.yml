@@ -37,11 +37,12 @@ pages:
   - Android:
       - Quick Start: 'android/quickstart.md'
       - Custom Code: 'android/customcode.md'
-  - General:
+  - Application Content:
+      - Application License: 'general/applicense.md'
       - Application Environments: 'general/envandpublish.md'
-  - Application Bundles:
       - Dynamic Application Bundle: 'general/dynamicappbundle.md'
       - Static Application Bundle: 'general/staticappbundle.md'
       - Application Bundle Updates: 'general/appbundleupdates.md'
+      - Splash Screens: 'general/splashscreen.md'
   - Data Sources:
       - Overview: 'datasources/overview.md'

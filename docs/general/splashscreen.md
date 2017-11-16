@@ -1,0 +1,4 @@
+# Splash Screens
+---
+
+Coming soon
