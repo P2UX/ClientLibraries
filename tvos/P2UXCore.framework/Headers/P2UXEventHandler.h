@@ -16,6 +16,7 @@
 @class P2UXElement;
 @class P2UXElementInstance;
 @class P2UXEventTransition;
+@class P2UXDataValueRepeater;
 
 extern NSString* const P2UXNotification_CheckForUpdates;
 
@@ -34,6 +35,7 @@ extern NSString* const P2UXNotification_CheckForUpdates;
 }
 @property (nonatomic, weak) id<P2UXEventHandlerDelegate> delegate;
 @property (nonatomic, weak) id<P2UXViewContainerDelegate> viewDelegate;
+@property (nonatomic, weak) P2UXDataValueRepeater* valueRepeater;
 
 - (id) initWithEvents:(NSArray*)events element:(P2UXElementInstance*)element source:(id)source;
 - (void) handleEvents:(NSInteger)result;
