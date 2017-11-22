@@ -33,7 +33,7 @@ extern NSString* const P2UXVarLinks_Var_Lat;
 extern NSString* const P2UXVarLinks_Var_Lon;
 extern NSString* const P2UXVarLinks_Var_Timestamp;
 extern NSString* const P2UXVarLinks_VarPrefix;
-
+extern NSString* const P2UXVarLinks_InternalValDelimiterCheck;
 
 @interface P2UXVarLinks : NSObject
 {
@@ -43,7 +43,6 @@ extern NSString* const P2UXVarLinks_VarPrefix;
 }
 @property (nonatomic) NSArray* varlinks;
 + (NSCharacterSet*) encodedCharSet;
-+ (BOOL) containsConditional:(NSString*)linkformat;
 + (BOOL) containsExpression:(NSString*)linkformat type:(P2UXExpressionType)type;
 + (NSString*) evaluateLinkFormat:(NSString*)linkformat conditionals:(NSDictionary*)conditionals vars:(NSDictionary*)vars delegate:(id<P2UXLocationManagerDelegate>)delegate;
 #ifdef MAP_SUPPORT

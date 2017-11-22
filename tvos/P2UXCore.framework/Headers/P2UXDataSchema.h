@@ -10,14 +10,14 @@
 @class P2UXDataSourceFilterRequest;
 
 typedef NS_ENUM(NSInteger, P2UXSchemaType) {
-    P2UXSchemaType_Unknown,
-    P2UXSchemaType_Object,
-    P2UXSchemaType_Array,
-    P2UXSchemaType_String,
-    P2UXSchemaType_Number,
-    P2UXSchemaType_Boolean,
-    P2UXSchemaType_Date,
-    P2UXSchemaType_ArrayOrObject
+    P2UXSchemaType_Unknown = 0,
+    P2UXSchemaType_Object = (1 << 0),
+    P2UXSchemaType_Array = (1 << 1),
+    P2UXSchemaType_String = (1 << 2),
+    P2UXSchemaType_Number = (1 << 3),
+    P2UXSchemaType_Boolean = (1 << 4),
+    P2UXSchemaType_Date = (1 << 5),
+    P2UXSchemaType_ArrayOrObject = (1 << 6)
 };
 
 extern NSString* const P2UXSchemaKey_Type;
