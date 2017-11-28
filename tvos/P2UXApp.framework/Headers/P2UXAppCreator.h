@@ -47,6 +47,9 @@ extern NSString* _Nonnull const P2UXAppCreator_Opt_LogLevel;
 + (void) reloadCurrentApplicationAndForceUpdate:(BOOL)forceLoad;
 
 + (nonnull P2UXAppController*) currentAppController;
+
++ (void) setEnv:(nonnull NSString*)env;
+
 #if !TARGET_OS_TV
 /// :nodoc:
 + (UIInterfaceOrientationMask) supportedInterfaceOrientationsForWindow:(nonnull UIWindow *)window;

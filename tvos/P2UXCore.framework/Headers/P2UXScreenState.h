@@ -36,11 +36,11 @@
 @property (nonatomic, readonly) NSMutableArray* controlsOrder;
 @property (nonatomic) NSDictionary*   background;
 
++ (instancetype) createScreenStateFromDef:(P2UXScreenStateDefinition*)def name:(NSString*)name;
++ (instancetype) createScreenStateFromDef:(P2UXScreenStateDefinition*)def baseState:(P2UXScreenState*)baseState name:(NSString*)name;
 
-+ (instancetype) createScreenStateFromDef:(P2UXScreenStateDefinition*)def;
-
-- (instancetype) initWithDef:(P2UXScreenStateDefinition*)def;
-- (instancetype) initWithDef:(P2UXScreenStateDefinition*)def defaults:(P2UXScreenState*)defaults;
+- (instancetype) initWithDef:(P2UXScreenStateDefinition*)def name:(NSString*)name;
+- (instancetype) initWithDef:(P2UXScreenStateDefinition*)def defaults:(P2UXScreenState*)defaults name:(NSString*)name;
 ///FIXME- (instancetype) initWithContainer:(P2UXContainerElement*)container defaults:(P2UXScreenState*)defaults;
 
 - (NSMutableDictionary*) buildViewWithParent:(UIView *)parent constraintParent:(UIView*)constraintParent handler:(id<P2UXActionDelegate>)handler viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate index:(id)index data:(id)data addToParent:(BOOL)addToParent delegate:(id<P2UXScreenStateDelegate>)delegate;

@@ -20,4 +20,7 @@
 - (NSInteger) integerValueForKey:(NSString*)key defaultValue:(NSInteger)defaultValue;
 - (id) objectForPath:(const NSString*)path;
 - (BOOL) objectForKeyRemovable:(const NSString*)key obj:(id*)obj;
+- (NSArray*) sortedKeys;
+- (void) sortByField:(NSString*)field ascending:(BOOL)ascending;
+
 @end

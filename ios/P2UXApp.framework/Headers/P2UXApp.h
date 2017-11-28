@@ -32,6 +32,8 @@ FOUNDATION_EXPORT const unsigned char P2UXAppVersionString[];
 #import <P2UXApp/P2UXAppCreator.h>
 #import <P2UXApp/P2UXPanelController.h>
 #import <P2UXApp/P2UXNativeDialogHandler.h>
+#import <P2UXApp/P2UXPeekViewController.h>
+#import <P2UXApp/P2UXNavigationController.h>
 #import <P2UXApp/UIViewController+P2UXViewController.h>
 #define NOTIFICATION_TOKEN @"NOTIFICATION_DEVICE_TOKEN"
 #define NOTIFICATION_PAYLOAD @"NOTIFICATION_PAYLOAD_DATA"

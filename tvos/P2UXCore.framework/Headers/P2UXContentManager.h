@@ -23,7 +23,8 @@ typedef NS_ENUM(NSInteger, ContentManagerError) {
     ContentManagerError_InvalidZip,
     ContentManagerError_CorruptedContent,
     ContentManagerError_Auth,
-    ContentManagerError_License
+    ContentManagerError_License,
+    ContentManagerError_LicenseNetwork
 };
 
 @protocol P2UXContentManagerDelegate <NSObject>

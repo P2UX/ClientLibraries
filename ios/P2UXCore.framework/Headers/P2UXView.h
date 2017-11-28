@@ -181,6 +181,8 @@ extern NSString* const P2UXView_Attribute_DragHandle;
 - (void) handleKeyboardVisible:(BOOL)visible;
 
 - (UIView*) contentContainer;
+- (UIViewController *) parentViewController;
+
 #pragma mark - P2UXControl
 - (void) cleanup;
 - (void) setData:(NSDictionary *)data;

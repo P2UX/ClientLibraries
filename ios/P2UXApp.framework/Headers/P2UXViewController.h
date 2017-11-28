@@ -24,7 +24,6 @@
 - (void) cleanup;
 - (BOOL) isControllerActive:(P2UXViewController*)controller;
 
-
 - (void) setViewState:(NSString*)state;
 
 #pragma mark - navigation method overrides
