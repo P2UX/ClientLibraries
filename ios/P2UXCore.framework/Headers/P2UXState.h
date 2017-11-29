@@ -17,6 +17,7 @@
     NSMutableDictionary*    _sizeChangeConstraints;
     NSMutableArray*         _events;
     NSString*               _elId;
+    BOOL                    _hasSizeSpec;
 }
 @property (nonatomic, readonly) NSString* elId;
 @property (nonatomic, readonly) BOOL visible;
@@ -54,6 +55,7 @@
 - (BOOL) updateConstraintsForSizeChange:(OSViewClass*)view parent:(OSViewClass*)parent controls:(NSDictionary*) controls def:(P2UXState*)def;
 
 - (BOOL) isValidFrameSpec;
+- (BOOL) hasSizeSpec;
 
 - (NSArray*) eventsWithEventType:(P2UXElementEvent)event;
 - (BOOL) hasDefinedEvents;
