@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Welcome to the P2UX Developer Site\n\n\nWe are working on bringing more documentation and samples for developers. Check back often for updates.\n\n\nWhat's New?\n\n\nRelease \n1.1.2.71\n\n\n\n\niOS and Android now support native navigation headers, including the iOS 11 large header.\n\n\nLots of bug fixes\n\n\n\n\nMore Docs Coming Soon!\n\n\nWe are working hard to bring more documents and examples to the site. If you have any questions that aren't available in the existing docs, please contact", 
+            "text": "Welcome to the P2UX Developer Site\n\n\nWe are working on bringing more documentation and samples for developers. Check back often for updates.\n\n\nWhat's New?\n\n\nRelease \n1.1.4.76\n\n\n\n\niOS and Android now support native navigation headers, including the iOS 11 large header.\n\n\nLots of bug fixes\n\n\n\n\nMore Docs Coming Soon!\n\n\nWe are working hard to bring more documents and examples to the site. If you have any questions that aren't available in the existing docs, please contact", 
             "title": "Latest News"
         }, 
         {
@@ -12,7 +12,7 @@
         }, 
         {
             "location": "/#whats-new", 
-            "text": "Release  1.1.2.71   iOS and Android now support native navigation headers, including the iOS 11 large header.  Lots of bug fixes", 
+            "text": "Release  1.1.4.76   iOS and Android now support native navigation headers, including the iOS 11 large header.  Lots of bug fixes", 
             "title": "What's New?"
         }, 
         {
