@@ -74,10 +74,62 @@ override func viewDidLoad() {
 ```
 
 ### Android
+In the `MainActivity.java`
+``` Java
+// Coming Soon
+```
 
 ## Customizing the Error Screen
+Customizing the error screen shown when the *PRL* is unable to load the application content is done much in the same way as customizing the loading screen.
 
 ### iOS/tvOS
+The error screen can be customized by providing an instance of the `P2UXAppErrorViewController` class via the `createErrorViewController` method of the `P2UXAppCreatorDelegate` protocol. Typically this is handled via your `AppDelegate` instance by having it implement the `P2UXAppCreatorDelegate` protocol. Since the class `P2UXAppErrorViewController` is just an instance of UIViewController, the contents can be customized using any standard iOS/tvOS APIs. 
+
+There are helper methods in the `P2UXAppErrorViewController` class that provide access to the default components of the view.
+#### Objective-C
+In `AppDelegate.m`
+``` Objective-C
+...
+// Return an instance of a P2UXAppLoadingViewController derived class
+- (P2UXAppLoadingViewController*) createErrorViewController {
+	return [[CustomErrorViewController alloc] init];
+}
+```
+
+In the custom class (in this example `CustomErrorViewController`):
+``` Objective-C
+...
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+ 	// for this example, we'll just change the background color
+ 	[self.view setBackgroundColor:[UIColor blueColor]];
+}
+```
+
+#### Swift
+In `AppDelegate.swift`
+``` Swift
+...
+// Return an instance of a P2UXAppErrorViewController derived class
+func createErrorViewController() -> P2UXAppErrorViewController {
+        return CustomErrorViewController()
+}
+```
+
+In the custom class (in this example `CustomErrorViewController`):
+``` Swift
+...
+override func viewDidLoad() {
+    super.viewDidLoad()
+
+ 	// for this example, we'll just change the background color
+ 	self.view.backgroundColor = UIColor.blue;
+}
+```
 
 ### Android
+```
+Coming soon
+```
 <div style="text-align:right"><sub><sup>Last Updated: Nov. 12, 2017<sup><sub></div>
