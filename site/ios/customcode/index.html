@@ -344,10 +344,82 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
-      Data Sources
+      General
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
+        General
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../general/envandpublish/" title="Application Environments" class="md-nav__link">
+      Application Environments
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Dynamic Application Bundles
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Dynamic Application Bundles
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../general/startupscreen/" title="Customizing Startup Screen" class="md-nav__link">
+      Customizing Startup Screen
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Data Sources
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
         Data Sources
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -508,7 +580,7 @@ This will create two files: <code class="codehilite">SampleBehavior.h</code> and
     <span class="n">appKey</span> <span class="o">=</span> <span class="s">@&quot;xxxxx&quot;</span><span class="p">;</span>
     <span class="bp">NSDictionary</span> <span class="o">*</span><span class="n">opts</span><span class="p">;</span>
 <span class="cp">#if DEBUG</span>
-    <span class="n">opts</span> <span class="o">=</span> <span class="l">@{</span><span class="nl">P2UXAppCreator_Opt_Env</span><span class="p">:</span> <span class="n">P2UXAppCreator_Opt_Env_Prototype</span><span class="l">}</span><span class="p">;</span>
+    <span class="n">opts</span> <span class="o">=</span> <span class="l">@{</span><span class="nl">P2UXAppCreator_Opt_Env</span><span class="p">:</span> <span class="n">P2UXAppCreator_Opt_Env_Stage</span><span class="l">}</span><span class="p">;</span>
 <span class="cp">#endif    </span>
     <span class="bp">NSDictionary</span> <span class="o">*</span><span class="n">resources</span> <span class="o">=</span> <span class="l">@[@{</span><span class="nl">P2UXApp_PackageAttrib_FormFactor</span><span class="p">:</span> <span class="p">[</span><span class="bp">NSNumber</span> <span class="nl">numberWithInteger</span><span class="p">:</span><span class="n">P2UXFormFactor_Phone</span><span class="p">],</span> <span class="nl">P2UXApp_PackageAttrib_Type</span><span class="p">:</span><span class="n">P2UXApp_PackageType_Static</span><span class="p">,</span> <span class="nl">P2UXApp_PackageAttrib_Package</span><span class="p">:</span><span class="s">@&quot;phone_pub&quot;</span><span class="p">,</span><span class="nl">P2UXApp_PackageAttrib_Update</span><span class="p">:</span><span class="n">P2UXApp_PackageUpdate_None</span><span class="l">}]</span><span class="p">;</span>
 
@@ -551,7 +623,7 @@ This will create two files: <code class="codehilite">SampleBehavior.h</code> and
         <span class="n">var</span> <span class="n">opts</span> <span class="p">:</span> <span class="p">[</span><span class="n">AnyHashable</span> <span class="p">:</span> <span class="n">Any</span><span class="p">];</span>
 <span class="c1">#if DEBUG</span>
         <span class="n">opts</span> <span class="o">=</span> <span class="p">[</span>
-            <span class="n">P2UXAppCreator_Opt_Env</span><span class="p">:</span> <span class="n">P2UXAppCreator_Opt_Env_Prototype</span><span class="p">,</span>
+            <span class="n">P2UXAppCreator_Opt_Env</span><span class="p">:</span> <span class="n">P2UXAppCreator_Opt_Env_Stage</span><span class="p">,</span>
             <span class="n">P2UXAppCreator_Opt_LogLevel</span><span class="p">:</span> <span class="n">P2UXCoreLogLevel</span><span class="o">.</span><span class="n">verbose</span><span class="o">.</span><span class="n">rawValue</span> <span class="k">as</span>  
             <span class="n">NSNumber</span>
         <span class="p">]</span>

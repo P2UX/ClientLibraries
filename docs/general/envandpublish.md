@@ -1,4 +1,5 @@
-# Introduction
+# Application Environments
+-----
 
 Publishing applications on the P2UX Platform allows for use in different environments to support prototype testing, staged testing for release to live applications, and deployment of the application content to production native apps. Each environment can be targeted by the native application based on the creation and initialization of the app in native code. The use of these different environments is not enforced by the P2UX rendering libraries (PRL) on the different platforms which allows the developer to decide how they are used.
 
@@ -13,14 +14,14 @@ When an application is Published via the ==Publish== menu in *Builder*, the appl
 !!! note "Private and Public Publishing"
     *Builder* provides the option to publicly or privately publish prototypes. A private publish of the Prototype is only available to the user that Published the application and will only be usable by the *P2UX Player* for Android and iOS/tvOS. A public publish of the application will be available in the *P2UX Player* to any user in the same group as the user that published the application as well as being available for use in native application instances.
 
-To use a *Prototype* in a native application, the developer needs to setup the PRL environment to refer to prototypes. 
+To use a *Prototype* in a native application, the developer needs to setup the *PRL* environment to refer to recent publishes. 
 
 The environment value to use for Prototypes is: `P2UXAppCreator_Opt_Env_Recent`
 
 This setting will fetch the most recent *Public* version of the Application bundle regardless of whether it is in the *Prototype*, *Staged*, or *Production* environments. Every time the application is published publicly, it becomes the most recent version and is available to developer builds of the application.
 
 !!! danger "Prototypes aren't meant for Release!"
-    Using a *Prototype* bundle with dynamic updates in a native application is supported by P2UX, but NOT recommended for applications released to the public. It is meant for developer builds try out features quickly and test your custom code. Be aware that every time a public pubish is performed on the application, the native application will pick up the changes when it restarts which means every change made to the application and published as a public *Prototype* would be pushed to your users! 
+    Using a *Prototype* bundle with dynamic updates in a native application is supported by P2UX, but NOT recommended for applications released to the public. It is meant for developer builds to try out features quickly and test custom code. Be aware that every time a public pubish is performed on the application, the native application will pick up the changes when it restarts which means every change made to the application and published as a public *Prototype* would be pushed to your users! 
 
 The following code examples set the environment to `P2UXAppCreator_Opt_Env_Recent` for developer testing and debugging purposes.
     
@@ -94,11 +95,18 @@ The *Stage* environment is intended for testing an application prior to its rele
 To make application content available to the *Stage* environment in *Builder*:
     
 * Click the ==Publish== menu dropdown and select ==Make it real== from the menu.
-* Make sure you are in the ==Prototypes== tab at the top of the ==Make it Real== dialog
-* Click the ==Stage App== button next to the Prototype application bundle. 
-* Click ==OK== from the ==Stage App Confirmation== to finish the staging.
+![project wizard](../images/appenv/make_it_real.png)
 
-To use *Stage* content in a native application, the developer needs to setup the PRL environment to refer to staged content. 
+* Make sure you are in the ==Prototypes== tab at the top of the ==Make it Real== dialog
+![project wizard](../images/appenv/prototypes.png)
+
+* Click the ==Stage App== button next to the Prototype application bundle. 
+![project wizard](../images/appenv/stage_app.png)
+
+* Click ==OK== from the ==Stage App Confirmation== to finish the staging.
+![project wizard](../images/appenv/stage_app_confirm.png)
+
+To use *Stage* content in a native application, the developer needs to setup the *PRL* environment to refer to staged content. 
 
 The environment value to use for Prototypes is: `P2UXAppCreator_Opt_Env_Stage`
 
@@ -179,13 +187,19 @@ The *Production* environment is intended for use in the released production appl
 To make application content available to the *Production* environment in *Builder*:
     
 * Click the ==Publish== menu dropdown and select ==Make it real== from the menu.
+![project wizard](../images/appenv/make_it_real.png)
+
 * Click on the ==Apps== tab at the top of the ==Make it Real== dialog
+![project wizard](../images/appenv/apps.png)
+
 * Click the ==Deploy== button next to the Staged application bundle. 
 
-To use a *Production* in a native application, the developer needs to setup the PRL environment to refer to deployed content. 
+To use *Production* content in a native application, the developer needs to setup the PRL environment to refer to deployed content. 
 
 The environment value to use for Prototypes is: `P2UXAppCreator_Opt_Env_Production`
 
 This setting will fetch the deployed version of the Application bundle when the application starts if it doesn't have the most recent deployed version of the bundle. 
 
 To set the PRL to the *Production* environment, either omit the `P2UXAppCreator_Opt_Env` value from the options at startup or explicitly set it to `P2UXAppCreator_Opt_Env_Production`. The previous code examples would work as is for using the *Production* environment for released applications as the other environment alternatives are only set when debugging the application.
+
+<div style="text-align:right"><sub><sup>Last Updated: Nov. 21, 2017<sup><sub></div>
