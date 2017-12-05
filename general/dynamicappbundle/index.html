@@ -1,0 +1,852 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.10.1">
+    
+    
+      
+        <title>Dynamic Application Bundle - P2UX Developer</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-e826f8942a.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-a20f419c8e.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-23f75ab9c7.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="blue-grey" data-md-color-accent="">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="P2UX Developer" class="md-header-nav__button md-logo">
+          
+            
+              <img src="../../images/logo.png" width="24" height="24">
+            
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  Application Content
+                </span>
+              
+            
+            Dynamic Application Bundle
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">&#xE5CD;</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <div class="md-nav__button md-logo">
+      
+        
+          <img src="../../images/logo.png">
+        
+      
+    </div>
+    P2UX Developer
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Latest News" class="md-nav__link">
+      Latest News
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      iOS/tvOS
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        iOS/tvOS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ios/quickstart/" title="Quick Start" class="md-nav__link">
+      Quick Start
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ios/customcode/" title="Custom Code" class="md-nav__link">
+      Custom Code
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Android
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Android
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../android/quickstart/" title="Quick Start" class="md-nav__link">
+      Quick Start
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../android/customcode/" title="Custom Code" class="md-nav__link">
+      Custom Code
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Application Content
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Application Content
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../applicense/" title="Application License" class="md-nav__link">
+      Application License
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../envandpublish/" title="Application Environments" class="md-nav__link">
+      Application Environments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../appbundleupdates/" title="Application Bundle Updates" class="md-nav__link">
+      Application Bundle Updates
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Dynamic Application Bundle
+      </label>
+    
+    <a href="./" title="Dynamic Application Bundle" class="md-nav__link md-nav__link--active">
+      Dynamic Application Bundle
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#customizing-the-startup-screen" title="Customizing the Startup Screen" class="md-nav__link">
+    Customizing the Startup Screen
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iostvos" title="iOS/tvOS" class="md-nav__link">
+    iOS/tvOS
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objective-c" title="Objective-C" class="md-nav__link">
+    Objective-C
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swift" title="Swift" class="md-nav__link">
+    Swift
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#android" title="Android" class="md-nav__link">
+    Android
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customizing-the-error-screen" title="Customizing the Error Screen" class="md-nav__link">
+    Customizing the Error Screen
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iostvos_1" title="iOS/tvOS" class="md-nav__link">
+    iOS/tvOS
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objective-c_1" title="Objective-C" class="md-nav__link">
+    Objective-C
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swift_1" title="Swift" class="md-nav__link">
+    Swift
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#android_1" title="Android" class="md-nav__link">
+    Android
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../staticappbundle/" title="Static Application Bundle" class="md-nav__link">
+      Static Application Bundle
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../splashscreen/" title="Splash Screens" class="md-nav__link">
+      Splash Screens
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Data Sources
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Data Sources
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../datasources/overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#customizing-the-startup-screen" title="Customizing the Startup Screen" class="md-nav__link">
+    Customizing the Startup Screen
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iostvos" title="iOS/tvOS" class="md-nav__link">
+    iOS/tvOS
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objective-c" title="Objective-C" class="md-nav__link">
+    Objective-C
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swift" title="Swift" class="md-nav__link">
+    Swift
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#android" title="Android" class="md-nav__link">
+    Android
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customizing-the-error-screen" title="Customizing the Error Screen" class="md-nav__link">
+    Customizing the Error Screen
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iostvos_1" title="iOS/tvOS" class="md-nav__link">
+    iOS/tvOS
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objective-c_1" title="Objective-C" class="md-nav__link">
+    Objective-C
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swift_1" title="Swift" class="md-nav__link">
+    Swift
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#android_1" title="Android" class="md-nav__link">
+    Android
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="dynamic-application-bundle">Dynamic Application Bundle<a class="headerlink" href="#dynamic-application-bundle" title="Permanent link">&para;</a></h1>
+<hr />
+<p>The default behavior of the <em>P2UX Rendering Library</em> (PRL) is to use the application bundle created by <em>Builder</em> as a dynamic resource. In this mode, there are no resources bundled into the native application itself. Instead, the first time the application is run, the <em>PRL</em> will contact <em>Builder</em> and retrieve the application bundle for the specified environment (see <a href="../envandpublish">Application Environments</a>) before the application starts. This experience allows for application content to be completely dynamic and easily updatable without need to have a heavy native application binary.</p>
+<div class="admonition note">
+<p class="admonition-title">Connectivity Required for First Run</p>
+<p>Using dynamic application bundles requires connectivity for the first run of the application so that the application can retrieve its content. In the case where the user runs an application for the first time without connectivity, the <em>PRL</em> will show an error dialog prompting the user to connect to the internet. If connectivity for first run is an issue, use <a href="../staticappbundle">Static Application Bundles</a></p>
+</div>
+<h2 id="customizing-the-startup-screen">Customizing the Startup Screen<a class="headerlink" href="#customizing-the-startup-screen" title="Permanent link">&para;</a></h2>
+<p>When using application bundles as live dynamic resources, the <em>PRL</em> will show a loading screen the first time your application runs. The default loading screen shows a P2UX logo, a message and the loading progress. This screen can be customized by the developer to use customized assets and messaging to match your application.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>After the first time the application bundle is successfully downloaded and unpacked, all updates of the application bundle are performed in the background allowing the user to continue using the application. (See <a href="../appbundleupdates">Application Bundle Updates</a> for more options on updating) It's only the first run of the application where the Startup Screen is shown.</p>
+</div>
+<h3 id="iostvos">iOS/tvOS<a class="headerlink" href="#iostvos" title="Permanent link">&para;</a></h3>
+<p>The startup screen can be customized by providing an instance of the <code class="codehilite">P2UXAppLoadingViewController</code> class via the <code class="codehilite">createLoadingViewController</code> method of the <code class="codehilite">P2UXAppCreatorDelegate</code> protocol. Typically this is handled via your <code class="codehilite">AppDelegate</code> instance by having it implement the <code class="codehilite">P2UXAppCreatorDelegate</code> protocol. Since the class <code class="codehilite">P2UXAppLoadingViewController</code> is just an instance of UIViewController, the contents can be customized using any standard iOS/tvOS APIs. </p>
+<p>There are helper methods in the <code class="codehilite">P2UXAppLoadingViewController</code> class that provide access to the default components of the view.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For Xcode projects created using the P2UX <em>Coordinator</em> application for macOS, the <code class="codehilite">AppDelegate</code> class is already setup as the <code class="codehilite">P2UXAppCreatorDelegate</code> delegate to <code class="codehilite">P2UXAppCreator</code>.</p>
+</div>
+<h4 id="objective-c">Objective-C<a class="headerlink" href="#objective-c" title="Permanent link">&para;</a></h4>
+<p>In <code class="codehilite">AppDelegate.m</code></p>
+<div class="codehilite"><pre><span></span><span class="p">...</span>
+<span class="c1">// Return an instance of a P2UXAppLoadingViewController derived class</span>
+<span class="o">-</span> <span class="p">(</span><span class="n">P2UXAppLoadingViewController</span><span class="o">*</span><span class="p">)</span> <span class="n">createLoadingViewController</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">[[</span><span class="n">CustomLoadingViewController</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>In the custom class (in this example <code class="codehilite">CustomLoadingViewController</code>):</p>
+<div class="codehilite"><pre><span></span><span class="p">...</span>
+<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">viewDidLoad</span> <span class="p">{</span>
+    <span class="p">[</span><span class="nb">super</span> <span class="n">viewDidLoad</span><span class="p">];</span>
+
+    <span class="c1">// for this example, we&#39;ll just override the logo shown in the loading dialog.</span>
+    <span class="c1">// load the UIImage instance of the custom logo from the native app bundle.</span>
+    <span class="bp">UIImage</span><span class="o">*</span> <span class="n">logo</span> <span class="o">=</span> <span class="p">[</span><span class="bp">UIImage</span> <span class="nl">imageNamed</span><span class="p">:</span><span class="s">@&quot;customlogo&quot;</span><span class="p">];</span>
+    <span class="c1">// set this image as the current logo</span>
+    <span class="c1">// this is a method of the base class P2UXAppLoadingViewController</span>
+    <span class="p">[</span><span class="nb">self</span> <span class="nl">setLogoImage</span><span class="p">:</span> <span class="n">logo</span><span class="p">];</span>    
+<span class="p">}</span>
+</pre></div>
+
+
+<h4 id="swift">Swift<a class="headerlink" href="#swift" title="Permanent link">&para;</a></h4>
+<p>In <code class="codehilite">AppDelegate.swift</code></p>
+<div class="codehilite"><pre><span></span><span class="p">...</span>
+<span class="c1">// Return an instance of a P2UXAppLoadingViewController derived class</span>
+<span class="kd">func</span> <span class="nf">createLoadingViewController</span><span class="p">()</span> <span class="p">-&gt;</span> <span class="n">P2UXAppLoadingViewController</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">CustomLoadingViewController</span><span class="p">()</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>In the custom class (in this example <code class="codehilite">CustomLoadingViewController</code>):</p>
+<div class="codehilite"><pre><span></span><span class="p">...</span>
+<span class="kr">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kc">super</span><span class="p">.</span><span class="n">viewDidLoad</span><span class="p">()</span>
+
+    <span class="c1">// for this example, we&#39;ll just override the logo shown in the loading dialog</span>
+    <span class="c1">// load the UIImage instance of the customlogo from the native app bundle.</span>
+    <span class="kd">let</span> <span class="nv">image</span> <span class="p">=</span> <span class="bp">UIImage</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">named</span><span class="p">:</span> <span class="s">&quot;customlogo&quot;</span><span class="p">);</span>
+    <span class="c1">// set this image as the current logo</span>
+    <span class="c1">// this is a method of the base class P2UXAppLoadingViewController</span>
+    <span class="kc">self</span><span class="p">.</span><span class="n">setLogoImage</span><span class="p">(</span><span class="n">image</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h3 id="android">Android<a class="headerlink" href="#android" title="Permanent link">&para;</a></h3>
+<p>In the <code class="codehilite">MainActivity.java</code></p>
+<div class="codehilite"><pre><span></span><span class="c1">// Coming Soon</span>
+</pre></div>
+
+
+<h2 id="customizing-the-error-screen">Customizing the Error Screen<a class="headerlink" href="#customizing-the-error-screen" title="Permanent link">&para;</a></h2>
+<p>Customizing the error screen shown when the <em>PRL</em> is unable to load the application content is done much in the same way as customizing the loading screen.</p>
+<h3 id="iostvos_1">iOS/tvOS<a class="headerlink" href="#iostvos_1" title="Permanent link">&para;</a></h3>
+<p>The error screen can be customized by providing an instance of the <code class="codehilite">P2UXAppErrorViewController</code> class via the <code class="codehilite">createErrorViewController</code> method of the <code class="codehilite">P2UXAppCreatorDelegate</code> protocol. Typically this is handled via your <code class="codehilite">AppDelegate</code> instance by having it implement the <code class="codehilite">P2UXAppCreatorDelegate</code> protocol. Since the class <code class="codehilite">P2UXAppErrorViewController</code> is just an instance of UIViewController, the contents can be customized using any standard iOS/tvOS APIs. </p>
+<p>There are helper methods in the <code class="codehilite">P2UXAppErrorViewController</code> class that provide access to the default components of the view.</p>
+<h4 id="objective-c_1">Objective-C<a class="headerlink" href="#objective-c_1" title="Permanent link">&para;</a></h4>
+<p>In <code class="codehilite">AppDelegate.m</code></p>
+<div class="codehilite"><pre><span></span><span class="p">...</span>
+<span class="c1">// Return an instance of a P2UXAppLoadingViewController derived class</span>
+<span class="o">-</span> <span class="p">(</span><span class="n">P2UXAppLoadingViewController</span><span class="o">*</span><span class="p">)</span> <span class="n">createErrorViewController</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">[[</span><span class="n">CustomErrorViewController</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>In the custom class (in this example <code class="codehilite">CustomErrorViewController</code>):</p>
+<div class="codehilite"><pre><span></span><span class="p">...</span>
+<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">viewDidLoad</span> <span class="p">{</span>
+    <span class="p">[</span><span class="nb">super</span> <span class="n">viewDidLoad</span><span class="p">];</span>
+
+    <span class="c1">// for this example, we&#39;ll just change the background color</span>
+    <span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">view</span> <span class="nl">setBackgroundColor</span><span class="p">:[</span><span class="bp">UIColor</span> <span class="n">blueColor</span><span class="p">]];</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h4 id="swift_1">Swift<a class="headerlink" href="#swift_1" title="Permanent link">&para;</a></h4>
+<p>In <code class="codehilite">AppDelegate.swift</code></p>
+<div class="codehilite"><pre><span></span><span class="p">...</span>
+<span class="c1">// Return an instance of a P2UXAppErrorViewController derived class</span>
+<span class="kd">func</span> <span class="nf">createErrorViewController</span><span class="p">()</span> <span class="p">-&gt;</span> <span class="n">P2UXAppErrorViewController</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">CustomErrorViewController</span><span class="p">()</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>In the custom class (in this example <code class="codehilite">CustomErrorViewController</code>):</p>
+<div class="codehilite"><pre><span></span><span class="p">...</span>
+<span class="kr">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kc">super</span><span class="p">.</span><span class="n">viewDidLoad</span><span class="p">()</span>
+
+    <span class="c1">// for this example, we&#39;ll just change the background color</span>
+    <span class="kc">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">backgroundColor</span> <span class="p">=</span> <span class="bp">UIColor</span><span class="p">.</span><span class="n">blue</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h3 id="android_1">Android<a class="headerlink" href="#android_1" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>Coming soon
+</pre></div>
+
+
+<div style="text-align:right"><sub><sup>Last Updated: Nov. 12, 2017<sup><sub></div>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../appbundleupdates/" title="Application Bundle Updates" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Application Bundle Updates
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../staticappbundle/" title="Static Application Bundle" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Static Application Bundle
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2017 P2UX, Inc.
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-f3ab9e5ff8.js"></script>
+      
+      
+      <script>app.initialize({url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

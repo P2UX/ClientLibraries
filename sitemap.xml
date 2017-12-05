@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-11-10</lastmod>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,13 +13,13 @@
         
     <url>
      <loc>/ios/quickstart/</loc>
-     <lastmod>2017-11-10</lastmod>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/ios/customcode/</loc>
-     <lastmod>2017-11-10</lastmod>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -29,33 +29,53 @@
         
     <url>
      <loc>/android/quickstart/</loc>
-     <lastmod>2017-11-10</lastmod>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/android/customcode/</loc>
-     <lastmod>2017-11-10</lastmod>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     
 
     
+        
+    <url>
+     <loc>/general/applicense/</loc>
+     <lastmod>2017-12-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
         
     <url>
      <loc>/general/envandpublish/</loc>
-     <lastmod>2017-11-10</lastmod>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
-    
-
-    
+    <url>
+     <loc>/general/appbundleupdates/</loc>
+     <lastmod>2017-12-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
         
     <url>
-     <loc>/general/startupscreen/</loc>
-     <lastmod>2017-11-10</lastmod>
+     <loc>/general/dynamicappbundle/</loc>
+     <lastmod>2017-12-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/general/staticappbundle/</loc>
+     <lastmod>2017-12-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/general/splashscreen/</loc>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -65,7 +85,7 @@
         
     <url>
      <loc>/datasources/overview/</loc>
-     <lastmod>2017-11-10</lastmod>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
