@@ -66,6 +66,8 @@ typedef enum {
 - (P2UXAppDefinition*) definitionWithBehavior:(P2UXAppBehavior*)behavior;
 - (void) setKeyMode:(BOOL)keyMode;
 
+- (BOOL) resetCurrentAppVersion;
+
 #pragma mark - P2UXKeyConnectionManagerDelegate
 - (void) connectionResultSuccess:(ConnectionLoginError)result request:(NSDictionary *)request;
 #pragma mark - P2UXUpdateContentManagerDelegate

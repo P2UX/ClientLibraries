@@ -39,6 +39,7 @@ typedef NS_ENUM(NSInteger, ProgressFillMode) {
 @property (nonatomic) CGFloat value;
 @property (nonatomic) CGFloat maxValue;
 @property (nonatomic) CGFloat minValue;
+@property (nonatomic) BOOL    reverse;
 
 - (id)initWithFrame:(CGRect)frame elemInst:(P2UXElementInstance*)elemInst uipath:(NSString *)path ext:(BOOL)ext viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate index:(id)index;
 - (void) layoutControls;

@@ -51,6 +51,8 @@
 + (void) createInfoForType:(NSString*)type name:(NSString*)itemId user:(NSString*)user;
 + (void) createInfoForType:(NSString*)type name:(NSString*)itemId user:(NSString*)user def:(NSDictionary*)def;
 
++ (BOOL) deleteInfoForType:(NSString*)type name:(NSString*)itemId user:(NSString*)user;
+
 + (BOOL) deleteAllContentForType:(NSString*)type;
 + (BOOL) deleteAllContentForType:(NSString*)type user:(NSString*)user;
 + (BOOL) deleteAllContentForType:(NSString*)type user:(NSString*)user except:(NSArray*)except;
