@@ -120,6 +120,6 @@ extern NSString* const P2UXButton_Default_Label_Color;
 #pragma mark - P2UXControl
 -(void) setData:(NSDictionary *)data;
 -(void) cleanup;
--(void) refreshControl;
+-(void) refreshControlContents;
 
 @end
