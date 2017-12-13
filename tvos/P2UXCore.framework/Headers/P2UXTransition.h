@@ -20,6 +20,15 @@ typedef NS_ENUM(NSInteger, P2UXTransitionScreen)
     P2UXTransitionScreen_Outgoing
 };
 
+typedef NS_ENUM(NSInteger, P2UXTransitionSide)
+{
+    P2UXTransitionSide_None = 0,
+    P2UXTransitionSide_Left,
+    P2UXTransitionSide_Right,
+    P2UXTransitionSide_Up,
+    P2UXTransitionSide_Down
+};
+
 extern NSString* const P2UXTransition_Attrib_Duration;
 extern NSString* const P2UXTransition_Attrib_Easing;
 extern NSString* const P2UXTransition_Attrib_Type;
@@ -32,6 +41,7 @@ extern NSString* const P2UXTransition_Bounces_Custom;
 @interface P2UXTransition : NSObject
 {
     P2UXTransitionScreen _screen;
+    P2UXTransitionSide _side;
 }
 @property (nonatomic) CGFloat duration;
 @property (nonatomic) CGFloat delay;
@@ -42,6 +52,7 @@ extern NSString* const P2UXTransition_Bounces_Custom;
 @property (nonatomic, readonly) NSString* curveType;
 @property (nonatomic, readonly) NSDictionary* controls;
 @property (nonatomic, readonly) NSDictionary* itemSpec;
+@property (nonatomic, readonly) P2UXTransitionSide side;
 @property (nonatomic) BOOL valid;
 @property (nonatomic) BOOL isFullScreen;
 @property (nonatomic, readonly) P2UXTransitionScreen screen;

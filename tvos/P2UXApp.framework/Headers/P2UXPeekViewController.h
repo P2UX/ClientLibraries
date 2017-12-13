@@ -9,7 +9,9 @@
 
 typedef NS_ENUM(NSInteger, P2UXPeekPosition) {
     P2UXPeekPosition_Left,
-    P2UXPeekPosition_Right
+    P2UXPeekPosition_Right,
+    P2UXPeekPosition_Up,
+    P2UXPeekPosition_Down
 };
 
 @protocol P2UXPeekViewControllerDelegate

@@ -50,9 +50,9 @@ typedef void (^P2UXWebAuthResponse)(id response);
 
 @protocol P2UXDataAuthDelegate <NSObject>
 
--(void) authType:(P2UXAuthType)type forService:(NSString*)service requires:(NSDictionary*)params viaCallback:(P2UXAuthParamResponse)callback;
--(void) authType:(P2UXAuthType)type forService:(NSString*)service returnedResult:(P2UXAuthResult)result onRequest:(NSString*)request fromSource:(id)source;
--(void) authType:(P2UXAuthType)type forService:(NSString*)service webAuth:(NSURL*)authURL withRedirect:(NSString*)redirect andCallback:(P2UXWebAuthResponse)callback;
+-(BOOL) authType:(P2UXAuthType)type forService:(NSString*)service requires:(NSDictionary*)params viaCallback:(P2UXAuthParamResponse)callback;
+-(BOOL) authType:(P2UXAuthType)type forService:(NSString*)service returnedResult:(P2UXAuthResult)result onRequest:(NSString*)request fromSource:(id)source;
+-(BOOL) authType:(P2UXAuthType)type forService:(NSString*)service webAuth:(NSURL*)authURL withRedirect:(NSString*)redirect andCallback:(P2UXWebAuthResponse)callback;
 
 @end
 

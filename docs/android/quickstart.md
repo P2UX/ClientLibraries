@@ -43,12 +43,12 @@ The next step in developing your project with P2UX is to include the P2UX librar
 apply plugin: 'com.android.application'
 
 android {
-   compileSdkVersion 25
-   buildToolsVersion "26.0.0"
+   compileSdkVersion 26
+   buildToolsVersion "26.0.2"
    defaultConfig {
        applicationId "com.p2ux.sampleapp"
        minSdkVersion 18
-       targetSdkVersion 25
+       targetSdkVersion 26
        versionCode 1
        versionName "1.0"
        multiDexEnabled true
@@ -68,17 +68,17 @@ repositories {
 
 dependencies {
    compile fileTree(dir: 'libs', include: ['*.jar'])
-   compile 'com.android.support:appcompat-v7:25.3.1'
+   compile 'com.android.support:appcompat-v7:26.1.0'
 
    compile(name: 'P2UXCore', ext: 'aar')
    compile(name: 'P2UXApp', ext: 'aar')
-   compile 'com.android.support:recyclerview-v7:25.3.1'
+   compile 'com.android.support:recyclerview-v7:26.1.0'
    // If Google Maps are required for your app, add the following 4 Google Play 
    // Services dependencies
-   compile 'com.google.android.gms:play-services-maps:10.2.1'
-   compile 'com.google.android.gms:play-services-ads:10.2.1'
-   compile 'com.google.android.gms:play-services-identity:10.2.1'
-   compile 'com.google.android.gms:play-services-gcm:10.2.1'
+   compile 'com.google.android.gms:play-services-maps:11.6.2'
+   compile 'com.google.android.gms:play-services-ads:11.6.2'
+   compile 'com.google.android.gms:play-services-identity:11.6.2'
+   compile 'com.google.android.gms:play-services-gcm:11.6.2'
    compile 'com.madgag.spongycastle:core:1.54.0.0'
    compile 'com.madgag.spongycastle:prov:1.54.0.0'
 }
@@ -99,23 +99,24 @@ import com.p2ux.app.P2UXAppFragmentActivity;
 import com.p2ux.app.components.P2UXAppBehavior;
 import com.p2ux.core.utils.P2UXLog;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class MainActivity extends P2UXAppFragmentActivity
 {
    @Override
    public void onCreate(Bundle savedInstanceState)
    {
-       //You can get the app key or license key from builder for your app. This is required to link your builder up to your local app
-       // This is the key generated from Builder for the application. This key is needed to initialize the P2UX rendering framework.
-       mAppKey = "xxxxxx";  
-       if ((getApplicationInfo().flags & ApplicationInfo.FLAG_DEBUGGABLE) == ApplicationInfo.FLAG_DEBUGGABLE) {
-           if (savedInstanceState == null) {
-               savedInstanceState = new Bundle();
-           }
-           savedInstanceState.putString(P2UXAppCreator.P2UXAppCreator_Opt_Env, P2UXAppCreator.P2UXAppCreator_Opt_Env_Prototype);
-           savedInstanceState.putLong(P2UXAppCreator.P2UXAppCreator_Opt_LogLevel, P2UXLog.P2UXCoreLogFlagVerbose);
-       }
-       super.onCreate(savedInstanceState);
-       applyTranslucentStatusBar();
+        super.onCreate(savedInstanceState);
+        // You can get the app key or license key from builder for your app. This is required to link your builder up to your local app
+        // This is the key generated from Builder for the application. This key is needed to initialize the P2UX rendering framework.
+        String appKey = "xxxxx"; 
+        HashMap<String, Object> options = new HashMap<>();
+        if ((getApplicationInfo().flags & ApplicationInfo.FLAG_DEBUGGABLE) == ApplicationInfo.FLAG_DEBUGGABLE) {
+	    options.put(P2UXAppCreator.P2UXAppCreator_Opt_Env, P2UXAppCreator.P2UXAppCreator_Opt_Env_Recent);
+            options.put(P2UXAppCreator.P2UXAppCreator_Opt_LogLevel, P2UXLog.P2UXCoreLogFlagVerbose);
+        }
+        super.setupApp(savedInstanceState, appKey, options, null);
    }
 }
 ```
@@ -160,32 +161,18 @@ In order to incorporate these files into your project, as well as to adjust the 
 @Override
 public void onCreate(Bundle savedInstanceState)
 {
-   mAppKey = "xxxxx";
-
-   try {
-       mResources = new JSONArray();
-       JSONObject resource = new JSONObject();
-       resource.put(P2UXAppTypes.P2UXApp_PackageAttrib_FormFactor, 0);
-       resource.put(P2UXAppTypes.P2UXApp_PackageAttrib_Type, P2UXAppTypes.P2UXApp_PackageType_Static);
-       resource.put(P2UXAppTypes.P2UXApp_PackageAttrib_Package, "phone_pub");
-       resource.put(P2UXAppTypes.P2UXApp_PackageAttrib_Update, P2UXAppTypes.P2UXApp_PackageUpdate_None);
-       mResources.put(resource);
-   }
-   catch (JSONException e)
-   {
-       P2UXLog.e(TAG, "onCreate - " + e.getMessage());
-   }
-
-   if ((getApplicationInfo().flags & ApplicationInfo.FLAG_DEBUGGABLE) == ApplicationInfo.FLAG_DEBUGGABLE) {
-       if (savedInstanceState == null) {
-           savedInstanceState = new Bundle();
-       }
-       savedInstanceState.putString(P2UXAppCreator.P2UXAppCreator_Opt_Env, P2UXAppCreator.P2UXAppCreator_Opt_Env_Prototype);
-       savedInstanceState.putLong(P2UXAppCreator.P2UXAppCreator_Opt_LogLevel, P2UXLog.P2UXCoreLogFlagVerbose);
-   }
-
-   super.onCreate(savedInstanceState);
-   applyTranslucentStatusBar();
+    super.onCreate(savedInstanceState);
+    
+    String appKey = "xxxxx"; 
+    ArrayList<HashMap<String, Object>> resources = new ArrayList<>();
+    // Set up external resource
+    HashMap<String, Object> phoneRes = new HashMap<>();
+    phoneRes.put(P2UXAppTypes.P2UXApp_PackageAttrib_FormFactor, 0);
+    phoneRes.put(P2UXAppTypes.P2UXApp_PackageAttrib_Type, P2UXAppTypes.P2UXApp_PackageType_Static);
+    phoneRes.put(P2UXAppTypes.P2UXApp_PackageAttrib_Package, "shellui_phone");
+    phoneRes.put(P2UXAppTypes.P2UXApp_PackageAttrib_Update, P2UXAppTypes.P2UXApp_PackageUpdate_None);
+    resources.add(phoneRes);
+    super.setupApp(savedInstanceState, appKey, options, null);
 }
 ```
 

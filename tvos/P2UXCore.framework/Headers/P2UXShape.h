@@ -56,7 +56,7 @@ typedef NS_ENUM(NSInteger, BorderLineJoin) {
 - (id) initWithFrame:(CGRect)frame elemInst:(P2UXElementInstance*)elemInst uipath:(NSString*)path ext:(BOOL)ext viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate index:(id)index;
 - (id) initWithFrame:(CGRect)frame spec:(NSDictionary*)spec path:(NSString*)path ext:(BOOL)ext viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate;
 - (id) initWithFrame:(CGRect)frame gradientSpec:(id)gradientSpec path:(NSString*)path ext:(BOOL)ext viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate;
-- (void) refreshControl;
+- (void) refreshControlContents;
 - (void) updatePaths;
 - (void) drawInContext:(CGContextRef)context rect:(CGRect)rect;
 - (BOOL) canBeRendered;

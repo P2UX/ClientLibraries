@@ -64,6 +64,7 @@ typedef void (^TransitionComplete)(UIView* view, BOOL reverse);
 @property (nonatomic) BOOL      valid;
 @property (nonatomic) BOOL      isDefault;
 @property (nonatomic) BOOL      isFullScreen;
+@property (nonatomic) P2UXTransitionSide side;
 @property (nonatomic, readonly) P2UXTransitionEasing easing;
 
 + (AHEasingFunction) easing:(NSDictionary*)transition;

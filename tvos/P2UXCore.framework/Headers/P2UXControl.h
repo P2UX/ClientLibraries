@@ -15,7 +15,7 @@
 - (P2UXElementInstance*) elemInstance;
 - (id) valueForAttribute:(NSString*)attribute;
 @optional
-- (void) refreshControl;
+- (void) refreshControlContents;
 - (void) updateContents;
 - (void) initializeConstraints:(UIView*)constraintParent;
 @end

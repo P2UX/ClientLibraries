@@ -22,5 +22,5 @@
 #pragma mark - P2UXControl
 - (void) setData:(NSDictionary *)data;
 - (void) cleanup;
-- (void) refreshControl;
+- (void) refreshControlContents;
 @end
