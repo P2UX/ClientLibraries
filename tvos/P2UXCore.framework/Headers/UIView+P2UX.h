@@ -19,8 +19,8 @@ void dispatch_uisafe_sync(dispatch_block_t block);
 
 + (void)animateWithDurationUsingAnimations:(void (^)(void))animations completion:(void (^)(BOOL finished))completion animSpec:(id)animSpec;
 
-- (id) initWithFrame:(CGRect)frame elemInst:(P2UXElementInstance *)elemInst viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate index:(id)index;
-- (id) initWithFrame:(CGRect)frame elemInst:(P2UXElementInstance *)elemInst uipath:(NSString *)path ext:(BOOL)ext viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate index:(id)index;
+- (instancetype) initWithFrame:(CGRect)frame elemInst:(P2UXElementInstance *)elemInst viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate index:(id)index;
+- (instancetype) initWithFrame:(CGRect)frame elemInst:(P2UXElementInstance *)elemInst uipath:(NSString *)path ext:(BOOL)ext viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate index:(id)index;
 
 - (void) setIgnored:(P2UXElementLayoutDim)ignored;
 - (P2UXElementLayoutDim) ignored;
@@ -31,7 +31,12 @@ void dispatch_uisafe_sync(dispatch_block_t block);
 - (void) initializeControls;
 - (void) parseSpec:(NSDictionary*)spec;
 
-- (BOOL) setAttribute:(id)value withName:(NSString*)name relative:(BOOL)relative animated:(id)animated itemspec:(NSDictionary*)itemspec;
+- (BOOL) setProperty:(NSString*)name withValue:(id)value relative:(BOOL)relative animated:(id)animated itemspec:(NSDictionary*)itemspec;
+- (BOOL) setProperty:(NSString*)name withStringValue:(NSString*)stringValue relative:(BOOL)relative animated:(id)animated itemspec:(NSDictionary*)itemspec;
+- (BOOL) setProperty:(NSString*)name withNumberValue:(NSNumber*)numberValue relative:(BOOL)relative animated:(id)animated itemspec:(NSDictionary*)itemspec;
+- (BOOL) setProperty:(NSString*)name withArrayValue:(NSArray*)arrayValue relative:(BOOL)relative animated:(id)animated itemspec:(NSDictionary*)itemspec;
+- (BOOL) setProperty:(NSString*)name withDictionaryValue:(NSDictionary*)dictionaryValue relative:(BOOL)relative animated:(id)animated itemspec:(NSDictionary*)itemspec;
+
 - (id)   valueForAttribute:(NSString*)attribute;
 - (void) updateAttribute:(NSString*)attribute withValue:(id)value;
 - (void) setAnimations:(NSDictionary*)animations;
@@ -106,11 +111,11 @@ void dispatch_uisafe_sync(dispatch_block_t block);
 
 #pragma mark - Link overrides for subclasses
 //- (void) varUpdate:(NSNotification*)notification;
-- (id)   dataForLinkAttribute:(P2UXVarLink*)link attributes:(NSArray*)attribute progressLinks:(NSArray*)progressLinks data:data;
-- (void) updateLinkAttributeHandler:(P2UXVarLink*)link attribute:(NSString*)attribute value:(id)value;
-- (void) updateLinkMissingAttributeHandler:(P2UXVarLink*)link attributes:(NSArray*)attributes;
+- (id)   dataForLinkProperty:(P2UXVarLink*)link properties:(NSArray*)properties progressLinks:(NSArray*)progressLinks data:data;
+- (void) updateLinkPropertyHandler:(P2UXVarLink*)link property:(NSString*)property value:(id)value;
+- (void) updateLinkMissingPropertyHandler:(P2UXVarLink*)link properties:(NSArray*)properties;
 - (void) updateLinkPostFilterHandler:(NSMutableDictionary*)varfilters conditionals:(NSDictionary*)conditionals varlinkvalues:(NSMutableDictionary*)varlinkvalues primaryValue:(NSString*)primaryValue;
-- (BOOL) updateLinkSetVariableValueHandler:(id)value attributes:(NSArray*)attributes varlinkvalues:(NSMutableDictionary*)varlinkvalues;
+- (BOOL) updateLinkSetVariableValueHandler:(id)value properties:(NSArray*)properties varlinkvalues:(NSMutableDictionary*)varlinkvalues;
 - (NSString*) updateLinkDefaultValue;
 
 - (id) objectForKey:(NSString*)key itemspec:(NSDictionary*) itemspec stylespec:(NSDictionary*)stylespec;

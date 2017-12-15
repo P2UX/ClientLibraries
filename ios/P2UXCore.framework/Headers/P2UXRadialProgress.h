@@ -43,7 +43,6 @@ typedef NS_ENUM(NSInteger, P2UXRadialProgressFillMode) {
 #pragma mark - P2UXControl
 - (void) setData:(NSDictionary *)data;
 - (void) cleanup;
-- (BOOL) setAttribute:(id)value withName:(NSString*)name relative:(BOOL)relative animated:(id)animated itemspec:(NSDictionary*)itemspec;
 
 #pragma mark - P2UXRadialProgressStateViewDelegate
 - (void) stateComplete:(P2UXRadialProgressStateView *)view;
