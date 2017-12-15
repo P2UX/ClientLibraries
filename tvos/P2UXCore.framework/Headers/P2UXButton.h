@@ -110,7 +110,6 @@ extern NSString* const P2UXButton_Default_Label_Color;
 - (void) handleUp:(id)sender;
 - (void) click;
 
-- (BOOL) setAttribute:(id)value withName:(NSString*)name relative:(BOOL)relative animated:(id)animated itemspec:(NSDictionary*)itemspec;
 - (id) valueForAttribute:(NSString*)attribute;
 
 - (void) setLabel:(NSString*)label;

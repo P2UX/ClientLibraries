@@ -35,8 +35,6 @@ extern NSString* const P2UXLabel_Truncation_None;
 - (void) setText:(NSString *)text;
 - (void) setLabelColor:(NSString*)labelColor;
 
-- (BOOL) setAttribute:(id)value withName:(NSString*)name relative:(BOOL)relative animated:(id)animated itemspec:(NSDictionary *)itemspec;
-
 #pragma mark - P2UXControl
 - (void) cleanup;
 - (void) setData:(NSDictionary *)data;

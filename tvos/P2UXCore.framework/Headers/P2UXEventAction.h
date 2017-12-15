@@ -35,7 +35,7 @@ typedef NS_ENUM(NSInteger,P2UXElementAction) {
     P2UXElementAction_Track,
     P2UXElementAction_SendMessage,
     P2UXElementAction_SetVariable,
-    P2UXElementAction_SetAttribute,
+    P2UXElementAction_SetProperty,
     P2UXElementAction_CheckForUpdates = 30,
     P2UXElementAction_LaunchSystemApp,
     P2UXElementAction_ShowNativeDialog,

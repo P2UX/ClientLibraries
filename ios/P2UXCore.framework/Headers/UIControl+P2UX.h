@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface UIControl (P2UX)
-- (BOOL) setAttribute:(id)value withName:(NSString*)name relative:(BOOL)relative animated:(id)animated itemspec:(NSDictionary*)itemspec;
+- (BOOL) setProperty:(NSString *)name withNumberValue:(NSNumber *)numberValue relative:(BOOL)relative animated:(id)animated itemspec:(NSDictionary *)itemspec;
 - (id)   valueForAttribute:(NSString *)attribute;
 - (void) setEnabledValue:(BOOL)enabled;
 @end

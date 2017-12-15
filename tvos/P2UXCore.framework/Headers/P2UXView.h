@@ -28,7 +28,6 @@ extern NSString* const P2UXView_Attribute_DragHandle;
 @interface P2UXView : UIView<UIGestureRecognizerDelegate, P2UXControl, P2UXActionDelegate, P2UXPanEventHandlerDelegate, P2UXData, P2UXScreenStateDelegate>
 {
     NSString*                       _path;
-    NSMutableDictionary*            _attributes;
     NSMutableArray*                 _focusChain;
     NSInteger                       _focusIndex;
     UIView*                         _currentView;
@@ -100,8 +99,6 @@ extern NSString* const P2UXView_Attribute_DragHandle;
 
 - (void) updateContents;
 
-- (id)   attributeWithName:(NSString*)name;
-- (BOOL) setAttribute:(id)attrib withName:(NSString*)name relative:(BOOL)relative animated:(id)animated itemspec:(NSDictionary *)itemspec;
 - (void) setValue:(NSInteger)value forElementWithType:(NSString*)type;
 - (void) setValue:(NSInteger)value forElement:(P2UXElement*)element;
 - (void) setValueWithString:(NSString*)value forElement:(P2UXElement*)element;
