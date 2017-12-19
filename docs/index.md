@@ -4,7 +4,7 @@ We are working on bringing more documentation and samples for developers. Check 
 
 ## What's New?
 
-Release <a href="https://github.com/P2UX/ClientLibraries" target="_blank">1.1.2.71</a>
+Release <a href="https://github.com/P2UX/ClientLibraries" target="_blank">1.1.4.76</a>
 
 * iOS and Android now support native navigation headers, including the iOS 11 large header.
 * Lots of bug fixes

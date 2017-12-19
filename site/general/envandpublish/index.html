@@ -80,7 +80,7 @@
             
               
                 <span class="md-header-nav__parent">
-                  General
+                  Application Content
                 </span>
               
             
@@ -263,14 +263,26 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
-      General
+      Application Content
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
-        General
+        Application Content
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../applicense/" title="Application License" class="md-nav__link">
+      Application License
+    </a>
+  </li>
+
         
           
           
@@ -387,29 +399,17 @@
   </li>
 
         
-      </ul>
-    </nav>
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../appbundleupdates/" title="Application Bundle Updates" class="md-nav__link">
+      Application Bundle Updates
+    </a>
   </li>
 
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
-    
-    <label class="md-nav__link" for="nav-5">
-      Dynamic Application Bundles
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
-        Dynamic Application Bundles
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
         
           
           
@@ -417,8 +417,32 @@
 
 
   <li class="md-nav__item">
-    <a href="../startupscreen/" title="Customizing Startup Screen" class="md-nav__link">
-      Customizing Startup Screen
+    <a href="../dynamicappbundle/" title="Dynamic Application Bundle" class="md-nav__link">
+      Dynamic Application Bundle
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../staticappbundle/" title="Static Application Bundle" class="md-nav__link">
+      Static Application Bundle
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../splashscreen/" title="Splash Screens" class="md-nav__link">
+      Splash Screens
     </a>
   </li>
 
@@ -435,13 +459,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
-    <label class="md-nav__link" for="nav-6">
+    <label class="md-nav__link" for="nav-5">
       Data Sources
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
+      <label class="md-nav__title" for="nav-5">
         Data Sources
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -573,7 +597,8 @@
               
                 
                 
-                <h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h1>
+                <h1 id="application-environments">Application Environments<a class="headerlink" href="#application-environments" title="Permanent link">&para;</a></h1>
+<hr />
 <p>Publishing applications on the P2UX Platform allows for use in different environments to support prototype testing, staged testing for release to live applications, and deployment of the application content to production native apps. Each environment can be targeted by the native application based on the creation and initialization of the app in native code. The use of these different environments is not enforced by the P2UX rendering libraries (PRL) on the different platforms which allows the developer to decide how they are used.</p>
 <p>When using application bundles as dynamic resources, P2UX based native applications will check for updates to the application bundle on startup of the app.</p>
 <h2 id="environments">Environments<a class="headerlink" href="#environments" title="Permanent link">&para;</a></h2>
@@ -584,12 +609,12 @@
 <p class="admonition-title">Private and Public Publishing</p>
 <p><em>Builder</em> provides the option to publicly or privately publish prototypes. A private publish of the Prototype is only available to the user that Published the application and will only be usable by the <em>P2UX Player</em> for Android and iOS/tvOS. A public publish of the application will be available in the <em>P2UX Player</em> to any user in the same group as the user that published the application as well as being available for use in native application instances.</p>
 </div>
-<p>To use a <em>Prototype</em> in a native application, the developer needs to setup the PRL environment to refer to prototypes. </p>
+<p>To use a <em>Prototype</em> in a native application, the developer needs to setup the <em>PRL</em> environment to refer to recent publishes. </p>
 <p>The environment value to use for Prototypes is: <code class="codehilite">P2UXAppCreator_Opt_Env_Recent</code></p>
 <p>This setting will fetch the most recent <em>Public</em> version of the Application bundle regardless of whether it is in the <em>Prototype</em>, <em>Staged</em>, or <em>Production</em> environments. Every time the application is published publicly, it becomes the most recent version and is available to developer builds of the application.</p>
 <div class="admonition danger">
 <p class="admonition-title">Prototypes aren't meant for Release!</p>
-<p>Using a <em>Prototype</em> bundle with dynamic updates in a native application is supported by P2UX, but NOT recommended for applications released to the public. It is meant for developer builds try out features quickly and test your custom code. Be aware that every time a public pubish is performed on the application, the native application will pick up the changes when it restarts which means every change made to the application and published as a public <em>Prototype</em> would be pushed to your users! </p>
+<p>Using a <em>Prototype</em> bundle with dynamic updates in a native application is supported by P2UX, but NOT recommended for applications released to the public. It is meant for developer builds to try out features quickly and test custom code. Be aware that every time a public pubish is performed on the application, the native application will pick up the changes when it restarts which means every change made to the application and published as a public <em>Prototype</em> would be pushed to your users! </p>
 </div>
 <p>The following code examples set the environment to <code class="codehilite">P2UXAppCreator_Opt_Env_Recent</code> for developer testing and debugging purposes.</p>
 <h4 id="iostvos">iOS/tvOS<a class="headerlink" href="#iostvos" title="Permanent link">&para;</a></h4>
@@ -659,12 +684,24 @@
 <p>The <em>Stage</em> environment is intended for testing an application prior to its release to production. Once application content is staged, it will NOT pick up any changes from subsequent publishes of the application as a <em>Prototype</em>. Staged application content will also NOT be delivered to native applications using <em>Production</em> content.</p>
 <p>To make application content available to the <em>Stage</em> environment in <em>Builder</em>:</p>
 <ul>
-<li>Click the <mark>Publish</mark> menu dropdown and select <mark>Make it real</mark> from the menu.</li>
-<li>Make sure you are in the <mark>Prototypes</mark> tab at the top of the <mark>Make it Real</mark> dialog</li>
-<li>Click the <mark>Stage App</mark> button next to the Prototype application bundle. </li>
-<li>Click <mark>OK</mark> from the <mark>Stage App Confirmation</mark> to finish the staging.</li>
+<li>
+<p>Click the <mark>Publish</mark> menu dropdown and select <mark>Make it real</mark> from the menu.
+<img alt="project wizard" src="../../images/appenv/make_it_real.png" /></p>
+</li>
+<li>
+<p>Make sure you are in the <mark>Prototypes</mark> tab at the top of the <mark>Make it Real</mark> dialog
+<img alt="project wizard" src="../../images/appenv/prototypes.png" /></p>
+</li>
+<li>
+<p>Click the <mark>Stage App</mark> button next to the Prototype application bundle. 
+<img alt="project wizard" src="../../images/appenv/stage_app.png" /></p>
+</li>
+<li>
+<p>Click <mark>OK</mark> from the <mark>Stage App Confirmation</mark> to finish the staging.
+<img alt="project wizard" src="../../images/appenv/stage_app_confirm.png" /></p>
+</li>
 </ul>
-<p>To use <em>Stage</em> content in a native application, the developer needs to setup the PRL environment to refer to staged content. </p>
+<p>To use <em>Stage</em> content in a native application, the developer needs to setup the <em>PRL</em> environment to refer to staged content. </p>
 <p>The environment value to use for Prototypes is: <code class="codehilite">P2UXAppCreator_Opt_Env_Stage</code></p>
 <p>This setting will fetch the staged version of the Application bundle when the application starts if it doesn't already have the most recent version of the bundle. </p>
 <div class="admonition danger">
@@ -739,14 +776,23 @@
 <p>The <em>Production</em> environment is intended for use in the released production application. This is the default setting for the PRL when no specific environment setting is provided. Application content can only be moved into <em>Production</em> after first being moved to the <em>Stage</em> environment. Once application content is deployed to production, it will NOT pick up any changes from subsequent publishes of the application as a <em>Prototype</em> or from content moved into the <em>Stage</em> environment. </p>
 <p>To make application content available to the <em>Production</em> environment in <em>Builder</em>:</p>
 <ul>
-<li>Click the <mark>Publish</mark> menu dropdown and select <mark>Make it real</mark> from the menu.</li>
-<li>Click on the <mark>Apps</mark> tab at the top of the <mark>Make it Real</mark> dialog</li>
-<li>Click the <mark>Deploy</mark> button next to the Staged application bundle. </li>
+<li>
+<p>Click the <mark>Publish</mark> menu dropdown and select <mark>Make it real</mark> from the menu.
+<img alt="project wizard" src="../../images/appenv/make_it_real.png" /></p>
+</li>
+<li>
+<p>Click on the <mark>Apps</mark> tab at the top of the <mark>Make it Real</mark> dialog
+<img alt="project wizard" src="../../images/appenv/apps.png" /></p>
+</li>
+<li>
+<p>Click the <mark>Deploy</mark> button next to the Staged application bundle. </p>
+</li>
 </ul>
-<p>To use a <em>Production</em> in a native application, the developer needs to setup the PRL environment to refer to deployed content. </p>
+<p>To use <em>Production</em> content in a native application, the developer needs to setup the PRL environment to refer to deployed content. </p>
 <p>The environment value to use for Prototypes is: <code class="codehilite">P2UXAppCreator_Opt_Env_Production</code></p>
 <p>This setting will fetch the deployed version of the Application bundle when the application starts if it doesn't have the most recent deployed version of the bundle. </p>
 <p>To set the PRL to the <em>Production</em> environment, either omit the <code class="codehilite">P2UXAppCreator_Opt_Env</code> value from the options at startup or explicitly set it to <code class="codehilite">P2UXAppCreator_Opt_Env_Production</code>. The previous code examples would work as is for using the <em>Production</em> environment for released applications as the other environment alternatives are only set when debugging the application.</p>
+<div style="text-align:right"><sub><sup>Last Updated: Nov. 21, 2017<sup><sub></div>
                 
                   
                 
@@ -765,7 +811,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../android/customcode/" title="Custom Code" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../applicense/" title="Application License" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -774,19 +820,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Custom Code
+                Application License
               </span>
             </div>
           </a>
         
         
-          <a href="../startupscreen/" title="Customizing Startup Screen" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../appbundleupdates/" title="Application Bundle Updates" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Customizing Startup Screen
+                Application Bundle Updates
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

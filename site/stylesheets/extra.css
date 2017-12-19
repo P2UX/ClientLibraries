@@ -9,3 +9,7 @@
     padding: 0 1.2rem;
     background-color: #a9d1ff;
 }
+
+.md-typeset h1 {
+	margin-bottom: 2rem;
+}
