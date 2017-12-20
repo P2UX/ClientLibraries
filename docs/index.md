@@ -2,12 +2,21 @@
 
 We are working on bringing more documentation and samples for developers. Check back often for updates.
 
-## What's New?
+## Client Libraries for Android and iOS/tvOS
+Client libraries for both Android and iOS/tvOS are available for building native applications. To learn more about how to use the P2UX client libraries, try our Quick Start guide for [iOS](ios/quickstart) or [Android](android/quickstart).
 
-Release <a href="https://github.com/P2UX/ClientLibraries" target="_blank">1.1.2.71</a>
+Below are links to the latest client library releases available from GitHub.
 
-* iOS and Android now support native navigation headers, including the iOS 11 large header.
+###Latest Official Release:
+<a href="https://github.com/P2UX/ClientLibraries/releases/tag/v1.1.4.82" target="_blank">1.1.4.82</a>
+
+
 * Lots of bug fixes
+* Some optimization of list controls
+
+###Feeling Brave?
+Try the next release on deck (Currently Being Tested):<br/>
+<a href="https://github.com/P2UX/ClientLibraries" target="_blank">1.1.5.84</a>
 
 ## More Docs Coming Soon!
 

@@ -44,5 +44,7 @@ pages:
       - Dynamic Application Bundle: 'general/dynamicappbundle.md'
       - Static Application Bundle: 'general/staticappbundle.md'
       - Splash Screens: 'general/splashscreen.md'
+  - Data Linking:
+      - Filters and Conditionals: 'linking/filtersconditionals.md'
   - Data Sources:
       - Overview: 'datasources/overview.md'
