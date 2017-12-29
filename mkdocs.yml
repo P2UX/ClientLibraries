@@ -48,3 +48,8 @@ pages:
       - Filters and Conditionals: 'linking/filtersconditionals.md'
   - Data Sources:
       - Overview: 'datasources/overview.md'
+      - Basic Data Sources: 'datasources/datasource.md'
+      - Specific Types of Sources:
+        - Static Data: 'datasources/staticdatasource.md'
+        - Local Data: 'datasources/localdatasource.md'
+        - RESTful Data: 'datasources/restfuldatasource.md'
