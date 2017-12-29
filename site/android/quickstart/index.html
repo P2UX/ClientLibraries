@@ -12,7 +12,7 @@
       
         <link rel="shortcut icon" href="../../assets/images/favicon.png">
       
-      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.10.1">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-1.10.1">
     
     
       
@@ -452,10 +452,46 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
-      Data Sources
+      Data Linking
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-5">
+        Data Linking
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../linking/filtersconditionals/" title="Filters and Conditionals" class="md-nav__link">
+      Filters and Conditionals
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Data Sources
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
         Data Sources
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -618,12 +654,12 @@ With the P2UX platform, XML Layout files are no longer required for Android deve
 <div class="codehilite"><pre><span></span>apply plugin: &#39;com.android.application&#39;
 
 android {
-   compileSdkVersion 25
-   buildToolsVersion &quot;26.0.0&quot;
+   compileSdkVersion 26
+   buildToolsVersion &quot;26.0.2&quot;
    defaultConfig {
        applicationId &quot;com.p2ux.sampleapp&quot;
        minSdkVersion 18
-       targetSdkVersion 25
+       targetSdkVersion 26
        versionCode 1
        versionName &quot;1.0&quot;
        multiDexEnabled true
@@ -643,17 +679,17 @@ repositories {
 
 dependencies {
    compile fileTree(dir: &#39;libs&#39;, include: [&#39;*.jar&#39;])
-   compile &#39;com.android.support:appcompat-v7:25.3.1&#39;
+   compile &#39;com.android.support:appcompat-v7:26.1.0&#39;
 
 <span class="hll">   compile(name: &#39;P2UXCore&#39;, ext: &#39;aar&#39;)
 </span><span class="hll">   compile(name: &#39;P2UXApp&#39;, ext: &#39;aar&#39;)
-</span><span class="hll">   compile &#39;com.android.support:recyclerview-v7:25.3.1&#39;
+</span><span class="hll">   compile &#39;com.android.support:recyclerview-v7:26.1.0&#39;
 </span>   // If Google Maps are required for your app, add the following 4 Google Play 
    // Services dependencies
-<span class="hll">   compile &#39;com.google.android.gms:play-services-maps:10.2.1&#39;
-</span><span class="hll">   compile &#39;com.google.android.gms:play-services-ads:10.2.1&#39;
-</span><span class="hll">   compile &#39;com.google.android.gms:play-services-identity:10.2.1&#39;
-</span><span class="hll">   compile &#39;com.google.android.gms:play-services-gcm:10.2.1&#39;
+<span class="hll">   compile &#39;com.google.android.gms:play-services-maps:11.6.2&#39;
+</span><span class="hll">   compile &#39;com.google.android.gms:play-services-ads:11.6.2&#39;
+</span><span class="hll">   compile &#39;com.google.android.gms:play-services-identity:11.6.2&#39;
+</span><span class="hll">   compile &#39;com.google.android.gms:play-services-gcm:11.6.2&#39;
 </span><span class="hll">   compile &#39;com.madgag.spongycastle:core:1.54.0.0&#39;
 </span><span class="hll">   compile &#39;com.madgag.spongycastle:prov:1.54.0.0&#39;
 </span>}
@@ -673,23 +709,24 @@ Edit the <code class="codehilite">MainActivity</code> file to look like this:</p
 </span><span class="hll"><span class="kn">import</span> <span class="nn">com.p2ux.app.components.P2UXAppBehavior</span><span class="o">;</span>
 </span><span class="hll"><span class="kn">import</span> <span class="nn">com.p2ux.core.utils.P2UXLog</span><span class="o">;</span>
 </span>
-<span class="hll"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="n">P2UXAppFragmentActivity</span>
-</span><span class="o">{</span>
+<span class="hll"><span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="o">;</span>
+</span><span class="kn">import</span> <span class="nn">java.util.HashMap</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="n">P2UXAppFragmentActivity</span>
+<span class="o">{</span>
    <span class="nd">@Override</span>
    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span>
-   <span class="o">{</span>
-       <span class="c1">//You can get the app key or license key from builder for your app. This is required to link your builder up to your local app</span>
-       <span class="c1">// This is the key generated from Builder for the application. This key is needed to initialize the P2UX rendering framework.</span>
-<span class="hll">       <span class="n">mAppKey</span> <span class="o">=</span> <span class="s">&quot;xxxxxx&quot;</span><span class="o">;</span>  
-</span><span class="hll">       <span class="k">if</span> <span class="o">((</span><span class="n">getApplicationInfo</span><span class="o">().</span><span class="na">flags</span> <span class="o">&amp;</span> <span class="n">ApplicationInfo</span><span class="o">.</span><span class="na">FLAG_DEBUGGABLE</span><span class="o">)</span> <span class="o">==</span> <span class="n">ApplicationInfo</span><span class="o">.</span><span class="na">FLAG_DEBUGGABLE</span><span class="o">)</span> <span class="o">{</span>
-</span><span class="hll">           <span class="k">if</span> <span class="o">(</span><span class="n">savedInstanceState</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
-</span><span class="hll">               <span class="n">savedInstanceState</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Bundle</span><span class="o">();</span>
-</span><span class="hll">           <span class="o">}</span>
-</span><span class="hll">           <span class="n">savedInstanceState</span><span class="o">.</span><span class="na">putString</span><span class="o">(</span><span class="n">P2UXAppCreator</span><span class="o">.</span><span class="na">P2UXAppCreator_Opt_Env</span><span class="o">,</span> <span class="n">P2UXAppCreator</span><span class="o">.</span><span class="na">P2UXAppCreator_Opt_Env_Prototype</span><span class="o">);</span>
-</span><span class="hll">           <span class="n">savedInstanceState</span><span class="o">.</span><span class="na">putLong</span><span class="o">(</span><span class="n">P2UXAppCreator</span><span class="o">.</span><span class="na">P2UXAppCreator_Opt_LogLevel</span><span class="o">,</span> <span class="n">P2UXLog</span><span class="o">.</span><span class="na">P2UXCoreLogFlagVerbose</span><span class="o">);</span>
-</span><span class="hll">       <span class="o">}</span>
-</span>       <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
-       <span class="n">applyTranslucentStatusBar</span><span class="o">();</span>
+<span class="hll">   <span class="o">{</span>
+</span><span class="hll">        <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
+</span><span class="hll">        <span class="c1">// You can get the app key or license key from builder for your app. This is required to link your builder up to your local app</span>
+</span><span class="hll">        <span class="c1">// This is the key generated from Builder for the application. This key is needed to initialize the P2UX rendering framework.</span>
+</span><span class="hll">        <span class="n">String</span> <span class="n">appKey</span> <span class="o">=</span> <span class="s">&quot;xxxxx&quot;</span><span class="o">;</span> 
+</span><span class="hll">        <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Object</span><span class="o">&gt;</span> <span class="n">options</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;();</span>
+</span><span class="hll">        <span class="k">if</span> <span class="o">((</span><span class="n">getApplicationInfo</span><span class="o">().</span><span class="na">flags</span> <span class="o">&amp;</span> <span class="n">ApplicationInfo</span><span class="o">.</span><span class="na">FLAG_DEBUGGABLE</span><span class="o">)</span> <span class="o">==</span> <span class="n">ApplicationInfo</span><span class="o">.</span><span class="na">FLAG_DEBUGGABLE</span><span class="o">)</span> <span class="o">{</span>
+</span><span class="hll">        <span class="n">options</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">P2UXAppCreator</span><span class="o">.</span><span class="na">P2UXAppCreator_Opt_Env</span><span class="o">,</span> <span class="n">P2UXAppCreator</span><span class="o">.</span><span class="na">P2UXAppCreator_Opt_Env_Recent</span><span class="o">);</span>
+</span>            <span class="n">options</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">P2UXAppCreator</span><span class="o">.</span><span class="na">P2UXAppCreator_Opt_LogLevel</span><span class="o">,</span> <span class="n">P2UXLog</span><span class="o">.</span><span class="na">P2UXCoreLogFlagVerbose</span><span class="o">);</span>
+        <span class="o">}</span>
+        <span class="kd">super</span><span class="o">.</span><span class="na">setupApp</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">,</span> <span class="n">appKey</span><span class="o">,</span> <span class="n">options</span><span class="o">,</span> <span class="kc">null</span><span class="o">);</span>
    <span class="o">}</span>
 <span class="o">}</span>
 </pre></div>
@@ -733,34 +770,20 @@ Edit the <code class="codehilite">MainActivity</code> file to look like this:</p
 <div class="codehilite"><pre><span></span><span class="nd">@Override</span>
 <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span>
 <span class="o">{</span>
-   <span class="n">mAppKey</span> <span class="o">=</span> <span class="s">&quot;xxxxx&quot;</span><span class="o">;</span>
+    <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
 
-<span class="hll">   <span class="k">try</span> <span class="o">{</span>
-</span><span class="hll">       <span class="n">mResources</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JSONArray</span><span class="o">();</span>
-</span><span class="hll">       <span class="n">JSONObject</span> <span class="n">resource</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JSONObject</span><span class="o">();</span>
-</span><span class="hll">       <span class="n">resource</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">P2UXAppTypes</span><span class="o">.</span><span class="na">P2UXApp_PackageAttrib_FormFactor</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span>
-</span><span class="hll">       <span class="n">resource</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">P2UXAppTypes</span><span class="o">.</span><span class="na">P2UXApp_PackageAttrib_Type</span><span class="o">,</span> <span class="n">P2UXAppTypes</span><span class="o">.</span><span class="na">P2UXApp_PackageType_Static</span><span class="o">);</span>
-</span><span class="hll">       <span class="n">resource</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">P2UXAppTypes</span><span class="o">.</span><span class="na">P2UXApp_PackageAttrib_Package</span><span class="o">,</span> <span class="s">&quot;phone_pub&quot;</span><span class="o">);</span>
-</span><span class="hll">       <span class="n">resource</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">P2UXAppTypes</span><span class="o">.</span><span class="na">P2UXApp_PackageAttrib_Update</span><span class="o">,</span> <span class="n">P2UXAppTypes</span><span class="o">.</span><span class="na">P2UXApp_PackageUpdate_None</span><span class="o">);</span>
-</span><span class="hll">       <span class="n">mResources</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">resource</span><span class="o">);</span>
-</span><span class="hll">   <span class="o">}</span>
-</span><span class="hll">   <span class="k">catch</span> <span class="o">(</span><span class="n">JSONException</span> <span class="n">e</span><span class="o">)</span>
-</span><span class="hll">   <span class="o">{</span>
-</span><span class="hll">       <span class="n">P2UXLog</span><span class="o">.</span><span class="na">e</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">&quot;onCreate - &quot;</span> <span class="o">+</span> <span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
-</span><span class="hll">   <span class="o">}</span>
-</span>
-   <span class="k">if</span> <span class="o">((</span><span class="n">getApplicationInfo</span><span class="o">().</span><span class="na">flags</span> <span class="o">&amp;</span> <span class="n">ApplicationInfo</span><span class="o">.</span><span class="na">FLAG_DEBUGGABLE</span><span class="o">)</span> <span class="o">==</span> <span class="n">ApplicationInfo</span><span class="o">.</span><span class="na">FLAG_DEBUGGABLE</span><span class="o">)</span> <span class="o">{</span>
-       <span class="k">if</span> <span class="o">(</span><span class="n">savedInstanceState</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
-           <span class="n">savedInstanceState</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Bundle</span><span class="o">();</span>
-       <span class="o">}</span>
-       <span class="n">savedInstanceState</span><span class="o">.</span><span class="na">putString</span><span class="o">(</span><span class="n">P2UXAppCreator</span><span class="o">.</span><span class="na">P2UXAppCreator_Opt_Env</span><span class="o">,</span> <span class="n">P2UXAppCreator</span><span class="o">.</span><span class="na">P2UXAppCreator_Opt_Env_Prototype</span><span class="o">);</span>
-       <span class="n">savedInstanceState</span><span class="o">.</span><span class="na">putLong</span><span class="o">(</span><span class="n">P2UXAppCreator</span><span class="o">.</span><span class="na">P2UXAppCreator_Opt_LogLevel</span><span class="o">,</span> <span class="n">P2UXLog</span><span class="o">.</span><span class="na">P2UXCoreLogFlagVerbose</span><span class="o">);</span>
-   <span class="o">}</span>
-
-   <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
-   <span class="n">applyTranslucentStatusBar</span><span class="o">();</span>
-<span class="o">}</span>
-</pre></div>
+<span class="hll">    <span class="n">String</span> <span class="n">appKey</span> <span class="o">=</span> <span class="s">&quot;xxxxx&quot;</span><span class="o">;</span> 
+</span><span class="hll">    <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Object</span><span class="o">&gt;&gt;</span> <span class="n">resources</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
+</span><span class="hll">    <span class="c1">// Set up external resource</span>
+</span><span class="hll">    <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Object</span><span class="o">&gt;</span> <span class="n">phoneRes</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;();</span>
+</span><span class="hll">    <span class="n">phoneRes</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">P2UXAppTypes</span><span class="o">.</span><span class="na">P2UXApp_PackageAttrib_FormFactor</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span>
+</span><span class="hll">    <span class="n">phoneRes</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">P2UXAppTypes</span><span class="o">.</span><span class="na">P2UXApp_PackageAttrib_Type</span><span class="o">,</span> <span class="n">P2UXAppTypes</span><span class="o">.</span><span class="na">P2UXApp_PackageType_Static</span><span class="o">);</span>
+</span><span class="hll">    <span class="n">phoneRes</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">P2UXAppTypes</span><span class="o">.</span><span class="na">P2UXApp_PackageAttrib_Package</span><span class="o">,</span> <span class="s">&quot;shellui_phone&quot;</span><span class="o">);</span>
+</span><span class="hll">    <span class="n">phoneRes</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">P2UXAppTypes</span><span class="o">.</span><span class="na">P2UXApp_PackageAttrib_Update</span><span class="o">,</span> <span class="n">P2UXAppTypes</span><span class="o">.</span><span class="na">P2UXApp_PackageUpdate_None</span><span class="o">);</span>
+</span><span class="hll">    <span class="n">resources</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">phoneRes</span><span class="o">);</span>
+</span><span class="hll">    <span class="kd">super</span><span class="o">.</span><span class="na">setupApp</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">,</span> <span class="n">appKey</span><span class="o">,</span> <span class="n">options</span><span class="o">,</span> <span class="kc">null</span><span class="o">);</span>
+</span><span class="hll"><span class="o">}</span>
+</span></pre></div>
 
 
 <h3 id="defining-custom-resource-attributes">Defining Custom Resource Attributes<a class="headerlink" href="#defining-custom-resource-attributes" title="Permanent link">&para;</a></h3>
@@ -870,6 +893,10 @@ Edit the <code class="codehilite">MainActivity</code> file to look like this:</p
       
       
       <script>app.initialize({url:{base:"../.."}})</script>
+      
+        <script src="../../search/require.js"></script>
+      
+        <script src="../../search/search.js"></script>
       
     
     
