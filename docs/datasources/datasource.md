@@ -105,4 +105,35 @@ Matching Data:
   }
 ]
 ```
-<div style="text-align:right"><sub><sup>Last Updated: Dec. 27, 2017<sup><sub></div>
+
+## Creating Data Sources
+*Builder* has a basic JSON interface (as of this article's writing), that allows for creation of a Data Source. The Data Source specification is separated into logical requests. Each request has a schema that defines the data structure and request parameters.
+
+To Create a new Data Source in *Builder*:
+
+* Make sure you are in the Application or Screen/Panel Editor for your application.
+* Click on the Data Source Icon from the top tool bar<br>
+![Data Source Icon](../images/datasources/datasourceicon.png)
+* In the ==Manage Data== dialog, click the ==+== button to create a new data source.
+* From the ==Add Data Source== dialog, click the ==+== to the right of the ==Select Data Source== drop down.
+* In the ==New Data Source== dialog, type in a name for the data source and then select the type of Data Source to create from the ==Select Type== drop down.
+![Data Source Icon](../images/datasources/selectstaticdata.png)
+* Click ==OK== to save the new data source.
+
+The newly created data source is now part of the application.<br>*Builder* will create the basic entries needed for the Data Source. It is up to the user to create the specific *requests* that define the data repository. 
+
+## Creating a Request
+Once a Data Source has been created, *requests* can be added that represent logical repositories of data. Each request requires a *schema* and a *request* object that define the request details. The *schema* object defines the structure of the data. The *request* object defines the version of the request schema and any other attributes about the request (See Data Source Requests for more information). The details of the `request` object for the different types of Data Sources can be found in the documentation for those specific Data Source types.
+
+To Create a new Request in *Builder*:
+
+* Make sure you are in the Application or Screen/Panel Editor
+* Click on the Data Source Icon from the top tool bar<br>
+![Data Source Icon](../images/datasources/datasourceicon.png)
+* In the ==Manage Data== dialog, click the ==edit== button overlay (or double click) on the Data Source from the list.
+
+In the ==Edit JSON== dialog, there will be a JSON node named ==requests==.
+
+Create a new key under the requests object that is the name of the request. The object associated with the key will contain the *schema* and the *request* attributes.
+
+<div style="text-align:right"><sub><sup>Last Updated: Jan. 2, 2018<sup><sub></div>

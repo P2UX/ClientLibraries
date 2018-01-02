@@ -13,7 +13,7 @@ The `initdata` object for RESTful Data Sources includes the following attributes
 | auth | object | The authentication method and details necessary to authorize a client for access to the requests defined in this datasource. The details of the auth object are specified according to the value of the type attribute. See [Authentication](#authentication) for more information |
 
 ## Request Object Attributes
-RESTful Data Sources have a additional attributes used for the data and parameters. In addition to the basic [Request Object Attributes](datasource.md#request-object-attributes):
+In addition to the standard [Request Object Attributes](datasource.md#request-object-attributes) provided by Data Sources, RESTful Data Sources have a additional attributes used for data and parameters.
 
 | Attribute | Type | Description |
 | --- | --- | --- |
@@ -30,13 +30,14 @@ RESTful Data Sources have a additional attributes used for the data and paramete
 | polling | object | This is an object that defines how the polling for results will be performed. It is primarily controlled by a `delay` field that specifies a number of seconds between issuing subsequent poll requests for a full result. It can also have a `count` field which specifies the maximum number of poll attempts it will make. If the request continues to return partial (i.e. non-success or failure) results then the polling will continue until it reaches the count. The polling object may also contain overrides for many of the other attributes in the initial request including the `method`, `path`, `url`, `postschema`, or the `schema`. Finally, it is possible to have the `url` for polling come from the results via a `urlfield` attribute that specifies a "dotted-path" into the results. |
 
 ### Attributes Object
-The `request` can have additional attributes that control how its data is handled.
+The `request` object can have additional attributes that control how its data is handled.
 
 | Attribute | Type | Description |
 | --- | --- | --- |
 | persist | boolean | (OPTIONAL) - Whether or not data retrieved from the REST service for a request is persisted locally. If this attribute not specified, no data will be persisted and network connectivity will be required to use any data from the request. |
 | validity | number | (OPTIONAL) - When data is persisted, this value indicates how long that data should be considered valid. This allows for requests to be defined where it will trigger a new request if the data no longer valid versus always fetching data from the service.<br><br>This value is the number of seconds to consider the data valid from the time it was persisted |
 | refresh | number | (OPTIONAL) - This value will create a polling type of request once a the request has been triggered by an event in the client. Use this value only in the case where the client needs to poll a request on a service based on a time interval.<br><br>This value is the number of seconds to wait between requests. |
+| encrypt | boolean | (OPTIONAL) - When `persist` is set to `true`, setting `encrypt` to `true` will encrypt the data persisted on the client device. |
 
 ## Authentication
 The `auth` object defines the form of authentication to use (if any) when accessing the data source requests. Most attributes of the `auth` object are dependent on the type of auth. However, the following attributes are defined at the top level.
@@ -364,36 +365,6 @@ In this example, the `client_id` and `client_secret` values would be defined in 
 | field | string | The name of the field to use for the value. When the use of the data is payload or argument, this becomes the key for the value in the key/value pair that is submitted either in the body of or the query parameters for each request. If the use is header, this is the HTTP header field to use when submitting the value with each request |
 | method | string | (OPTIONAL) - the specific method of request that the persist data should be applied to. If no method is specified, the data would be applied to any method of data request. If multiple methods are needed, they can be provided as single value separated by commas.<br><br>Possible Values:<br><table><thead><tr><th>Value</th></thead><tbody><tr><td>GET</td></tr><tr><td>POST</td></tr><tr><td>PUT</td></tr><tr><td>DELETE</td></tr></tbody></table>|
 
-## Creating RESTful Data Sources
-RESTful Data Sources follow the standard model of Data Sources in the P2UX environment (*[see Basic Data Sources for more details](datasource.md)*). Data is separated into logical requests. Each request has a schema that defines the data structure and request parameters.
-
-To Create a new RESTful Data Source in *Builder*:
-
-* Make sure you are in the Application or Screen/Panel Editor
-* Click on the Data Source Icon from the top tool bar<br>
-![Data Source Icon](../images/datasources/datasourceicon.png)
-* In the ==Manage Data== dialog, click the ==+== button to create a new data source.
-* From the ==Add Data Source== dialog, click the ==+== to the right of the ==Select Data Source== drop down.
-* In the ==New Data Source== dialog, type in a name for the data source and then select ==RESTful Web Service== from the ==Select Type== drop down.
-![Data Source Icon](../images/datasources/selectrestdata.png)
-* Click ==OK== to save the new data source.
-
-The newly created data source is now part of the application.
-
-## Creating a Request
-Once a RESTful Data Source has been created, *requests* can be added that represent requests from the RESTful service. Each request requires a *schema* and a *request* object that define the request details. The *schema* defines the structure of the data. The *request* object defines the version of the request schema and any other attributes about the request (See [Data Source Requests](datasource#requests-object-attributes) for more information).
-
-To Create a new Request in *Builder*:
-
-* Make sure you are in the Application or Screen/Panel Editor
-* Click on the Data Source Icon from the top tool bar<br>
-![Data Source Icon](../images/datasources/datasourceicon.png)
-* In the ==Manage Data== dialog, click the ==edit== button overlay (or double click) on the Local Data Source from the list.
-
-In the ==Edit JSON== dialog, there will be a JSON node named ==requests==.
-
-Create a new key under the requests object that is the name of the request. The object associated with the key will contain the *schema* and the *request* attributes.
-
 ### Data Schema
 All requests require a schema object that defines the structure of the data returned for the request.
 
@@ -633,4 +604,8 @@ This example specification uses Twitter's RESTful API with OAuth as the authenti
   }
 }
 ```
+
+!!! note Creating a New Data Source
+    For Steps to create a new Data Source in *Builder*, refer to the [Data Sources](datasource#creating-data-sources) documentation
+
 <div style="text-align:right"><sub><sup>Last Updated: Dec. 27, 2017<sup><sub></div>
