@@ -8,7 +8,7 @@ Persistence of the data from a MQTT topic is controlled by the request attribute
 A schema is required for the data associated with a topic. The P2UXDataSource will convert any received data into the appropriate type based on the Schema. If the data received doesn't match the schema, it will be rejected.
 
 ## Project setup in Android Studio
-The first requirement is to get your application setup in Android Studio. See the P2UX Developer Site for an explanation of how to get started. There is also a [sample application](https://github.com/P2UX/P2UX-Sample-App-Android) for Android on GitHub that can be used as a starting point for your application.
+The first requirement is to get your P2UX application setup in Android Studio. See the [P2UX Developer Site](http://developer.p2ux.com/android/quickstart/) for an explanation of how to get started. There is also a [sample application](https://github.com/P2UX/P2UX-Sample-App-Android) for Android on GitHub that can be used as a starting point for your application.
 
 ### Add Paho MQTT Service
 Once you have your basic application setup and running. You'll need to get the Paho MQTT Service for Android. The library can be found [here](https://github.com/eclipse/paho.mqtt.android). Follow the directions for `Gradle` when adding the Service to your project. 
@@ -82,10 +82,10 @@ public class MainActivity extends P2UXAppFragmentActivity
     {
         super.onCreate(savedInstanceState);
 
-		// Register MQTT Data Source using the type name 'mqtt'.
+        // Register MQTT Data Source using the type name 'mqtt'.
         P2UXDataSourceManager.instance().registerDataSourceClass("mqtt", MQTTDataSource.class);
 
-	    // Setup P2UX Rendering Library
+        // Setup P2UX Rendering Library
         String appKey = "xxxx.xxxx";
         HashMap<String, Object> options = new HashMap<>();
         options.put(P2UXAppCreator.P2UXAppCreator_Opt_Env, P2UXAppCreator.P2UXAppCreator_Opt_Env_Recent);
