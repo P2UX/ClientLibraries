@@ -118,7 +118,7 @@ This example shows a request with seeded data. The request is called `messages` 
 }
 ```    
 
-!!! note Creating a New Data Source
+!!! note "Creating a New Data Source"
     For Steps to create a new Data Source in *Builder*, refer to the [Data Sources](datasource#creating-data-sources) documentation
 
 <div style="text-align:right"><sub><sup>Last Updated: Jan. 2, 2018<sup><sub></div>

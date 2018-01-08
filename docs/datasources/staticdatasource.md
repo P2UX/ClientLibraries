@@ -75,7 +75,7 @@ The following attributes are additional Request Object Attributes that are part 
 |---|---|---|
 | params | Array | An array of objects that define each parameter available to the request. *(See Params Array Object for more Information)* |
 | paramdata | Object | An object that defines each possible parameter value and its associated `data`. The `data` item beneath each parameter value follows the `data` definition for default data |
-|
+
 #### Params Array Object
 Each item in the Params array for a request follow this structure:
 
@@ -146,7 +146,7 @@ Below is an Example of a request called `colors` in a data source named `Interna
 }
 ```
 
-!!! note Creating a New Data Source
+!!! note "Creating a New Data Source"
     For Steps to create a new Data Source in *Builder*, refer to the [Data Sources](datasource#creating-data-sources) documentation
 
 <div style="text-align:right"><sub><sup>Last Updated: Jan. 2, 2018<sup><sub></div>

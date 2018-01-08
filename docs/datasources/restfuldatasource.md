@@ -605,7 +605,7 @@ This example specification uses Twitter's RESTful API with OAuth as the authenti
 }
 ```
 
-!!! note Creating a New Data Source
+!!! note "Creating a New Data Source"
     For Steps to create a new Data Source in *Builder*, refer to the [Data Sources](datasource#creating-data-sources) documentation
 
 <div style="text-align:right"><sub><sup>Last Updated: Dec. 27, 2017<sup><sub></div>
