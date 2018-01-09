@@ -71,8 +71,8 @@ Example:
 ### Add P2UX MQTTDataSource code
 The last step is to add the P2UX MQTTDataSource code into your project. In AndroidStudio:
 
-* Copy entire directory `com` and its contents from this repository into your projects `app/src` folder. (Eventually this will be hosted in a different location) and can be added as a Gradle build dependency.
-* In the `MainActivity.java` file for your project, add the line from the example code below to register the class for the `mqtt` data source type. The first parameter to the `registerDataSourceClass` method is the `type` of the data source defined in *Builder*.
+* Copy entire directory `com` and its contents from this repository into your projects `app/src/main/java` folder. (Eventually this will be hosted in a different location) and can be added as a Gradle build dependency.
+* In the `MainActivity.java` file for your project, add the line from the example code below to setup the use of the `MQTTDataSource` the class for the `MQTT` data source type. The `setup()` method takes care of registering the class as the Data Source instance for MQTT.
 
 ```
 public class MainActivity extends P2UXAppFragmentActivity
@@ -82,8 +82,8 @@ public class MainActivity extends P2UXAppFragmentActivity
     {
         super.onCreate(savedInstanceState);
 
-        // Register MQTT Data Source using the type name 'mqtt'.
-        P2UXDataSourceManager.instance().registerDataSourceClass("mqtt", MQTTDataSource.class);
+        // Register MQTT Data Source.
+        MQTTDataSource.setup();
 
         // Setup P2UX Rendering Library
         String appKey = "xxxx.xxxx";
