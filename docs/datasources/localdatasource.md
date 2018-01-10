@@ -20,10 +20,10 @@ This example shows a request with an array collection of "user" objects. The req
 ```
 {
   "name": {
-    "en_US": "Local Data"
+    "en_US": "Internal Data"
   },
   "type": "LOCAL",
-  "systemtype": "local_data",
+  "systemtype": "internal_data",
   "requests": {
     "users": {
       "request": {
@@ -72,10 +72,10 @@ This example shows a request with seeded data. The request is called `messages` 
 ```
 {
   "name": {
-    "en_US": "Local Data"
+    "en_US": "Internal Data"
   },
   "type": "LOCAL",
-  "systemtype": "local_data",
+  "systemtype": "internal_data",
   "requests": {
     "messages": {
       "request": {
