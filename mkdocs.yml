@@ -53,3 +53,4 @@ pages:
         - Static Data: 'datasources/staticdatasource.md'
         - Local Data: 'datasources/localdatasource.md'
         - RESTful Data: 'datasources/restfuldatasource.md'
+        - MQTT Data: 'datasources/mqttdatasource.md'
