@@ -1,5 +1,5 @@
 ## P2UX Paho MQTT Data Source
-This is an adaptation of the Paho MQTT Library as a P2UXDataSource. This allows for use of MQTT data sources within P2UX based applications. Like all P2UX Data Sources, there needs to be an associated Data Source defined in Builder for your application that defines the requests (topics) and the data schemas that go along with the data. See the [P2UX developer site](http://developer.p2ux.com) for details on how to create an MQTT Data Source in Builder.
+This is an adaptation of the Paho MQTT Library as a P2UXDataSource. This allows for use of MQTT data sources within P2UX based applications. Like all P2UX Data Sources, there needs to be an associated Data Source defined in Builder for your application that defines the requests (topics) and the data schemas that go along with the data. See the [P2UX developer site](http://developer.p2ux.com/datasources/mqttdatasource/) for details on how to create an MQTT Data Source in Builder.
 
 UI controls that are linked to a MQTTDataSource Request will subscribe to the topic associated with the request referenced in the data link for the control. If the topic is already subscribed, the subscription will be ignored. Any messages that are received for the specified topic will be sent to associated links and cached in memory during the lifetime of the application. 
 
