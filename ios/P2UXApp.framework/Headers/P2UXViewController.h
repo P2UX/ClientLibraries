@@ -19,6 +19,7 @@
 }
 @property (nonatomic) NSDictionary* initialRect;
 @property (nonatomic, readonly) BOOL hasSubView;
+@property (nonatomic) UIBarButtonItem* backbtn;
 
 - (id)initWithView:(P2UXDefinition*)def behavior:(P2UXAppBehavior*)behavior cache:(BOOL)cache index:(id)index data:(id)data viewDelegate:(id<P2UXViewContainerDelegate>)delegate;
 - (void) cleanup;

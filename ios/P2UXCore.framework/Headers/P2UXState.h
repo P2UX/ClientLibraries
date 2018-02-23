@@ -30,6 +30,10 @@
 @property (nonatomic, readonly) P2UXCoordinate* y;
 @property (nonatomic, readonly) P2UXCoordinate* w;
 @property (nonatomic, readonly) P2UXCoordinate* h;
+@property (nonatomic, readonly) P2UXCoordinate* maxw;
+@property (nonatomic, readonly) P2UXCoordinate* maxh;
+@property (nonatomic, readonly) P2UXCoordinate* minw;
+@property (nonatomic, readonly) P2UXCoordinate* minh;
 @property (nonatomic, readonly) NSArray* events;
 @property (nonatomic, readonly) NSDictionary* itemspec;
 @property (nonatomic)           CGRect frame;

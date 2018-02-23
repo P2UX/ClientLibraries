@@ -42,6 +42,7 @@ extern NSString* const P2UXPos_Y;
 extern NSString* const P2UXCoordinate_Type;
 extern NSString* const P2UXCoordinate_Val;
 extern NSString* const P2UXMaxSize;
+extern NSString* const P2UXMinSize;
 
 extern NSString* const P2UXLabelType_Standard;
 extern NSString* const P2UXLabelType_Time;
@@ -345,7 +346,9 @@ typedef NS_ENUM(NSInteger, P2UXControlType) {
     P2UXCtrlType_TouchSlider,
     P2UXCtrlType_Picker,
     P2UXCtrlType_Switch,
-    P2UXCtrlType_RadioButtonGroup
+    P2UXCtrlType_RadioButtonGroup,
+    P2UXCtrlType_DatePicker,
+    P2UXCtrlType_TextView
 };
 
 typedef NS_ENUM(NSInteger, P2UXScrollStyle) {

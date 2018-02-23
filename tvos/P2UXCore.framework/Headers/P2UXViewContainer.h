@@ -21,6 +21,7 @@
 @property (nonatomic, readonly) BOOL overlay;
 @property (nonatomic, readonly) NSString* viewIdent;
 @property (nonatomic, readonly) NSInteger overlayReferences;
+@property (nonatomic) P2UXOrientationType pendingOrientationChange;
 
 + (NSString*) defaultViewFromInst:(P2UXElementInstance*)elemInst;
 

@@ -43,6 +43,11 @@
 @property (nonatomic, readonly) BOOL overlay;
 @property (nonatomic) OSViewClass* parent;
 @property (nonatomic) id<P2UXViewContainerDelegate> viewDelegate;
+@property (nonatomic, readonly) BOOL hasOrientationChanges;
+@property (nonatomic, readonly) BOOL initializedConstraints;
+@property (nonatomic)           CGSize maxSize;
+@property (nonatomic)           CGSize minSize;
+
 
 - (id) initWithElement:(P2UXElement*)elem tag:(NSInteger)tag;
 - (void) cleanup;
@@ -55,6 +60,7 @@
 - (NSArray*) changeState:(NSString *)stateName;
 #endif
 - (BOOL) attributeInState:(NSString*)attribute;
+- (void) updateMaxMin;
 
 - (P2UXOrientation*) addOrientationSpec:(NSDictionary*)spec forType:(P2UXOrientationType)type;
 - (NSArray*) changeOrientation:(P2UXOrientationType)orientationType usingState:(NSString*)stateName;

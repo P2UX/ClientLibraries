@@ -38,8 +38,24 @@ extern NSString* const P2UXSpecKey_Object;
 extern NSString* const P2UXSpecKey_Delegate;
 extern NSString* const P2UXSpecKey_KeepAlive;
 extern NSString* const P2UXSpecKey_Headers;
+extern NSString* const P2UXSpecKey_Attributes;
 
 extern NSString* const P2UXSpecKey_UKeys;
+
+extern NSString* const P2UXSpecKey_Cmd;
+extern NSString* const P2UXSpecKey_UCmd;
+extern NSString* const P2UXSpecKey_UData;
+extern NSString* const P2UXSpecKey_UIndex;
+extern NSString* const P2UXSpecKey_UFile;
+
+extern NSString* const P2UXCommand_Attrib_Operator;
+extern NSString* const P2UXCommand_Attrib_Collection;
+
+extern NSString* const P2UXCommandTypeString_Create;
+extern NSString* const P2UXCommandTypeString_Update;
+extern NSString* const P2UXCommandTypeString_Read;
+extern NSString* const P2UXCommandTypeString_Delete;
+extern NSString* const P2UXCommandTypeString_Patch;
 
 typedef NS_ENUM(NSInteger, P2UXDataRequestResult) {
     P2UXRequestResult_Success,
@@ -54,6 +70,14 @@ typedef NS_ENUM(NSInteger, P2UXDataRequestResult) {
     P2UXRequestResult_Cancelled,
     P2UXRequestResult_Deleted,
     P2UXRequestResult_InvalidRequest
+};
+
+typedef NS_ENUM(NSInteger, P2UXDataCommandType) {
+    P2UXCommandType_Read,
+    P2UXCommandType_Update,
+    P2UXCommandType_Create,
+    P2UXCommandType_Delete,
+    P2UXCommandType_Patch
 };
 
 extern NSString* const PERSIST_TYPE;
@@ -93,10 +117,14 @@ updatedProgress:(P2UXSourcedData*)progress
 @property (readonly) BOOL requiresInternet;
 @property (nonatomic, copy) NSString* sourceDir;
 
++ (P2UXDataCommandType)commandTypeFromString:(NSString*)commandString;
+
 - (NSString*)serializeArgs:(NSDictionary*)args forRequest:(NSString*)request;
 
 -(id) initWithSpec:(NSDictionary*)dataSpec;
 -(id) initWithId:(NSString*)sourceId type:(NSString*)sourceType andSpec:(NSDictionary*)dataSpec;
+
+-(BOOL) liveRequest:(NSString*)request;
 
 -(BOOL) makeRequest:(NSString*)request
               async:(BOOL)async
@@ -131,4 +159,6 @@ updatedProgress:(P2UXSourcedData*)progress
 -(P2UXSourcedData*) createData:(id)data andSchema:(P2UXDataSchema*)schema cachedOn:(NSDate *)date;
 -(P2UXDataSchema*) createSchemaWithSpec:(NSDictionary*)spec;
 -(BOOL) persistRequest:(NSString*)request;
+-(void) cacheResults:(id)results forRequest:(NSString*)request key:(NSString*)key;
+-(BOOL) validateResultsForRequest:(NSString*)request args:(NSDictionary*)args;
 @end

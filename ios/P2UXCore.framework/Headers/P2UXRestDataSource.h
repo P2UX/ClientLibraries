@@ -12,9 +12,20 @@ extern NSString* const HTTPMethod_GET;
 extern NSString* const HTTPMethod_PUT;
 extern NSString* const HTTPMethod_POST;
 extern NSString* const HTTPMethod_DELETE;
+extern NSString* const HTTPMethod_PATCH;
 extern NSString* const HTTPMethod_LIVE;
+extern NSString* const HTTPMethod_CRUD;
 
 @interface P2UXRestDownloadHandler : NSObject  <NSURLSessionDownloadDelegate>
+-(id) initWithRequest:(NSString*)request
+           serialized:(NSString*)reqWithArgs
+             ofFormat:(NSString*)format
+           andContent:(NSDictionary*)content
+              onTasks:(NSMutableDictionary*)currTasks
+         thenCallback:(P2UXCallbackResponse)callback;
+@end
+
+@interface P2UXRestUploadHandler: NSObject <NSURLSessionStreamDelegate>
 -(id) initWithRequest:(NSString*)request
            serialized:(NSString*)reqWithArgs
              ofFormat:(NSString*)format

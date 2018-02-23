@@ -93,6 +93,7 @@ void dispatch_uisafe_sync(dispatch_block_t block);
 - (void) updateStatefulValues;
 - (void) attachingToScroll;
 - (void) addSubviewToScroll:(UIView*)view;
+- (void) refreshControlContents;
 
 #pragma mark - Subview helpers
 - (P2UXView*) createSubViewFromSpec:(NSDictionary*)viewspec itemRect:(CGRect)itemRect handler:(id<P2UXActionDelegate>)handler scrollStyle:(P2UXScrollStyle)scrollStyle viewAttributes:(NSMutableDictionary*)viewAttributes;

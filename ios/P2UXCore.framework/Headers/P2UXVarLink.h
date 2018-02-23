@@ -33,7 +33,8 @@ typedef NS_ENUM(NSInteger, P2UXVarLinkType)
     P2UXVarLinkType_ArrayNameValue,
     P2UXVarLinkType_Static,
     P2UXVarLinkType_UserEntry,
-    P2UXVarLinkType_AuthValue
+    P2UXVarLinkType_AuthValue,
+    P2UXVarLinkType_PayloadValue
 };
 
 typedef NS_ENUM(NSInteger, P2UXDataPolicy)

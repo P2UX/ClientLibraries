@@ -9,8 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface NSString (P2UX)
--(NSString *) URLEncodeString;
--(BOOL) isNumeric;
--(BOOL) isSVG;
+- (NSString *) URLEncodeString;
+- (BOOL) isNumeric;
+- (BOOL) isSVG;
 - (BOOL) hasSubstring:(NSString*)substring;
+- (id) numberOrString;
+
 @end

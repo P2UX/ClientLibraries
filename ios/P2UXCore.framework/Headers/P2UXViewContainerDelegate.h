@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <P2UXCore/P2UXActionDelegate.h>
 #import <P2UXCore/P2UXEventAction.h>
+#ifdef LOCAL_NOTIFICATION_SUPPORT
+#import <UserNotifications/UserNotifications.h>
+#endif
 
 @class P2UXEventAction, P2UXElementInstance, P2UXEventTransition, P2UXDefinition, P2UXPanel, P2UXViewController;
 @protocol P2UXHelperDelegate;
@@ -52,4 +55,8 @@
 - (P2UXView*)   createViewItemWithDef:(P2UXDefinition*)def rect:(CGRect)rect cache:(BOOL)cache index:(id)index data:(id)data;
 - (void)        handleTimeUpdate;
 - (id<P2UXHelperDelegate>) helperDelegate;
+#ifdef LOCAL_NOTIFICATION_SUPPORT
+- (void) handleSystemLocalNotification:(UNNotification*)notification;
+#endif
+
 @end

@@ -14,6 +14,9 @@
 #import <P2UXCore/P2UXVarDelegate.h>
 #import <P2UXCore/P2UXVarLink.h>
 #import <P2UXCore/P2UXDataManagerDelegate.h>
+
+extern NSString* const Var_Now;
+
 @class P2UXSourcedData, P2UXEvent;
 
 @interface P2UXDataManager : NSObject<P2UXDataAuthDelegate, P2UXDataSourceDelegate>

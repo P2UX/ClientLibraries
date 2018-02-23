@@ -90,6 +90,7 @@ typedef void (^P2UXAuthCallback)(P2UXAuthResult result, NSString* message);
 - (NSDictionary*) appendToPayload:(NSDictionary*)payload method:(NSString*)method;
 - (void) appendToHeaders:(NSMutableURLRequest*)request method:(NSString*)method;
 - (NSMutableDictionary*) appendToParameters:(NSMutableDictionary*)parameters method:(NSString*)method;
+- (NSString*) updatePathComponent:(NSString*)path method:(NSString*)method;
 // Auth data persistance
 - (void) persistResults:(NSDictionary*)results altPaths:(NSDictionary*)altPaths;
 - (void) loadPersistResults;

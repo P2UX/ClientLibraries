@@ -32,13 +32,19 @@ typedef NS_ENUM(NSInteger, P2UXElementEvent) {
     P2UXElementEvent_PullToRefresh = 20,
     P2UXElementEvent_ExternalRequest,
     P2UXElementEvent_AttributeChanged,
-    P2UXElementEvent_SystemNotifyTapped,
+    P2UXElementEvent_SystemNotification,
     P2UXElementEvent_Keyboard_Return,
     P2UXElementEvent_FingerprintAuth,
     P2UXElementEvent_AuthInput,
     P2UXElementEvent_AuthComplete,
     P2UXElementEvent_ShowView,
     P2UXElementEvent_UserAuth = 200
+};
+
+typedef NS_ENUM(NSInteger, P2UXSystemNotificationType) {
+    P2UXSystemNotificationType_Unknown = -1,
+    P2UXSystemNotificationType_UserTapped = 0,
+    P2UXSystemNotificationType_Foreground
 };
 
 @class P2UXEventTransition;
@@ -90,6 +96,7 @@ extern NSString* const P2UXEvent_AuthAction_Clear;
 @property (nonatomic, weak) id eventContext;
 @property (nonatomic, weak) id<P2UXViewContainerDelegate> viewDelegate;
 @property (nonatomic) BOOL enabled;
+@property (nonatomic) id data;
 
 + (void) SendGlobalMessageEvent:(NSString*)message data:(id)data sender:(id)sender;
 + (void) NotifyAttributeChanged:(NSString*)attribute value:(id)value sender:(id)sender;
@@ -118,4 +125,5 @@ extern NSString* const P2UXEvent_AuthAction_Clear;
 - (BOOL) isValueChangedEvent:(NSString*)msg;
 - (BOOL) isService:(NSString*)service;
 - (void) resetLinks;
+- (id)   payloadValueForLink:(P2UXVarLink*)link;
 @end

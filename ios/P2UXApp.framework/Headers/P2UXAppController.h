@@ -27,7 +27,12 @@ extern NSString* const UPDATE_CONTENTS_NOW;
     UINavigationControllerDelegate,
     P2UXModalLayerDelegate,
     P2UXPanelDelegate,
+#ifdef LOCAL_NOTIFICATION_SUPPORT
+    P2UXPeekViewControllerDelegate,
+    UNUserNotificationCenterDelegate>
+#else
     P2UXPeekViewControllerDelegate>
+#endif
 {
     P2UXAppDefinition*          _def;
     NSMutableArray*             _eventHandlers;
@@ -59,7 +64,9 @@ extern NSString* const UPDATE_CONTENTS_NOW;
 @property (nonatomic) BOOL primary;
 @property (nonatomic, readonly) P2UXScreenNavigation* headerNavigation;
 @property (nonatomic) CGFloat scale;
-
+#ifdef LOCAL_NOTIFICATION_SUPPORT
+@property (nonatomic, readonly) UNAuthorizationOptions notifyOptions;
+#endif
 - (instancetype) initWithFrame:(CGRect)frame;
 - (instancetype) initWithExplicitSize:(CGRect)frame;
 - (instancetype) initWithFormFactor:(P2UXAppFormFactor*)ff def:(P2UXAppDefinition*)def;
@@ -77,7 +84,7 @@ extern NSString* const UPDATE_CONTENTS_NOW;
 - (BOOL) handleExternalEvent:(NSString*)eventType params:(id)params;
 
 #ifdef LOCAL_NOTIFICATION_SUPPORT
-- (void) handleSystemLocalNotification:(UNNotificationRequest*)notification;
+- (void) handleSystemLocalNotification:(UNNotification*)notification;
 #endif
 
 - (void) resetEvents;
@@ -145,4 +152,7 @@ extern NSString* const UPDATE_CONTENTS_NOW;
 
 #pragma mark - P2UXPanelDelegate
 - (void) viewDidClose:(id)view;
+
+- (void) handleRemoteNotificationRegistration:(NSData*)deviceToken;
+- (void) handleRemoteNotificationFailure:(NSError*)error;
 @end

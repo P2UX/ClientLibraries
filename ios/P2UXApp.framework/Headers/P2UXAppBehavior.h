@@ -23,7 +23,7 @@ extern NSString* const kServiceName;
  @discussion Create a subclass of this class to add custom controls, view controllers, and screen or panel instances.
  */
 #if TARGET_OS_IOS
-@interface P2UXAppBehavior : P2UXBehavior<P2UXDataAuthDelegate,P2UXDataSourceDelegate,P2UXDataManagerDelegate,UIWebViewDelegate,UNUserNotificationCenterDelegate>
+@interface P2UXAppBehavior : P2UXBehavior<P2UXDataAuthDelegate,P2UXDataSourceDelegate,P2UXDataManagerDelegate,UIWebViewDelegate>
 #else
 @interface P2UXAppBehavior : P2UXBehavior<P2UXDataAuthDelegate,P2UXDataSourceDelegate,P2UXDataManagerDelegate>
 #endif
@@ -172,8 +172,8 @@ extern NSString* const kServiceName;
 
 #ifdef LOCAL_NOTIFICATION_SUPPORT
 - (BOOL) handleSystemLocalNotification:(UNNotificationRequest*)notification active:(BOOL)active;
-- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler;
-- (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler;
+- (UNNotificationPresentationOptions) handleSystemLocalNotificationInForeground:(UNNotification*)notification;
+- (void) handleSystemLocalNotificationResponse:(UNNotificationResponse *)response;
 #endif
 
 #pragma mark - P2UXDataManagerDelegate

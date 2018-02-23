@@ -28,6 +28,7 @@ extern NSString* const P2UXDataSchema_PathSeparator;
 @property (readonly) BOOL expired;
 @property (nonatomic) BOOL postFiltered;
 @property (nonatomic) P2UXDataSourceFilterRequest* filterRequest;
+@property (nonatomic, readonly) id rawData;
 + (NSString*) cachePath:(NSString*)path;
 
 -(id) initWithData:(id)data andSchema:(P2UXDataSchema*)schema cachedOn:(NSDate*)date;

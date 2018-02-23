@@ -62,4 +62,9 @@ typedef enum
 - (void) setInvalid;
 - (BOOL) valid;
 - (BOOL) setLatLon:(NSString*)latlon;
+
+// Comparison
+- (BOOL) isEqualToWaypoint:(P2UXMapWaypoint*)waypoint;
+- (BOOL) isSameRegionName:(NSString*)regionName;
+- (BOOL) isSameMarkerName:(NSString*)markerName;
 @end

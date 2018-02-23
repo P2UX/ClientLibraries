@@ -59,6 +59,8 @@ typedef NS_ENUM(NSInteger, P2UXStatusBar) {
 @property (nonatomic, readonly) NSString* assetPath;
 @property (nonatomic, readonly) BOOL external;
 @property (nonatomic, readonly) P2UXPaletteManager* palettes;
+@property (nonatomic, readonly) BOOL notifications;
+@property (nonatomic, readonly) NSDictionary* notificationSpec;
 
 - (id)                initWithAppID:(NSString*)appId behavior:(P2UXAppBehavior*)behavior;
 - (id)                initFromBundleWithAppID:(NSString *)appId dir:(NSString*)dir behavior:(P2UXAppBehavior *)behavior;
@@ -84,4 +86,5 @@ typedef NS_ENUM(NSInteger, P2UXStatusBar) {
 - (NSDictionary*)     cacheState;
 - (void)              restoreState:(NSDictionary*)state;
 - (id)                staticValueForKey:(NSString*)key;
+
 @end

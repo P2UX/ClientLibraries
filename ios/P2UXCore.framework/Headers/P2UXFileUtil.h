@@ -27,6 +27,10 @@
 + (BOOL)            saveJSONForType:(NSString*)type itemId:(NSString*)itemId data:(NSDictionary*)data;
 + (BOOL)            saveJSONForType:(NSString*)type itemId:(NSString*)itemId data:(NSDictionary*)data user:(NSString*)user;
 + (BOOL)            saveJSONForType:(NSString*)type itemId:(NSString*)itemId data:(NSDictionary*)data user:(NSString *)user dir:(NSString*)dir key:(NSString*)key;
++ (BOOL)            saveDataForType:(NSString*)type itemId:(NSString*)itemId data:(NSDictionary*)data user:(NSString *)user dir:(NSString*)dir key:(NSString*)key;
++ (id)              loadDataForType:(NSString*)type itemId:(NSString*)itemId mutable:(BOOL)mutable dir:(NSString*)dir key:(NSString*)key;
++ (id)              loadDataForType:(NSString*)type itemId:(NSString*)itemId mutable:(BOOL)mutable user:(NSString*)user filename:(NSString *)filename dir:(NSString*)dir key:(NSString*)key;
++ (NSDictionary*)   loadDataDirectForType:(NSString*)type itemId:(NSString*)itemId mutable:(BOOL)mutable user:(NSString*)user;
 + (NSDictionary*)   loadJSONForType:(NSString*)type itemId:(NSString*)itemId;
 + (NSDictionary*)   loadJSONForType:(NSString*)type itemId:(NSString*)itemId dir:(NSString*)dir key:(NSString*)key;
 + (NSDictionary*)   loadJSONForType:(NSString*)type itemId:(NSString*)itemId dir:(NSString*)dir;
@@ -67,4 +71,6 @@
 #pragma mark - Data methods
 + (BOOL) saveData:(NSDictionary*)data withName:(NSString*)name;
 + (NSDictionary*) loadData:(NSString*)name;
+
++ (NSString *)MIMETypeFromFileName: (NSString *)fileName;
 @end
