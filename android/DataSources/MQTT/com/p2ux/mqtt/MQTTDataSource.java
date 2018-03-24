@@ -124,6 +124,11 @@ public class MQTTDataSource extends P2UXDataSource implements MqttCallback
             mServerURI = null;
         }
     }
+    
+    public static void setup()
+    {
+        P2UXDataSourceManager.instance().registerDataSourceClass("mqtt", MQTTDataSource.class);
+    }
 
     @Override
     protected RequestResult handleRequest(String name, JSONObject dataObj, JSONObject args, UXDataUpdateCallback callback)
