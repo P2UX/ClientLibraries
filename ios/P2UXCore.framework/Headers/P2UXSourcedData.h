@@ -58,6 +58,7 @@ extern NSString* const P2UXDataSchema_PathSeparator;
 -(void) filterRecordsForPath:(NSString*)path
                     usingFilters:(NSArray*)filters;
 -(void) clearFilter;
+-(void) setContextForPath:(NSString*)path;
 
 // protected
 - (P2UXSourcedData*) createNewRecord:(id)data andSchema:(P2UXDataSchema*)schema;

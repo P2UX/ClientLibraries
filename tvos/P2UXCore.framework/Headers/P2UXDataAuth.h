@@ -27,6 +27,7 @@ extern NSString* const P2UXAuthError_Cancel;
 
 typedef NS_ENUM(NSInteger, P2UXAuthResult) {
     P2UXAuthResult_Success,
+    P2UXAuthResult_Reserved,
     P2UXAuthResult_UnknownError,
     P2UXAuthResult_InvalidParams,
     P2UXAuthResult_Failed,

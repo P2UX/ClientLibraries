@@ -39,6 +39,7 @@ typedef NS_ENUM(NSInteger, P2UXStatusBar) {
     P2UXAppBehavior*        _behavior;
 
     NSMutableDictionary*    _appVars;
+    NSMutableDictionary*    _updatedVars;
     NSMutableDictionary*    _appVarLinks;
     NSMutableArray*         _events;
     NSDictionary*           _staticValues;

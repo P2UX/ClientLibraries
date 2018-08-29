@@ -36,6 +36,7 @@
 - (void) setData:(NSDictionary *)data;
 - (void) handleActionParams:(NSDictionary*)action;
 - (void) initializeConstraints:(UIView*)parent;
+- (void) updateData:(id)data updateLinks:(BOOL)updateLinks;
 
 #pragma mark - P2UXData
 - (id) valueForAttribute:(NSString*)attribute;

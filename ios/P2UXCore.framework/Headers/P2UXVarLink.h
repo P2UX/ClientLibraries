@@ -58,6 +58,7 @@ extern NSString* const P2UXDeviceMedia_Value_Update;
 extern NSString* const P2UXDataSourceType_Value_Update;
 extern NSString* const P2UXBatch_DataSource_Value_Update;
 extern NSString* const P2UXDataSourceType_Item_Value_Update;
+extern NSString* const P2UXViewParam_Value_Update;
 extern NSString* const P2UXVarLink_Attrib_Attribute;
 extern NSString* const P2UXVarLink_Attrib_Attributes;
 extern NSString* const P2UXIndexReplacement;
@@ -69,6 +70,10 @@ extern NSString* const P2UXVarLink_Attrib_Src;
 extern NSString* const P2UXVarLink_Attrib_Ctrls;
 extern NSString* const P2UXVarLink_Attrib_Var;
 extern NSString* const P2UXVarLink_Attrib_VarType;
+extern NSString* const P2UXVarLink_Attrib_Delimiter;
+extern NSString* const P2UXVarLink_Attrib_Args;
+extern NSString* const P2UXVarLink_Attrib_Ident;
+extern NSString* const P2UXVarLink_Attrib_Request;
 
 extern NSString* const P2UXVarLink_Message_TwoParam_Fmt;
 extern NSString* const P2UXVarLink_Message_OneParam_Fmt;
@@ -124,6 +129,8 @@ extern NSString* const P2UXVarLink_Message_OneParam_Fmt;
 @property (nonatomic,readonly) NSArray* paths;
 @property (nonatomic)          BOOL disabled;
 @property (nonatomic)          BOOL deliminate;
+@property (nonatomic)          BOOL ctrlRetry;
+@property (nonatomic, weak)    id   ctrlContext;
 
 + (NSString*) notificationMsg:(NSInteger)itemType;
 + (P2UXVarMessageType) notificationMsgType:(NSInteger)itemType;
@@ -131,6 +138,7 @@ extern NSString* const P2UXVarLink_Message_OneParam_Fmt;
 + (NSString*) formatNotificationType:(NSInteger)type param1:(NSString*)param1 param2:(NSString*)param2;
 + (NSString*) formatNotificationFromMsg:(NSString*)msg param1:(NSString*)param1;
 + (NSString*) formatNotificationFromMsg:(NSString*)msg param1:(NSString*)param1 param2:(NSString*)param2;
++ (void) handleVarChange:(NSString*)varName type:(P2UXVarLinkType)type listener:(id)listener notifyHandler:(SEL)notifyHandler;
 
 - (void)      cleanup;
 - (id)        initWithDictionary:(NSDictionary*)spec index:(id)index context:(id)context viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate;
@@ -142,5 +150,5 @@ extern NSString* const P2UXVarLink_Message_OneParam_Fmt;
 - (BOOL)      hasAttribute:(NSString*)attribute;
 - (void)      updateLinkedValues:(id)context viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate;
 
-- (void)      parse:(NSDictionary*)spec viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate;
+- (void)      parse:(NSDictionary*)spec context:(id)context viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate;
 @end

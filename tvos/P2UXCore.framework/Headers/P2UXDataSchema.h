@@ -17,7 +17,9 @@ typedef NS_ENUM(NSInteger, P2UXSchemaType) {
     P2UXSchemaType_Number = (1 << 3),
     P2UXSchemaType_Boolean = (1 << 4),
     P2UXSchemaType_Date = (1 << 5),
-    P2UXSchemaType_ArrayOrObject = (1 << 6)
+    P2UXSchemaType_ArrayOrObject = (1 << 6),
+    P2UXSchemaType_Timestamp = (1<<7),
+    P2UXSchemaType_TimestampMS = (1<<8)
 };
 
 extern NSString* const P2UXSchemaKey_Type;
@@ -28,6 +30,7 @@ extern NSString* const P2UXSchemaKey_Detail;
 extern NSString* const P2UXSchemaKey_Total;
 extern NSString* const P2UXSchemaKey_Current;
 extern NSString* const P2UXSchemaKey_Unit;
+extern NSString* const P2UXSchemaKey_UDefault;
 
 @interface P2UXDataSchema : NSObject
 
@@ -37,7 +40,9 @@ extern NSString* const P2UXSchemaKey_Unit;
 @property (retain, readwrite)id failure;
 @property (readonly)BOOL validationPending;
 @property (readonly)BOOL failureIndicated;
+@property (readonly)BOOL allowEmpty;
 @property (nonatomic, weak) P2UXDataSourceFilterRequest* filterValue;
+@property (readonly) id defaultValue;
 
 +(P2UXSchemaType)stringToType:(NSString*)typeName;
 +(P2UXDataSchema*)updateSchema;
@@ -50,9 +55,12 @@ extern NSString* const P2UXSchemaKey_Unit;
 -(P2UXDataSchema*)schemaForKey:(NSString*)key;
 -(P2UXDataSchema*)itemSchema;
 -(NSString*)itemIndex;
--(BOOL)validateData:(id)dataValue atContext:(NSString*)context;
+-(BOOL)validateData:(id)dataValue atContext:(NSString*)context output:(BOOL)output;
 -(id)filterType:(id)value atContext:(NSString*)context;
+-(id)filterTypeOutput:(id)value atContext:(NSString*)context;
 -(id)filterValue:(id)value atContext:(NSString*)context;
+- (id) formatDataForOutput:(id)dataValue atContext:(NSString*)context;
+- (id) applyDefaultValues:(id)dataValue atContext:(NSString*)context;
 
 // Protected
 -(P2UXDataSchema*)createSchemaWithSpec:(NSDictionary*)spec;

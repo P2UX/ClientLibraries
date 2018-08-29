@@ -69,7 +69,7 @@ extern NSString* const P2UXNotification_CheckForUpdates;
 - (void) handleSetAppState:(P2UXEventAction*)action element:(P2UXElementInstance*)elem sender:(id)sender;
 - (void) handleSetLanguage:(P2UXEventAction*)action;
 - (void) handleCheckForUpdates:(P2UXEventAction*)action;
-- (void) handleShowNativeDialog:(P2UXEventAction*)action;
+- (void) handleShowNativeDialog:(P2UXEventAction*)action sender:(id)sender;
 - (BOOL) handleSendSystemNotification:(P2UXEventAction*)action element:(P2UXElementInstance*)elem sender:(id)sender;
 - (void) handleAnalyticsEvent:(P2UXEventAction*)action element:(P2UXElementInstance*)elem sender:(id)sender;
 - (void) handleFocusNextControl:(P2UXEventAction*)action elem:(P2UXElementInstance*)elem sender:(id)sender;

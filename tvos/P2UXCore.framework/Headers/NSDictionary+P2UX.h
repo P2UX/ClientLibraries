@@ -22,5 +22,6 @@
 - (BOOL) objectForKeyRemovable:(const NSString*)key obj:(id*)obj;
 - (NSArray*) sortedKeys;
 - (void) sortByField:(NSString*)field ascending:(BOOL)ascending;
+- (NSDictionary*) mergeWithDictionary:(NSDictionary*)toMerge;
 
 @end

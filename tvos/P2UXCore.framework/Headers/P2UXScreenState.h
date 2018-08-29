@@ -46,7 +46,7 @@
 - (NSMutableDictionary*) buildViewWithParent:(UIView *)parent constraintParent:(UIView*)constraintParent handler:(id<P2UXActionDelegate>)handler viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate index:(id)index data:(id)data addToParent:(BOOL)addToParent delegate:(id<P2UXScreenStateDelegate>)delegate;
 - (void)         renderViewWithParent:(P2UXView*)view;
 - (void)         clearContents;
-- (void)         updateIndexValue:(id)indexValue;
+- (void)         updateIndexValue:(id)indexValue updateLinks:(BOOL)updateLinks;
 
 // State Methods
 - (void)         activate:(NSArray*)updates orientation:(P2UXOrientationType)type parent:(UIView*)parent;

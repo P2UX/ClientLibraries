@@ -73,4 +73,5 @@
 + (NSDictionary*) loadData:(NSString*)name;
 
 + (NSString *)MIMETypeFromFileName: (NSString *)fileName;
++(void)mimeType:(NSURL*)fileURL completed:(void (^)(NSString *MIMEType, NSData *fileData))completionHandler;
 @end

@@ -27,7 +27,7 @@
 @property (nonatomic, weak) id<P2UXViewContainerDelegate> viewDelegate;
 
 + (instancetype) instance;
-- (void) showDialogFromAction:(P2UXEventAction*)action viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate;
+- (void) showDialogFromAction:(P2UXEventAction*)action sender:(id)sender viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate;
 - (void) showDialogWithId:(NSString*)ident withData:(NSDictionary*)data viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate;
 - (void) showDialogWithSpec:(NSDictionary*)spec withData:(NSDictionary*)data viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate;
 @end

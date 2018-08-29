@@ -11,4 +11,5 @@
 @interface NSArray (P2UX)
 - (NSMutableArray*) deepMutableCopy;
 - (NSArray*) shuffled;
+- (id) objectWithValue:(id)val inPath:(NSString*)path;
 @end

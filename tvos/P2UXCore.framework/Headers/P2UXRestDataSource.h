@@ -39,6 +39,7 @@ extern NSString* const HTTPMethod_CRUD;
 @property (readonly) NSURL* baseURL;
 @property (readonly) BOOL authRequired;
 @property (readwrite) BOOL pushResponse;
+@property (nonatomic) NSString* baseURLKey;
 + (NSString*) buildQuery:(NSString*)query withArgs:(NSMutableDictionary*)args;
 
 -(BOOL) makeRequest:(NSString*)request

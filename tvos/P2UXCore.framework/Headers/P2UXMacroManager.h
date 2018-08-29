@@ -18,4 +18,5 @@
 - (NSDictionary*)transitionWithName:(NSString*)name;
 - (void) addLinkSources:(NSDictionary*)sources;
 - (NSDictionary*)linkSourceWithName:(NSString*)name;
+- (NSDictionary*)linkSourceWithAlias:(NSString*)alias;
 @end

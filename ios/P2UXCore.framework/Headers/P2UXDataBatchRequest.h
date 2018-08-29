@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <P2UXCore/P2UXTypes.h>
+#import <P2uXCore/P2UXDataSource.h>
 
 @class P2UXSourcedData, P2UXEvent;
 
@@ -33,5 +34,5 @@
 - (void) fetch;
 - (void) updateArgsFromEvent:(P2UXEvent*)event sender:(id)sender viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate;
 - (void) updateSources:(NSArray*)sources;
-- (BOOL) handleDataSourceRequestComplete:(NSString*)ident request:(NSString*)request success:(BOOL)success;
+- (BOOL) handleDataSourceRequestComplete:(NSString*)ident request:(NSString*)request result:(P2UXDataRequestResult)result;
 @end

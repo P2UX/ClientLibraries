@@ -99,14 +99,15 @@ extern NSString* const P2UXAction_UserAuthPwd_Password;
 
 @class P2UXEventTransition, P2UXView, P2UXEvent;
 
-@interface P2UXEventAction : NSObject
+@interface P2UXEventAction : NSObject<NSCopying>
 {
     P2UXEventTransition* _transition;
 }
 @property (nonatomic,weak) P2UXEvent* event;
-@property (nonatomic,readonly) P2UXEventTransition* transition;
-@property (nonatomic,readonly) NSDictionary* target;
-@property (nonatomic,readonly) P2UXElementAction action;
+@property (nonatomic, retain) P2UXEventTransition* transition;
+@property (nonatomic, copy) NSDictionary* target;
+@property (nonatomic) P2UXElementAction action;
+@property (nonatomic) CGFloat delay;
 @property (nonatomic,readonly) NSString* item;
 @property (nonatomic,readonly) NSString* targetData;
 @property (nonatomic,readonly) id targetValue;
@@ -119,10 +120,10 @@ extern NSString* const P2UXAction_UserAuthPwd_Password;
 @property (nonatomic,readonly) NSNumber* targetIncrement;
 @property (nonatomic,readonly) P2UXEventBackHistory targetBackHistory;
 @property (nonatomic,readonly) BOOL targetClearAppHistory;
-@property (nonatomic,readonly) CGFloat delay;
 
 - (id) initWithSpec:(NSDictionary*)spec event:(P2UXEvent*)event;
 - (void) cleanup;
+- (instancetype) copyWithZone:(NSZone*)zone;
 
 - (id) targetObjectForKey:(NSString*)key;
 - (id) targetObjectFromData:(NSDictionary*)data forKey:(NSString*)key;

@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <P2UXCore/P2UXControl.h>
 #import <P2UXCore/P2UXViewContainerDelegate.h>
-#import <AssetsLibrary/AssetsLibrary.h>
 @class P2UXEventAction;
 
 typedef void (^P2UXMediaResultBlock)(UIImage* image);

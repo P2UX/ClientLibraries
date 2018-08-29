@@ -51,7 +51,7 @@ extern NSString* _Nonnull const P2UXAppCreator_Opt_LogLevel;
 + (void) setEnv:(nonnull NSString*)env;
 
 + (void) resetBundleVersion;
-+ (void) checkForUpdates;
++ (void) checkForUpdates:(BOOL)userTriggered;
 + (void) updateOpts:(nonnull NSDictionary*)opts resetVersion:(BOOL)reset;
 
 #if !TARGET_OS_TV

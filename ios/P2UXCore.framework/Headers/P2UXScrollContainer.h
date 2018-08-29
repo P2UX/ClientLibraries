@@ -56,6 +56,7 @@ extern NSString* const P2UXScrollContainer_Attribute_PageIndex;
 @property (nonatomic)           P2UXView*       currentView;
 @property (nonatomic)           NSString*     exportType;
 @property (nonatomic, readonly) NSArray*      controls;
+@property (nonatomic, readonly) BOOL          scrolled;
 
 - (id) initWithFrame:(CGRect)frame elemInst:(P2UXElementInstance*)elemInst uipath:(NSString *)path ext:(BOOL)ext handler:(id<P2UXActionDelegate>)handler parentDef:(P2UXScreenStateDefinition*)parentDef viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate index:(id)index data:(id)data stateDelegate:(id<P2UXScreenStateDelegate>)stateDelegate;
 

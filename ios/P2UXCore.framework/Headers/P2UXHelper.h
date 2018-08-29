@@ -51,7 +51,7 @@ extern NSString* const CreateViewKey_RequiresSizeUpdate;
 + (float) valueFromMixedSpec:(id)spec parent:(float)parent scale:(CGFloat)scale;;
 
 +(NSString*) formatDateTime:(NSDate*)date itemspec:(NSDictionary*)itemspec def:(NSString*)defFormat;
-+ (NSString*) formatRelativeTime:(NSDate*)date;
++ (NSString*) formatRelativeTime:(NSDate*)date  def:(NSString*)defFormat;
 
 + (P2UXView*) parentViewForElementView:(UIView*)viewElement;
 

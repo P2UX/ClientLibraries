@@ -55,9 +55,11 @@ extern NSString* const P2UXVarLinks_InternalValDelimiterCheck;
 + (NSString*) varValue:(NSString*)value;
 + (BOOL) isEvaluatedValue:(NSString*)value;
 + (NSString*) stripVarDelimiter:(NSString*)value;
-
++ (NSNumber*) generateRandFromValue:(NSString*)value;
++ (NSNumber*) generateRandWithParams:(NSString*)value;
++ (NSNumber*) generateRandWithMax:(NSInteger)max min:(NSInteger)min;
 - (id) initWithItemSpec:(NSDictionary*)itemspec index:(id)index context:(id)context viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate;
-- (id) initWithLinks:(NSArray*)links index:(id)index;
+- (id) initWithLinks:(NSArray*)links index:(id)index context:(id)context;
 - (void) cleanup;
 - (void) updateIndexValue:(id)value;
 - (P2UXVarLink*) linkWithType:(P2UXVarLinkType)type ident:(NSString*)ident;

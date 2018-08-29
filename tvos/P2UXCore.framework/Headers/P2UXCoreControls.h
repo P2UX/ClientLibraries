@@ -22,6 +22,7 @@
 #import <P2UXCore/P2UXViewContainer.h>
 #import <P2UXCore/P2UXClock.h>
 #import <P2UXCore/P2UXMHRotaryKnob.h>
+#import <P2UXCore/P2UXRadioButtonGroup.h>
 #import <P2UXCore/P2UXRotaryButton.h>
 #import <P2UXCore/P2UXRotaryPushButton.h>
 #import <P2UXCore/P2UXBusyIndicator.h>
@@ -35,10 +36,12 @@
 #import <P2UXCore/P2UXReorderGestureRecognizer.h>
 #import <P2UXCore/P2UXCarousel.h>
 #import <P2UXCore/P2UXCollectionView.h>
+#import <P2UXCore/P2UXCollectionViewCell.h>
 #import <P2UXCore/P2UXScrollContainer.h>
 #import <P2UXCore/P2UXScrollContainerContents.h>
 #import <P2UXCore/P2UXScrollbarDelegate.h>
 #if !TARGET_OS_TV
+#import <P2UXCore/P2UXDatePicker.h>
 #import <P2UXCore/P2UXButtonSelector.h>
 #import <P2UXCore/P2UXPicker.h>
 #endif

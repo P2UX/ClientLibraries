@@ -12,4 +12,7 @@
 @interface NSDate (P2UX)
 + (NSDate*) dateWithISO:(NSString*)isodate;
 - (NSString*) iso8601Date;
+- (NSString*) stringWithDateFormat:(NSString*)format;
++ (NSDate*) adjustedDateWithTimeIntervalSince1970:(NSTimeInterval)interval;
+
 @end

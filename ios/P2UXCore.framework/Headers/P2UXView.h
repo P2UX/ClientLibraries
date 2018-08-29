@@ -98,6 +98,8 @@ extern NSString* const P2UXView_Attribute_DragHandle;
 - (void) clearConstraints;
 
 - (void) updateContents;
+- (void) updateData:(id)data updateLinks:(BOOL)updateLinks;
+- (void) updateData:(id)data;
 
 - (void) setValue:(NSInteger)value forElementWithType:(NSString*)type;
 - (void) setValue:(NSInteger)value forElement:(P2UXElement*)element;
@@ -158,6 +160,7 @@ extern NSString* const P2UXView_Attribute_DragHandle;
 - (void) updateBackground;
 
 - (UIView*) createControlFromElement:(P2UXElement*)element controls:(NSDictionary*)controlsMap parent:(UIView*)parent def:(P2UXDefinition*)def;
+- (UIView*) overrideControlWithType:(int)ctrlType frame:(CGRect)frame elemInst:(P2UXElementInstance*)elemInst uipath:(NSString*)path ext:(BOOL)ext handler:(id<P2UXActionDelegate>)handler index:(id)index;
 
 - (void) handleViewSwipeRight:(UISwipeGestureRecognizer*)recognizer;
 - (void) handleViewSwipeLeft:(UISwipeGestureRecognizer*)recognizer;
@@ -200,6 +203,7 @@ extern NSString* const P2UXView_Attribute_DragHandle;
 - (void) registerPanGesture:(UIPanGestureRecognizer*)gesture direction:(NSInteger)direction;
 - (BOOL) handleRotaryChange:(id)sender;
 - (BOOL) handleRotaryIncrement:(id)sender;
+- (void) viewStateDidChange:(NSString *)layout;
 
 #pragma mark - P2UXPanEventHandlerDelegate
 - (void) panComplete:(BOOL)cancelled;

@@ -18,7 +18,10 @@ typedef NS_OPTIONS(NSInteger, P2UXAnalyticsEvent) {
     P2UXAnalyticsEvent_RestDataRequest = 1<<5,
     P2UXAnalyticsEvent_RestDataRequestFail = 1<<6,
     P2UXAnalyticsEvent_PullDown = 1<<7,
-    P2UXAnalyticsEvent_KeyboardReturn = 1<<8
+    P2UXAnalyticsEvent_KeyboardReturn = 1<<8,
+    P2UXAnalyticsEvent_Authentication = 1<<9,
+    P2UXAnalyticsEvent_Registration = 1<<10,
+    P2UXAnalyticsEvent_Share = 1<<11
 };
 
 @protocol P2UXAnalytics <NSObject>

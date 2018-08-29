@@ -16,6 +16,7 @@
 #import <P2UXCore/P2UXDataManagerDelegate.h>
 
 extern NSString* const Var_Now;
+extern NSString* const Var_Count;
 
 @class P2UXSourcedData, P2UXEvent;
 
@@ -34,6 +35,7 @@ extern NSString* const Var_Now;
 + (NSString*) generateUUID;
 + (id) valueForPath:(NSString*)path value:(id)value;
 + (id) incrementExisting:(id)existing withValue:(id)withValue itemspec:(NSDictionary*)itemspec;
++ (id) resolveReservedValue:(id)value;
 
 // P2UXUser Methods
 - (P2UXUser*) createUserWithUsername:(NSString*)username;
@@ -66,8 +68,11 @@ extern NSString* const Var_Now;
 - (id) varForKey:(NSString*)key usingIdent:(NSString*)ident withType:(NSInteger)type;
 - (void) setAppState:(NSString*)appState usingIdent:(NSString *)ident;
 - (NSString*) appStateForIdent:(NSString*)ident;
+- (void) setValueForViewParam:(id)value forPath:(NSString *)path notify:(BOOL)notify context:(id)context itemspec:(NSDictionary*)itemspec viewDelegate:(id<P2UXViewContainerDelegate>)viewDegate;
+- (id) valueForViewParamPath:(NSString*)path context:(id)context viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate;
 
 - (P2UXSourcedData*) fetchDataSource:(NSString*)ident request:(NSString*)request withArgs:(NSDictionary*)args policy:(P2UXDataPolicy)policy state:(NSNumber**)state errorData:(BOOL)errorData async:(BOOL)async;
+- (P2UXSourcedData*) fetchDataSourceWithParamSetAlias:(NSString*)alias source:(id)source policy:(P2UXDataPolicy)policy errorData:(BOOL)errorData async:(BOOL)async viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate;
 - (P2UXSourcedData*) fetchBatchData:(NSString*)batchid policy:(P2UXDataPolicy)policy;
 - (P2UXSourcedData*) fetchBatchDataDirect:(NSString*)batchid policy:(P2UXDataPolicy)policy viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate;
 - (void) removeFromDataSource:(NSString*)ident request:(NSString*)request withArgs:(NSDictionary*)args async:(BOOL)async;
@@ -84,8 +89,9 @@ extern NSString* const Var_Now;
 - (void) clearFilters:(NSString*)ident request:(NSString*)request itempath:(NSString*)itempath notify:(BOOL)notify;
 - (void) authenticateForService:(NSString*)service withArgs:(NSDictionary*)args;
 #pragma mark - P2UXDataSourceDelegate
--(void) request:(NSString*)request withArgs:(NSDictionary*)args returnedSuccess:(BOOL)success withResults:(P2UXSourcedData*)results forSource:(P2UXDataSource*)source;
+-(void) request:(NSString*)request withArgs:(NSDictionary*)args returnedResult:(P2UXDataRequestResult)result withResults:(P2UXSourcedData*)results forSource:(P2UXDataSource*)source;
 -(id<P2UXDataAuthDelegate>)dataAuthHandler;
+- (id) processRequestDataForSource:(NSString*)ident request:(NSString*)request data:(id)data;
 
 #pragma mark - P2UXDataAuthDelegate
 -(BOOL) authType:(P2UXAuthType)type forService:(NSString*)service requires:(NSDictionary*)params viaCallback:(P2UXAuthParamResponse)callback;

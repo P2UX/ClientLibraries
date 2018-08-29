@@ -73,7 +73,7 @@ void dispatch_uisafe_sync(dispatch_block_t block);
 - (void) updateFrameSize:(CGFloat)size attribute:(NSLayoutAttribute)attribute notify:(BOOL)notify;
 - (void) cleanup;
 - (BOOL) updateIdleConstraints:(NSMutableArray*)constraints;
-- (void) updateIndexValue:(id)value;
+- (void) updateIndexValue:(id)value updateLinks:(BOOL)updateLinks;
 - (NSString*) getAppState;
 - (NSArray*) constraintsFromRect:(NSDictionary*)rect parent:(UIView*)parent;
 - (UIView*) viewFromElement:(P2UXElement*)elem;
@@ -94,11 +94,15 @@ void dispatch_uisafe_sync(dispatch_block_t block);
 - (void) attachingToScroll;
 - (void) addSubviewToScroll:(UIView*)view;
 - (void) refreshControlContents;
+- (void) retryControlLinks;
+- (void) updateStatefulConstraints;
+- (void) updateLinks;
+- (BOOL) handleOnMessage:(NSNotification*)notification;
 
 #pragma mark - Subview helpers
-- (P2UXView*) createSubViewFromSpec:(NSDictionary*)viewspec itemRect:(CGRect)itemRect handler:(id<P2UXActionDelegate>)handler scrollStyle:(P2UXScrollStyle)scrollStyle viewAttributes:(NSMutableDictionary*)viewAttributes;
-- (P2UXView*) createSubViewFromSpec:(NSDictionary*) viewspec itemSize:(NSDictionary*)itemSize itemPos:(NSDictionary*)itemPos cacheVal:(NSNumber*)cacheVal index:(id)index handler:(id<P2UXActionDelegate>)handler itemRect:(CGRect)itemRect scrollStyle:(P2UXScrollStyle)scrollStyle viewAttributes:(NSMutableDictionary*)viewAttributes;
-- (P2UXView*) createSubView:(NSString*) viewIdent itemSize:(NSDictionary*)itemSize itemPos:(NSDictionary*)itemPos cache:(NSNumber*)cacheVal index:(id)index handler:(id<P2UXActionDelegate>)handler itemRect:(CGRect)itemRect scrollStyle:(P2UXScrollStyle)scrollStyle viewAttributes:(NSMutableDictionary*)viewAttributes;
+- (P2UXView*) createSubViewFromSpec:(NSDictionary*)viewspec itemRect:(CGRect)itemRect handler:(id<P2UXActionDelegate>)handler scrollStyle:(P2UXScrollStyle)scrollStyle viewAttributes:(NSMutableDictionary*)viewAttributes data:(id)data;
+- (P2UXView*) createSubViewFromSpec:(NSDictionary*) viewspec itemSize:(NSDictionary*)itemSize itemPos:(NSDictionary*)itemPos cacheVal:(NSNumber*)cacheVal index:(id)index handler:(id<P2UXActionDelegate>)handler itemRect:(CGRect)itemRect scrollStyle:(P2UXScrollStyle)scrollStyle viewAttributes:(NSMutableDictionary*)viewAttributes data:(id)data;
+- (P2UXView*) createSubView:(NSString*) viewIdent itemSize:(NSDictionary*)itemSize itemPos:(NSDictionary*)itemPos cache:(NSNumber*)cacheVal index:(id)index handler:(id<P2UXActionDelegate>)handler itemRect:(CGRect)itemRect scrollStyle:(P2UXScrollStyle)scrollStyle viewAttributes:(NSMutableDictionary*)viewAttributes data:(id)data;
 - (CGRect) itemRectForSize:(NSDictionary*)sizespec pos:(NSDictionary*)pos  attributes:(NSMutableDictionary*)attributes;
 - (P2UXView*) createViewItemWithSpec:(NSDictionary*)spec rect:(CGRect)rect cache:(BOOL)cache index:(id)index data:(id)data;
 
@@ -134,6 +138,7 @@ void dispatch_uisafe_sync(dispatch_block_t block);
 - (void) loadButton:(UIButton*)btn values:(NSArray*)statesObj path:(NSString*)path ext:(BOOL)ext type:(NSInteger)type;
 - (void) setShadowFromSpec:(NSDictionary*)shadowSpec;
 - (P2UXView*) parentContainer;
+- (UIView*) searchParentContainer;
 - (UIView*) keyboardScrollContainer;
 
 - (void) animateWithSpec:(id)spec animations:(void (^)(void))animations completion:(void (^)(BOOL finished))completion;

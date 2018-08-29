@@ -12,7 +12,7 @@
 
 - (instancetype) init;
 - (void) cleanup;
-- (void) setVariableFromAction:(P2UXEventAction*)action element:(P2UXElementInstance*)elem sender:(id)sender viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate;
+- (void) setVariableFromAction:(P2UXEventAction*)actiontohandle element:(P2UXElementInstance*)elem sender:(id)sender viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate;
 - (void) updateRequestValueFromAction:(P2UXEventAction*)action element:(P2UXElementInstance*)elem sender:(id)sender viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate;
 
 @end

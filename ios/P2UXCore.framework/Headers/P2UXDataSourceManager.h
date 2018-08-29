@@ -20,6 +20,7 @@ extern NSString* const P2UXDataSourceType_Rest;
 + (instancetype) instance;
 - (P2UXDataSource*)dataSourceFromSpec:(NSDictionary*)dataSourceSpec sourceDir:(NSString*)sourceDir forProvider:(id)provider behavior:(P2UXBehavior*)behavior;
 - (P2UXDataSource*)dataSourceWithIdOrType:(NSString*)sourceType;
+- (void) cleanupDataSource:(NSDictionary*)dataSourceSpec;
 - (void) mapType:(NSString*)inType toType:(NSString*)outType;
 - (void) unMapType:(NSString*)type;
 - (void) clearDataSources;

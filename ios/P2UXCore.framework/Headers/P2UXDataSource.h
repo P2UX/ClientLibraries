@@ -88,7 +88,7 @@ extern NSString* const PERSIST_TYPE;
 
 -(void) request:(NSString*)request
        withArgs:(NSDictionary*)args
-returnedSuccess:(BOOL)success
+ returnedResult:(P2UXDataRequestResult)result
     withResults:(P2UXSourcedData*)results
       forSource:(P2UXDataSource*)source;
 
@@ -98,7 +98,7 @@ updatedProgress:(P2UXSourcedData*)progress
       forSource:(P2UXDataSource*)source;
 
 -(id<P2UXDataAuthDelegate>)dataAuthHandler;
-
+- (id) processRequestDataForSource:(NSString*)ident request:(NSString*)request data:(id)data;
 @end
 
 @interface P2UXDataSource : NSObject
@@ -107,6 +107,10 @@ updatedProgress:(P2UXSourcedData*)progress
     BOOL _requiresAsync;
     NSDictionary* _initdata;
     NSDictionary* _requests;
+    NSMutableDictionary* _cachedResults;
+    NSMutableDictionary* _cachedErrors;
+    P2UXSourcedData* _lastError;
+    __weak id<P2UXDataSourceDelegate> _delegate;
 }
 
 @property (readonly) NSString* type;
@@ -119,10 +123,12 @@ updatedProgress:(P2UXSourcedData*)progress
 
 + (P2UXDataCommandType)commandTypeFromString:(NSString*)commandString;
 
-- (NSString*)serializeArgs:(NSDictionary*)args forRequest:(NSString*)request;
++ (NSString*)serializeArgs:(NSDictionary*)args forRequest:(NSString*)request;
 
 -(id) initWithSpec:(NSDictionary*)dataSpec;
 -(id) initWithId:(NSString*)sourceId type:(NSString*)sourceType andSpec:(NSDictionary*)dataSpec;
+
+- (void) cleanup;
 
 -(BOOL) liveRequest:(NSString*)request;
 
@@ -153,6 +159,7 @@ updatedProgress:(P2UXSourcedData*)progress
 
 - (BOOL) clearAuthForService:(NSString*)service;
 - (BOOL) authenticateForService:(NSString*)service withArgs:(NSDictionary*)args delegate:(id<P2UXDataSourceDelegate>)delegate;
+- (NSString*)serializeArgs:(NSDictionary*)args forRequest:(NSString*)request;
 
 // protected
 -(P2UXSourcedData*) createData:(id)data andSchema:(P2UXDataSchema*)schema;

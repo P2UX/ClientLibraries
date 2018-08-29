@@ -83,10 +83,6 @@ extern NSString* const UPDATE_CONTENTS_NOW;
 - (NSArray*) eventsWithEventType:( P2UXElementEvent)eventType;
 - (BOOL) handleExternalEvent:(NSString*)eventType params:(id)params;
 
-#ifdef LOCAL_NOTIFICATION_SUPPORT
-- (void) handleSystemLocalNotification:(UNNotification*)notification;
-#endif
-
 - (void) resetEvents;
 
 - (void) presentViewController:(UIViewController *)viewControllerToPresent animated:(BOOL)flag completion:(void (^)(void))completion;
@@ -107,7 +103,7 @@ extern NSString* const UPDATE_CONTENTS_NOW;
 - (BOOL) setCurrentView:(NSString*)viewId history:(P2UXEventBackHistory)history data:(id)data transition:(P2UXEventTransition*)transition toggle:(BOOL)toggle index:(id)index rect:(NSDictionary*)rect modal:(BOOL)modal;
 
 #pragma mark - Overlay methods
-- (P2UXPanel*) showPanel:(NSString*)ident timeout:(NSNumber*)timeout show:(NSInteger)show pos:(NSDictionary*)pos size:(NSDictionary*)size modalColor:(NSString*)modalColor transition:(P2UXEventTransition*)transition;
+- (P2UXPanel*) showPanel:(NSString*)ident timeout:(NSNumber*)timeout show:(NSInteger)show pos:(NSDictionary*)pos size:(NSDictionary*)size modalColor:(NSString*)modalColor transition:(P2UXEventTransition*)transition params:(NSDictionary*)params data:(id)data;
 - (void) showPanelFromAction:(P2UXEventAction*)action;
 - (P2UXPanelController*) visiblePanelWithIdent:(NSString*)ident;
 - (void) hidePanel:(NSString*)systemType transition:(P2UXEventTransition*)transition;
@@ -153,6 +149,9 @@ extern NSString* const UPDATE_CONTENTS_NOW;
 #pragma mark - P2UXPanelDelegate
 - (void) viewDidClose:(id)view;
 
+#ifdef LOCAL_NOTIFICATION_SUPPORT
+- (void) handleSystemLocalNotification:(UNNotification*)notification;
 - (void) handleRemoteNotificationRegistration:(NSData*)deviceToken;
 - (void) handleRemoteNotificationFailure:(NSError*)error;
+#endif
 @end

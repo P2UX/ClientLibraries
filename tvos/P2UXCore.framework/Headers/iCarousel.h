@@ -1,7 +1,7 @@
 //
 //  iCarousel.h
 //
-//  Version 1.8.2
+//  Version 1.8.3
 //
 //  Created by Nick Lockwood on 01/04/2011.
 //  Copyright 2011 Charcoal Design
@@ -160,13 +160,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)reloadData;
 
+- (void)registerClass:(Class)viewClass forViewWithReuseIdentifier:(NSString *)identifier;
+- (UIView*) createViewInstanceWithClass:(Class)class index:(NSInteger)index;
+- (id)dequeueReusableItemViewWithReuseIdentifier:(NSString *)identifier forIndex:(NSInteger)index;
+- (NSString*) identifierForView:(UIView*)view;
 @end
 
 
 @protocol iCarouselDataSource <NSObject>
 
 - (NSInteger)numberOfItemsInCarousel:(iCarousel *)carousel;
-- (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSInteger)index reusingView:(nullable UIView *)view;
+- (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSInteger)index;
 
 @optional
 
@@ -194,7 +198,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (CGFloat)carouselItemWidth:(iCarousel *)carousel;
 - (CATransform3D)carousel:(iCarousel *)carousel itemTransformForOffset:(CGFloat)offset baseTransform:(CATransform3D)transform;
 - (CGFloat)carousel:(iCarousel *)carousel valueForOption:(iCarouselOption)option withDefault:(CGFloat)value;
-
+- (CGSize)carousel:(iCarousel*)carousel sizeForItemAtIndex:(NSInteger)index;
 @end
 
 NS_ASSUME_NONNULL_END

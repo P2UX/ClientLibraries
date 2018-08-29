@@ -48,14 +48,11 @@ typedef NS_ENUM(NSInteger, P2UXDimType) {
 
 @interface P2UXCoordinate : NSObject
 {
-    float       _value;
-    int         _type;
-    int         _relType;
-    NSString*   _elId;
 }
 @property (nonatomic) float value;
-@property (nonatomic) int type;
-@property (nonatomic) int relType;
+@property (nonatomic) P2UXCoordinateType type;
+@property (nonatomic) P2UXRelativeType relType;
+@property (nonatomic) BOOL safeArea;
 @property (nonatomic, readonly) P2UXCoordinateValue coordVal;
 @property (nonatomic, retain) NSString* elId;
 @property (nonatomic, readonly) BOOL requiresSizeUpdate;

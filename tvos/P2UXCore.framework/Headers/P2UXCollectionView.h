@@ -59,4 +59,11 @@ typedef NS_ENUM(NSInteger, P2UXCollectionView_DataType) {
 - (void) setScrollPos:(NSInteger)pos animated:(BOOL)animated;
 - (void) endScrollPagingAnimated:(BOOL)animated;
 
+- (void) scrollViewDidScroll:(UIScrollView *)scrollView;
+
+- (void) processData:(id)data;
+- (id) objectAtIndex:(NSInteger)index;
+- (NSInteger) viewTemplateIndexForRow:(NSInteger)row;
+- (id) dataValueForRow:(NSInteger)row;
+- (id) dataContent;
 @end

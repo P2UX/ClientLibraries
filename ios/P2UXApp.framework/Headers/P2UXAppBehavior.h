@@ -174,6 +174,9 @@ extern NSString* const kServiceName;
 - (BOOL) handleSystemLocalNotification:(UNNotificationRequest*)notification active:(BOOL)active;
 - (UNNotificationPresentationOptions) handleSystemLocalNotificationInForeground:(UNNotification*)notification;
 - (void) handleSystemLocalNotificationResponse:(UNNotificationResponse *)response;
+- (void) handlePushNotificationWithResponse:(UNNotificationResponse*)response;
+- (void) handlePushNotificationAuthorized;
+- (void) handlePushNotificationAuthorizationFailed:(NSError*)error;
 #endif
 
 #pragma mark - P2UXDataManagerDelegate
@@ -181,5 +184,7 @@ extern NSString* const kServiceName;
 - (void) postVarFetch:(NSString *)ident var:(NSString *)var value:(id)value;
 
 - (id) valueForAuthParam:(NSString*)param forService:(NSString*)service;
+- (void) handlePushDeviceTokenRegistration:(NSString*)deviceToken;
+- (void) handlePushDeviceTokenRegistrationFailure:(NSError*)error;
 @end
 

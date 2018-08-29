@@ -38,6 +38,8 @@ typedef NS_ENUM(NSInteger, P2UXElementEvent) {
     P2UXElementEvent_AuthInput,
     P2UXElementEvent_AuthComplete,
     P2UXElementEvent_ShowView,
+    P2UXElementEvent_NotificationReceived,
+    P2UXElementEvent_LaunchSystemAppComplete,
     P2UXElementEvent_UserAuth = 200
 };
 
@@ -104,7 +106,6 @@ extern NSString* const P2UXEvent_AuthAction_Clear;
 + (NSArray*) dataEventsWithEventType:(P2UXElementEvent)eventType ident:(NSString*)ident request:(NSString*)request events:(NSArray*)events;
 + (NSArray*) dataEventsWithEventType:(P2UXElementEvent)eventType systemType:(NSString*)systemType request:(NSString*)request events:(NSArray*)events;
 + (NSArray*) dataEventsWithEventType:(P2UXElementEvent)eventType field:(NSString*)field value:(NSString*)value events:(NSArray*)events;
-
 
 - (id) initWithEventSpec:(NSDictionary *)spec;
 - (id) initWithActions:(NSArray*)actions itemspec:(NSDictionary*)itemspec;

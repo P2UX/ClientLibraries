@@ -35,4 +35,5 @@
 - (void) transitionComplete:(UIView *)view outgoing:(UIView*)outgoing transition:(P2UXEventTransition*)transition;
 - (void) transitionReverseComplete:(UIView*)view outgoing:(UIView*)outgoing transition:(P2UXEventTransition*)transition;
 
+- (UIView*) overrideControlWithType:(int)ctrlType frame:(CGRect)frame elemInst:(P2UXElementInstance*)elemInst uipath:(NSString*)path ext:(BOOL)ext handler:(id<P2UXActionDelegate>)handler index:(id)index;
 @end

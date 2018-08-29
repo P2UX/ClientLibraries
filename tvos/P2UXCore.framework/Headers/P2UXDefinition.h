@@ -48,6 +48,7 @@ extern NSString* const TypeClass_View;
 @property (nonatomic, readonly) P2UXScreenStateDefinition* landscape;
 @property (nonatomic, readonly) P2UXScreenStateDefinition* portrait;
 @property (nonatomic, readonly) NSString* title;
+@property (nonatomic, readonly) BOOL cache;
 
 + (NSInteger) nextTag;
 - (void) clearEvents;

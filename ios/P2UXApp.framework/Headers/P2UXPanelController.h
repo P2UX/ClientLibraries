@@ -15,4 +15,5 @@
 - (void) showPanelWithParent:(UIView*)parent pos:(NSDictionary*)pos size:(NSDictionary*)size;
 - (void) showPanelWithParent:(UIView*)parent rect:(CGRect)rect elemInst:(P2UXElementInstance*)elemInst;
 - (BOOL) close;
+- (void) closeReference;
 @end

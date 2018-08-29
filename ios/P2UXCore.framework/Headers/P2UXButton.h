@@ -58,6 +58,7 @@ extern NSString* const P2UXButtonAttrib_BorderColor;
 extern NSString* const P2UXButtonAttrib_ShadowRadius;
 
 extern NSString* const P2UXButtonAttrib_ShadowLayer;
+extern NSString* const P2UXButtonAttrib_Value;
 
 extern NSString* const P2UXButtonShapeType_Rectangle;
 extern NSString* const P2UXButtonShapeType_Ellipse;

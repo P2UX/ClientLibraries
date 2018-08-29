@@ -174,6 +174,7 @@ extern NSString* const P2UXElement_Attrib_Overlay;
 extern NSString* const P2UXElement_Attrib_CtrlLink;
 extern NSString* const P2UXElement_Attrib_Relative;
 extern NSString* const P2UXElement_Attrib_RadioBtn;
+extern NSString* const P2UXElement_Attrib_SafeArea;
 
 extern NSString* const P2UXElement_Gradient_DefaultColor;
 
@@ -202,7 +203,7 @@ extern NSString* const P2UXVariable_Attrib_Request;
 extern NSString* const P2UXVariable_Attrib_Requests;
 extern NSString* const P2UXVariable_Attrib_SystemType;
 extern NSString* const P2UXVariable_Attrib_Args;
-extern NSString* const P2UXVariable_Attrib_Success;
+extern NSString* const P2UXVariable_Attrib_Result;
 extern NSString* const P2UXVariable_Attrib_Animated;
 extern NSString* const P2UXVariable_Attrib_ValuesFmt;
 extern NSString* const P2UXVariable_Attrib_NotifyChange;
@@ -251,6 +252,7 @@ extern NSString* const P2NotifyValue_ChangedKeys;
 
 extern NSString* const P2UXNotify_DataSource_Fetch_Start;
 extern NSString* const P2UXNotify_DataSource_Fetch_Complete;
+extern NSString* const P2UXNotify_LaunchSystemApp_Complete;
 
 extern NSString* const P2UXTime_Format;
 extern NSString* const P2UXAnimation_Image_Format;

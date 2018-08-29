@@ -142,7 +142,8 @@ enum {
  * Sets the controls’s current value, allowing you to animate the change
  * visually.
  */
-- (void)setValue:(float)value animated:(BOOL)animated;
+- (void)setValue:(float)value animated:(BOOL)animated notify:(BOOL)notify;
+- (void) setIncrement:(float)newIncrement notify:(BOOL)notify;
 
 /*!
  * Assigns a knob image to the specified control states.

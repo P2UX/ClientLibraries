@@ -67,15 +67,17 @@
 #import <P2UXCore/P2UXDataSourceFilter.h>
 #import <P2UXCore/P2UXDataAuthMissingParam.h>
 #import <P2UXCore/P2UXDataValueRepeater.h>
+#import <P2UXCore/P2UXFunctionManager.h>
 
 #ifdef MAP_SUPPORT
 #import <P2UXCore/P2UXLocationManager.h>
 #endif
 
 #pragma mark - Multimedia
-#ifdef MEDIA_SUPPORT
+#ifdef ASSET_SUPPORT
 #import <P2UXCore/P2UXMediaManager.h>
+#endif
+#ifdef MEDIA_SUPPORT
 #import <P2UXCore/P2UXAudioMediaManager.h>
 #endif
-
 #endif

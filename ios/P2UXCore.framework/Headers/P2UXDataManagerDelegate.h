@@ -10,6 +10,7 @@
 
 @protocol P2UXDataManagerDelegate <NSObject>
 @optional
+- (id) processRequestDataForSource:(NSString*)ident request:(NSString*)request data:(id)data;
 - (void) postDataSourceFetch:(NSString*)ident request:(NSString*)request args:(NSDictionary*)args data:(P2UXSourcedData*)data cached:(BOOL)cached;
 - (void) postVarFetch:(NSString*)ident var:(NSString*)var value:(id)value;
 @end
