@@ -56,6 +56,7 @@
 - (void)        handleTimeUpdate;
 - (id<P2UXHelperDelegate>) helperDelegate;
 - (UIView*)     overrideControlWithType:(int)ctrlType frame:(CGRect)frame elemInst:(P2UXElementInstance*)elemInst uipath:(NSString*)path ext:(BOOL)ext handler:(id<P2UXActionDelegate>)handler index:(id)index;
+- (void)        clearCachedViews;
 #ifdef LOCAL_NOTIFICATION_SUPPORT
 - (void) handleSystemLocalNotification:(UNNotification*)notification;
 #endif

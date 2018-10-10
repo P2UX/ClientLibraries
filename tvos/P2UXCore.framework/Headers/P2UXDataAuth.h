@@ -97,4 +97,5 @@ typedef void (^P2UXAuthCallback)(P2UXAuthResult result, NSString* message);
 - (void) loadPersistResults;
 - (NSString*) persistName;
 -(NSArray*)clearPendingAuths;
+- (P2UXSourcedData*) authData;
 @end

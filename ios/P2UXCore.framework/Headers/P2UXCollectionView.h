@@ -48,6 +48,7 @@ typedef NS_ENUM(NSInteger, P2UXCollectionView_DataType) {
 @property (nonatomic) NSInteger     visibleItems;
 @property (nonatomic) NSInteger     visibleCols;
 @property (nonatomic) BOOL          refreshing;
+@property (nonatomic, readonly) BOOL scrolled;
 
 - (id) initAsListWithFrame:(CGRect)frame elemInst:(P2UXElementInstance*)elemInst uipath:(NSString*)path ext:(BOOL)ext handler:(id<P2UXActionDelegate>)handler viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate index:(id) index;
 

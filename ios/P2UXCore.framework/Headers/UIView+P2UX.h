@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <P2UXCore/P2UXViewContainerDelegate.h>
 #import <P2UXCore/P2UXActionDelegate.h>
+#import <P2UXCore/P2UXVarLink.h>
 
 @class P2UXVarLinks, P2UXSourcedData, P2UXVarLink, P2UXElement;
 
@@ -96,7 +97,7 @@ void dispatch_uisafe_sync(dispatch_block_t block);
 - (void) refreshControlContents;
 - (void) retryControlLinks;
 - (void) updateStatefulConstraints;
-- (void) updateLinks;
+- (void) updateLinks:(P2UXVarLinkType)type;
 - (BOOL) handleOnMessage:(NSNotification*)notification;
 
 #pragma mark - Subview helpers

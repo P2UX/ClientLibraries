@@ -45,6 +45,13 @@ typedef NS_ENUM(NSInteger, P2UXDataPolicy)
     P2UXDataPolicy_Fetch_Always
 };
 
+typedef NS_ENUM(NSInteger, P2UXLinkContentType)
+{
+    P2UXLinkContentType_Default = 0,
+    P2UXLinkContentType_ErrorData,
+    P2UXLinkContentType_AuthData
+};
+
 typedef NS_ENUM(NSInteger, P2UXVarMessageType)
 {
     P2UXVarMessageType_Data = 0,
@@ -114,15 +121,15 @@ extern NSString* const P2UXVarLink_Message_OneParam_Fmt;
 @property (nonatomic,readonly) NSDictionary* argsValue;
 @property (nonatomic,readonly) P2UXDataPolicy policy;
 @property (nonatomic,readonly) BOOL notifyChange;
-@property (nonatomic)          P2UXDataIndex* dataIndex;
+@property (nonatomic,readonly) P2UXDataIndex* dataIndex;
 @property (nonatomic,readonly) BOOL indexed;
-@property (nonatomic)          id index;
+@property (nonatomic,weak)     id index;
 @property (nonatomic,readonly) id indexValue;
 @property (nonatomic,readonly) id val;
 @property (nonatomic,readonly) NSArray* vars;
 @property (nonatomic,readonly) id defaultValue;
 @property (nonatomic,readonly) BOOL updatable;
-@property (nonatomic,readonly) BOOL errorData;
+@property (nonatomic,readonly) P2UXLinkContentType contentType;
 @property (nonatomic)          BOOL async;
 @property (nonatomic,readonly) BOOL autoUpdate;
 @property (nonatomic,readonly) BOOL encode;
@@ -149,6 +156,6 @@ extern NSString* const P2UXVarLink_Message_OneParam_Fmt;
 - (void)      updateIndexValue:(id)value;
 - (BOOL)      hasAttribute:(NSString*)attribute;
 - (void)      updateLinkedValues:(id)context viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate;
-
 - (void)      parse:(NSDictionary*)spec context:(id)context viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate;
+- (BOOL)      hasType:(P2UXVarLinkType)type;
 @end

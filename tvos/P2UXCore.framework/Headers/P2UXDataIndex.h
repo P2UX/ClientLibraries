@@ -26,4 +26,5 @@
 - (void) setValueLink:(P2UXVarLink*)link context:(id)context viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate;
 - (void) updateLinkedValue:(id) context viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate;
 - (void) updateIndexValue:(id)value;
+- (BOOL) hasType:(P2UXVarLinkType)type;
 @end

@@ -434,9 +434,16 @@ typedef NS_ENUM(NSInteger, P2UXRequestState) {
 };
 
 typedef NS_ENUM(NSInteger, P2UXElementLayoutDim) {
+    P2UXElementLayoutDim_Undefined = -1,
     P2UXElementLayoutDim_None = 0,
     P2UXElementLayoutDim_Height = 1,
     P2UXElementLayoutDim_Width = 2
+};
+
+typedef NS_ENUM(NSInteger, P2UXElementVisibility) {
+    P2UXElementVisibility_Undefined = -1,
+    P2UXElementVisibility_Hidden = 0,
+    P2UXElementVisibility_Visible = 1
 };
 
 typedef NS_ENUM(NSInteger, P2UXReturnKeyType) {

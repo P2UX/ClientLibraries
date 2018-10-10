@@ -71,8 +71,8 @@ extern NSString* const Var_Count;
 - (void) setValueForViewParam:(id)value forPath:(NSString *)path notify:(BOOL)notify context:(id)context itemspec:(NSDictionary*)itemspec viewDelegate:(id<P2UXViewContainerDelegate>)viewDegate;
 - (id) valueForViewParamPath:(NSString*)path context:(id)context viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate;
 
-- (P2UXSourcedData*) fetchDataSource:(NSString*)ident request:(NSString*)request withArgs:(NSDictionary*)args policy:(P2UXDataPolicy)policy state:(NSNumber**)state errorData:(BOOL)errorData async:(BOOL)async;
-- (P2UXSourcedData*) fetchDataSourceWithParamSetAlias:(NSString*)alias source:(id)source policy:(P2UXDataPolicy)policy errorData:(BOOL)errorData async:(BOOL)async viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate;
+- (P2UXSourcedData*) fetchDataSource:(NSString*)ident request:(NSString*)request withArgs:(NSDictionary*)args policy:(P2UXDataPolicy)policy state:(NSNumber**)state contentType:(P2UXLinkContentType)contentType async:(BOOL)async;
+- (P2UXSourcedData*) fetchDataSourceWithParamSetAlias:(NSString*)alias source:(id)source policy:(P2UXDataPolicy)policy contentType:(P2UXLinkContentType)contentType async:(BOOL)async viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate;
 - (P2UXSourcedData*) fetchBatchData:(NSString*)batchid policy:(P2UXDataPolicy)policy;
 - (P2UXSourcedData*) fetchBatchDataDirect:(NSString*)batchid policy:(P2UXDataPolicy)policy viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate;
 - (void) removeFromDataSource:(NSString*)ident request:(NSString*)request withArgs:(NSDictionary*)args async:(BOOL)async;

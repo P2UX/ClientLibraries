@@ -95,4 +95,5 @@
 
 - (P2UXOrientation*) createOrientation:(NSDictionary*)spec type:(P2UXOrientationType)type elId:(NSString*)elId defaults:(P2UXOrientation*)defaults;
 - (void) setupConstraints:(NSMutableArray*)constraints;
+- (BOOL) visibleFromState;
 @end

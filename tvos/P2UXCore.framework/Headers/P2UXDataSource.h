@@ -124,6 +124,7 @@ updatedProgress:(P2UXSourcedData*)progress
 + (P2UXDataCommandType)commandTypeFromString:(NSString*)commandString;
 
 + (NSString*)serializeArgs:(NSDictionary*)args forRequest:(NSString*)request;
++ (NSDictionary*) argsForSerialization:(NSDictionary*)args;
 
 -(id) initWithSpec:(NSDictionary*)dataSpec;
 -(id) initWithId:(NSString*)sourceId type:(NSString*)sourceType andSpec:(NSDictionary*)dataSpec;
@@ -141,6 +142,7 @@ updatedProgress:(P2UXSourcedData*)progress
 -(P2UXSourcedData*) resultsForRequest:(NSString*)request withArgs:(NSDictionary*)args;
 -(P2UXSourcedData*) resultsForRequest:(NSString*)request withArgs:(NSDictionary*)args makeCopy:(BOOL)copy;
 -(P2UXSourcedData*) errorsForRequest:(NSString*)request withArgs:(NSDictionary*)args;
+-(P2UXSourcedData*) authData;
 
 -(void) authLogout;
 -(void) cancelRequests;

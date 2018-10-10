@@ -43,6 +43,7 @@ extern NSString* const P2UXSchemaKey_UDefault;
 @property (readonly)BOOL allowEmpty;
 @property (nonatomic, weak) P2UXDataSourceFilterRequest* filterValue;
 @property (readonly) id defaultValue;
+@property (nonatomic) BOOL allowUnknown;
 
 +(P2UXSchemaType)stringToType:(NSString*)typeName;
 +(P2UXDataSchema*)updateSchema;

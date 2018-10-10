@@ -46,7 +46,7 @@ typedef NS_ENUM(NSInteger,P2UXElementAction) {
     P2UXElementAction_PostAnalyticsEvent,
     P2UXElementAction_SelectMedia,
     P2UXElementAction_RemoveFiles,
-    P2UXElementAction_FocusNextControl,
+    P2UXElementAction_FocusNextControl=40,
     P2UXElementAction_Animate,
     P2UXElementAction_CancelAnimate,
     P2UXElementAction_Fingerprint,
@@ -54,6 +54,7 @@ typedef NS_ENUM(NSInteger,P2UXElementAction) {
     P2UXElementAction_TextToSpeech,
     P2UXElementAction_PeekScreen,
     P2UXElementAction_Conditional,
+    P2UXElementAction_ClearViewCache,
     P2UXElementAction_UserAuthCode = 200,
     P2UXElementAction_UserAuthPwd = 201
 };

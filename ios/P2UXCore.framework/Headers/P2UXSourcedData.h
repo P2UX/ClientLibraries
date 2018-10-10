@@ -29,10 +29,13 @@ extern NSString* const P2UXDataSchema_PathSeparator;
 @property (nonatomic) BOOL postFiltered;
 @property (nonatomic) P2UXDataSourceFilterRequest* filterRequest;
 @property (nonatomic, readonly) id rawData;
+@property (nonatomic) BOOL flatPath;
+
 + (NSString*) cachePath:(NSString*)path;
 
 -(id) initWithData:(id)data andSchema:(P2UXDataSchema*)schema cachedOn:(NSDate*)date;
 -(id) initWithData:(id)data andSchema:(P2UXDataSchema*)schema;
+-(id) initWithData:(id)data andSchema:(P2UXDataSchema*)schema flatPath:(BOOL)flatPath;
 -(id) copyWithZone:(NSZone*)zone;
 
 -(id) valueForKeyPath:(NSString*)path;

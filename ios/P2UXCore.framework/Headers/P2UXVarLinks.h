@@ -66,6 +66,7 @@ extern NSString* const P2UXVarLinks_InternalValDelimiterCheck;
 - (P2UXVarLink*) linkWithName:(NSString*)name;
 - (P2UXVarLink*) linkWithNotification:(NSString*)notification ident:(NSString*)ident;
 //- (NSArray*) linksWithNotification:(NSString*)notification ident:(NSString*)ident;
+- (NSArray*) linksWithType:(P2UXVarLinkType)type;
 - (NSArray*) linksWithNotification:(NSString*)notification ident:(NSString*)ident request:(NSString*)request;
 //- (NSArray*) linksWithItemNotification:(NSString*)notification ident:(NSString*)ident request:(NSString*)request context:(NSString*)context itemContext:(NSString*)itemContext index:(id)index;
 - (NSArray*) linksWithNotification:(NSString*)notification;

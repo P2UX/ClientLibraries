@@ -20,7 +20,7 @@
     BOOL                    _hasSizeSpec;
 }
 @property (nonatomic, readonly) NSString* elId;
-@property (nonatomic, readonly) BOOL visible;
+@property (nonatomic, readonly) P2UXElementVisibility visible;
 @property (nonatomic, readonly) P2UXElementLayoutDim ignored;
 @property (nonatomic, readonly) float opacity;
 @property (nonatomic, readonly) float rotation;
