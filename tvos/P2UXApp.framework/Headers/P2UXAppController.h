@@ -69,19 +69,19 @@ extern NSString* const UPDATE_CONTENTS_NOW;
 #endif
 - (instancetype) initWithFrame:(CGRect)frame;
 - (instancetype) initWithExplicitSize:(CGRect)frame;
-- (instancetype) initWithFormFactor:(P2UXAppFormFactor*)ff def:(P2UXAppDefinition*)def;
-- (instancetype) initWithFormFactor:(P2UXAppFormFactor*)ff def:(P2UXAppDefinition*)def size:(CGSize)size;
+- (nonnull instancetype) initWithFormFactor:(nonnull P2UXAppFormFactor*)ff def:(nonnull P2UXAppDefinition*)def;
+- (nonnull instancetype) initWithFormFactor:(nonnull P2UXAppFormFactor*)ff def:(nonnull P2UXAppDefinition*)def size:(CGSize)size;
 
-- (void) setFormFactor:(P2UXAppFormFactor *)ff andDef:(P2UXAppDefinition*)def;
+- (void) setFormFactor:(nonnull P2UXAppFormFactor *)ff andDef:(nonnull P2UXAppDefinition*)def;
 
 - (void) cleanup;
-- (void) reloadContents:(P2UXAppFormFactor*)ff andDef:(P2UXAppDefinition*)def;
-- (void) setAppStateFromAction:(P2UXEventAction*)action;
-- (void) setAppState:(NSString*)state;
+- (void) reloadContents:(nonnull P2UXAppFormFactor*)ff andDef:(nonnull P2UXAppDefinition*)def;
+- (void) setAppStateFromAction:(nonnull P2UXEventAction*)action;
+- (void) setAppState:(nonnull NSString*)state;
 - (NSString*) appState;
 
 - (NSArray*) eventsWithEventType:( P2UXElementEvent)eventType;
-- (BOOL) handleExternalEvent:(NSString*)eventType params:(id)params;
+- (BOOL) handleExternalEvent:(nonnull NSString*)eventType params:(id)params;
 
 - (void) resetEvents;
 
@@ -155,4 +155,6 @@ extern NSString* const UPDATE_CONTENTS_NOW;
 - (void) handleRemoteNotificationRegistration:(NSData*)deviceToken;
 - (void) handleRemoteNotificationFailure:(NSError*)error;
 #endif
+
+- (void) setupWithFormFactor:(P2UXAppFormFactor*)formFactor def:(P2UXAppDefinition*)def;
 @end

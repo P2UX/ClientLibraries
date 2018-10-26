@@ -99,6 +99,7 @@ extern NSString* const P2UXEvent_AuthAction_Clear;
 @property (nonatomic, weak) id<P2UXViewContainerDelegate> viewDelegate;
 @property (nonatomic) BOOL enabled;
 @property (nonatomic) id data;
+@property (nonatomic, readonly) BOOL sync;
 
 + (void) SendGlobalMessageEvent:(NSString*)message data:(id)data sender:(id)sender;
 + (void) NotifyAttributeChanged:(NSString*)attribute value:(id)value sender:(id)sender;

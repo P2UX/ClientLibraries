@@ -23,6 +23,7 @@ FOUNDATION_EXPORT const unsigned char P2UXCoreVersionString[];
 #import <P2UXCore/P2UXCoreComponents.h>
 #import <P2UXCore/P2UXCoreService.h>
 #import <P2UXCore/P2UXCoreLogging.h>
+#import <P2UXCore/Lottie.h>
 
 
 

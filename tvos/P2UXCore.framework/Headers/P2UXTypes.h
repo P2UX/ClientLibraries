@@ -349,8 +349,9 @@ typedef NS_ENUM(NSInteger, P2UXControlType) {
     P2UXCtrlType_Picker,
     P2UXCtrlType_Switch,
     P2UXCtrlType_RadioButtonGroup,
-    P2UXCtrlType_DatePicker,
-    P2UXCtrlType_TextView
+    P2UXCtrlType_DatePicker = 40,
+    P2UXCtrlType_TextView,
+    P2UXCtrlType_AnimationView
 };
 
 typedef NS_ENUM(NSInteger, P2UXScrollStyle) {
@@ -486,5 +487,7 @@ typedef NS_ENUM(NSInteger, P2UXFormFactor) {
     P2UXFormFactor_TV
 };
 
-
+@interface P2UXTypes : NSObject
++ (UIViewContentMode) typeFromScaleType:(P2UXScaleType)scaleType;
+@end
 #endif

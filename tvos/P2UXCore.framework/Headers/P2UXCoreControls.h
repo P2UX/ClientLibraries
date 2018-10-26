@@ -40,6 +40,7 @@
 #import <P2UXCore/P2UXScrollContainer.h>
 #import <P2UXCore/P2UXScrollContainerContents.h>
 #import <P2UXCore/P2UXScrollbarDelegate.h>
+#import <P2UXCore/P2UXAnimationView.h>
 #if !TARGET_OS_TV
 #import <P2UXCore/P2UXDatePicker.h>
 #import <P2UXCore/P2UXButtonSelector.h>
