@@ -8,46 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import <P2UXCore/P2UXEventAction.h>
-typedef NS_ENUM(NSInteger, P2UXElementEvent) {
-    P2UXElementEvent_Invalid = 0,
-    P2UXElementEvent_Tap,
-    P2UXElementEvent_LongPress,
-    P2UXElementEvent_Selected,
-    P2UXElementEvent_Deselected,
-    P2UXElementEvent_SwipeLeft,
-    P2UXElementEvent_SwipeRight,
-    P2UXElementEvent_SwipeUp,
-    P2UXElementEvent_SwipeDown,
-    P2UXElementEvent_LoadView,
-    P2UXElementEvent_Pan,
-    P2UXElementEvent_StateChanged,
-    P2UXElementEvent_Message,
-    P2UXElementEvent_AppLoaded,
-    P2UXElementEvent_Media,
-    P2UXElementEvent_ValueChanged,
-    P2UXElementEvent_FetchData_Start,
-    P2UXElementEvent_FetchData_Complete,
-    P2UXElementEvent_WillPullToRefresh,
-    P2UXElementEvent_CancelPullToRefresh,
-    P2UXElementEvent_PullToRefresh = 20,
-    P2UXElementEvent_ExternalRequest,
-    P2UXElementEvent_AttributeChanged,
-    P2UXElementEvent_SystemNotification,
-    P2UXElementEvent_Keyboard_Return,
-    P2UXElementEvent_FingerprintAuth,
-    P2UXElementEvent_AuthInput,
-    P2UXElementEvent_AuthComplete,
-    P2UXElementEvent_ShowView,
-    P2UXElementEvent_NotificationReceived,
-    P2UXElementEvent_LaunchSystemAppComplete,
-    P2UXElementEvent_UserAuth = 200
-};
-
-typedef NS_ENUM(NSInteger, P2UXSystemNotificationType) {
-    P2UXSystemNotificationType_Unknown = -1,
-    P2UXSystemNotificationType_UserTapped = 0,
-    P2UXSystemNotificationType_Foreground
-};
 
 @class P2UXEventTransition;
 @class P2UXElementInstance;
@@ -65,6 +25,7 @@ extern NSString* const P2UXEvent_Global_Attribute_Changed;
 extern NSString* const P2UXEvent_Attrib_Value;
 extern NSString* const P2UXEvent_Attrib_Name;
 extern NSString* const P2UXEvent_Attrib_Actions;
+extern NSString* const P2UXEvent_Attrib_Event;
 
 extern NSString* const P2UXEvent_INPUT_VALUE;
 extern NSString* const P2UXEvent_INPUT_BACKSPACE;
@@ -88,11 +49,10 @@ extern NSString* const P2UXEvent_AuthAction_Clear;
 
 @interface P2UXEvent : NSObject
 {
-    P2UXElementEvent            _event;
     NSMutableDictionary*    _linkActions;
     NSArray*                _actions;
 }
-@property (nonatomic,readonly) P2UXElementEvent event;
+@property (nonatomic) P2UXElementEvent event;
 @property (nonatomic,readonly) NSDictionary* itemspec;
 @property (nonatomic) NSDictionary* eventParams;
 @property (nonatomic, weak) id eventContext;
@@ -100,6 +60,7 @@ extern NSString* const P2UXEvent_AuthAction_Clear;
 @property (nonatomic) BOOL enabled;
 @property (nonatomic) id data;
 @property (nonatomic, readonly) BOOL sync;
+@property (nonatomic, readonly) NSDictionary* conditionals;
 
 + (void) SendGlobalMessageEvent:(NSString*)message data:(id)data sender:(id)sender;
 + (void) NotifyAttributeChanged:(NSString*)attribute value:(id)value sender:(id)sender;
@@ -116,6 +77,7 @@ extern NSString* const P2UXEvent_AuthAction_Clear;
 - (P2UXVarLinks*) links;
 
 - (NSArray*) actions;
+- (void) setActions:(NSArray*)actions;
 - (NSArray*) actionsWithResult:(NSInteger)result context:(id)context;
 - (id) itemSpecItem:(NSString*)itemName;
 
@@ -128,4 +90,5 @@ extern NSString* const P2UXEvent_AuthAction_Clear;
 - (BOOL) isService:(NSString*)service;
 - (void) resetLinks;
 - (id)   payloadValueForLink:(P2UXVarLink*)link;
+- (NSDictionary*) varsWithContext:(id)context;
 @end

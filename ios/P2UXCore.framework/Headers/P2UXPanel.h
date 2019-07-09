@@ -36,6 +36,7 @@ extern NSString* const P2UXPanel_CachedAttribute_State;
 @property (nonatomic) NSArray* constraints;
 @property (nonatomic, readonly) NSInteger overlayReferences;
 @property (nonatomic) NSString* optId;
+@property (nonatomic, readonly) BOOL overlay;
 
 - (id)initWithFrame:(CGRect)frame contents:(P2UXDefinition*)contents viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate;
 - (id)initWithFrame:(CGRect)frame contents:(P2UXDefinition*)contents viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate index:(id)index data:(id)data;

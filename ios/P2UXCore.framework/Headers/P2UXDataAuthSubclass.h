@@ -10,7 +10,7 @@
 
 @interface P2UXDataAuth()
 
--(id)initWithAuthSpec:(NSDictionary*)authSpec andURL:(NSURL*)URL;
+-(id)initWithAuthSpec:(NSDictionary*)authSpec andURL:(NSURL*)URL schemaTypes:(NSDictionary*)schemaTypes;
 -(void)handleRequestWithParams:(NSDictionary*)params andCallback:(P2UXAuthCallback)callback;
 -(NSDictionary*)paramsForRequest;
 -(void)addPendingAuth:(NSDictionary*)pendingItem;

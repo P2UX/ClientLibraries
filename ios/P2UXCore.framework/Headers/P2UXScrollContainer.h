@@ -70,6 +70,7 @@ extern NSString* const P2UXScrollContainer_Attribute_PageIndex;
 - (void) scrollToPage:(NSInteger)page animated:(BOOL)animated;
 - (void) incrementPage:(BOOL)animated;
 - (void) decrementPage:(BOOL)animated;
+- (void) updateData:(id)data updateLinks:(BOOL)updateLinks;
 
 #pragma mark - Internal Methods
 - (void) sortViews;

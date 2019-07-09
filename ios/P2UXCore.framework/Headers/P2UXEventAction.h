@@ -128,9 +128,11 @@ extern NSString* const P2UXAction_UserAuthPwd_Password;
 
 - (id) targetObjectForKey:(NSString*)key;
 - (id) targetObjectFromData:(NSDictionary*)data forKey:(NSString*)key;
+- (void) addTargetObjectForKey:(NSString*)key value:(id)value;
 
 - (NSNumber*) targetTimeout:(BOOL)useDefault;
 
 - (P2UXEventTransition*) transitionForView:(OSViewClass*)view;
 - (id) linkedValue:(id)value;
+- (void) setStandardTransitionWithType:(NSString*)type;
 @end

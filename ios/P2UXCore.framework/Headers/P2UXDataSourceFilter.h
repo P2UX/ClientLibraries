@@ -12,5 +12,5 @@
 @protocol P2UXDataSourceFilter <NSObject>
 - (NSString*) type;
 - (P2UXSchemaType) dataType;
-- (id) filterData:(id)data usingfilter:(NSDictionary*)filter itemSchema:(P2UXDataSchema*)itemSchema;
+- (id) filterData:(id)data usingfilter:(NSDictionary*)filter itemSchema:(P2UXDataSchema*)itemSchema context:(id)context viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate;
 @end

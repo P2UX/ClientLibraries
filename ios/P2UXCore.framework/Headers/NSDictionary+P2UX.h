@@ -23,5 +23,5 @@
 - (NSArray*) sortedKeys;
 - (void) sortByField:(NSString*)field ascending:(BOOL)ascending;
 - (NSDictionary*) mergeWithDictionary:(NSDictionary*)toMerge;
-
+- (NSMutableDictionary*) mutablePreservedCopy;
 @end

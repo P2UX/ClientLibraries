@@ -39,6 +39,7 @@
 
 - (void) setHotkeys:(NSDictionary*)hotkeys;
 - (void) handleAuthForService:(NSString*)service args:(NSDictionary*)args action:(NSString*)action;
+- (UIView*) overrideControlWithType:(int)ctrlType frame:(CGRect)frame elemInst:(P2UXElementInstance*)elemInst uipath:(NSString*)path ext:(BOOL)ext handler:(id<P2UXActionDelegate>)handler index:(id)index;
 
 #pragma mark - Data Source methods
 - (P2UXDataSource*) createDataSourceWithId:(NSString*)sourceId type:(NSString*)sourceType andSpec:(NSDictionary*)dataSourceSpec;

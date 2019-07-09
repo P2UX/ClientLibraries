@@ -14,6 +14,7 @@
 #define NOTIFICATION_SUPPORT
 #define MAP_SUPPORT
 #define PHONE_SUPPORT
+#define CALENDAR_SUPPORT
 #endif
 
 #if TARGET_OS_IOS

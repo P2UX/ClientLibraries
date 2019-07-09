@@ -17,6 +17,11 @@
 
 extern NSString* const Var_Now;
 extern NSString* const Var_Count;
+extern NSString* const Var_Null;
+extern NSString* const Var_Rand;
+extern NSString* const Var_Exists;
+extern NSString* const Var_UUID;
+extern NSString* const Var_Path_Delimiter;
 
 @class P2UXSourcedData, P2UXEvent;
 
@@ -36,6 +41,7 @@ extern NSString* const Var_Count;
 + (id) valueForPath:(NSString*)path value:(id)value;
 + (id) incrementExisting:(id)existing withValue:(id)withValue itemspec:(NSDictionary*)itemspec;
 + (id) resolveReservedValue:(id)value;
++ (id) resolveReservedValue:(id)value passthru:(BOOL)passthru;
 
 // P2UXUser Methods
 - (P2UXUser*) createUserWithUsername:(NSString*)username;
@@ -72,6 +78,7 @@ extern NSString* const Var_Count;
 - (id) valueForViewParamPath:(NSString*)path context:(id)context viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate;
 
 - (P2UXSourcedData*) fetchDataSource:(NSString*)ident request:(NSString*)request withArgs:(NSDictionary*)args policy:(P2UXDataPolicy)policy state:(NSNumber**)state contentType:(P2UXLinkContentType)contentType async:(BOOL)async;
+- (P2UXSourcedData*) fetchDataSource:(NSString*)ident request:(NSString*)request withArgs:(NSDictionary*)args policy:(P2UXDataPolicy)policy contentType:(P2UXLinkContentType)contentType async:(BOOL)async;
 - (P2UXSourcedData*) fetchDataSourceWithParamSetAlias:(NSString*)alias source:(id)source policy:(P2UXDataPolicy)policy contentType:(P2UXLinkContentType)contentType async:(BOOL)async viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate;
 - (P2UXSourcedData*) fetchBatchData:(NSString*)batchid policy:(P2UXDataPolicy)policy;
 - (P2UXSourcedData*) fetchBatchDataDirect:(NSString*)batchid policy:(P2UXDataPolicy)policy viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate;

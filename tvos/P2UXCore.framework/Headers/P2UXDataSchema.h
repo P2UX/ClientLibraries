@@ -44,16 +44,18 @@ extern NSString* const P2UXSchemaKey_UDefault;
 @property (nonatomic, weak) P2UXDataSourceFilterRequest* filterValue;
 @property (readonly) id defaultValue;
 @property (nonatomic) BOOL allowUnknown;
+@property (nonatomic, weak) NSDictionary* schemaTypes;
 
 +(P2UXSchemaType)stringToType:(NSString*)typeName;
 +(P2UXDataSchema*)updateSchema;
 +(P2UXDataSchema*)errorSchema;
 
--(id)initWithSpec:(NSDictionary*)schemaSpec;
+-(id)initWithSpec:(NSDictionary*)schemaSpec schemaTypes:(NSDictionary*)schemaTypes;
 -(NSArray*)keys;
 -(NSDictionary*)requiredItems;
 -(NSString*)aliasForKey:(NSString*)key;
 -(P2UXDataSchema*)schemaForKey:(NSString*)key;
+-(P2UXDataSchema*)schemaForPath:(NSString*)path;
 -(P2UXDataSchema*)itemSchema;
 -(NSString*)itemIndex;
 -(BOOL)validateData:(id)dataValue atContext:(NSString*)context output:(BOOL)output;

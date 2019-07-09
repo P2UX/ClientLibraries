@@ -40,9 +40,11 @@ extern NSString* const P2UXVarLinks_InternalValDelimiterCheck;
     NSMutableArray*       _links;
     __weak OSViewClass*   _view;
     NSMutableDictionary*  _msgMap;
+    BOOL                  _valid;
 }
 @property (nonatomic) NSArray* varlinks;
 + (NSCharacterSet*) encodedCharSet;
++ (NSCharacterSet*) comparisonSet;
 + (BOOL) containsExpression:(NSString*)linkformat type:(P2UXExpressionType)type;
 + (id) evaluateLinkFormat:(NSString*)linkformat conditionals:(NSDictionary*)conditionals vars:(NSDictionary*)vars delegate:(id<P2UXLocationManagerDelegate>)delegate;
 #ifdef MAP_SUPPORT

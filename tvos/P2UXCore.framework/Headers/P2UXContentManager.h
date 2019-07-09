@@ -66,4 +66,7 @@ typedef NS_ENUM(NSInteger, ContentManagerError) {
 - (void) contentComplete;
 - (ContentManagerError) contentItemComplete:(P2UXContentItem*)item toTarget:(NSString*)targetFolder;
 - (ContentManagerError) contentItemComplete:(P2UXContentItem*)item data:(NSData*)data;
+
+- (void) checkForBinaryUpdates:(void (^)(BOOL updateAvailable, NSNumber* appId, NSString* version, NSError *error))completionHandler;
+
 @end

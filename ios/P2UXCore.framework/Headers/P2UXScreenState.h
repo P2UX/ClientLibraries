@@ -47,6 +47,7 @@
 - (void)         renderViewWithParent:(P2UXView*)view;
 - (void)         clearContents;
 - (void)         updateIndexValue:(id)indexValue updateLinks:(BOOL)updateLinks;
+- (void)         retryControlLinks;
 
 // State Methods
 - (void)         activate:(NSArray*)updates orientation:(P2UXOrientationType)type parent:(UIView*)parent;

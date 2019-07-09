@@ -31,6 +31,7 @@ void dispatch_uisafe_sync(dispatch_block_t block);
 - (void) initializeControl;
 - (void) initializeControls;
 - (void) parseSpec:(NSDictionary*)spec;
+- (void) viewCreated;
 
 - (BOOL) setProperty:(NSString*)name withValue:(id)value relative:(BOOL)relative animated:(id)animated itemspec:(NSDictionary*)itemspec;
 - (BOOL) setProperty:(NSString*)name withStringValue:(NSString*)stringValue relative:(BOOL)relative animated:(id)animated itemspec:(NSDictionary*)itemspec;
@@ -98,6 +99,7 @@ void dispatch_uisafe_sync(dispatch_block_t block);
 - (void) retryControlLinks;
 - (void) updateStatefulConstraints;
 - (void) updateLinks:(P2UXVarLinkType)type;
+- (void) updateLinks;
 - (BOOL) handleOnMessage:(NSNotification*)notification;
 
 #pragma mark - Subview helpers
@@ -146,4 +148,6 @@ void dispatch_uisafe_sync(dispatch_block_t block);
 - (UIImageView*) cloneAsImageView;
 - (BOOL) hasParentScrollView;
 - (CGFloat) rotation;
+- (UIImage*) contentsAsImage;
+- (void) setValidDataHandler;
 @end

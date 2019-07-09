@@ -107,9 +107,11 @@ updatedProgress:(P2UXSourcedData*)progress
     BOOL _requiresAsync;
     NSDictionary* _initdata;
     NSDictionary* _requests;
+    NSDictionary* _dataStores;
     NSMutableDictionary* _cachedResults;
     NSMutableDictionary* _cachedErrors;
     P2UXSourcedData* _lastError;
+    NSDictionary* _schemaTypes;
     __weak id<P2UXDataSourceDelegate> _delegate;
 }
 

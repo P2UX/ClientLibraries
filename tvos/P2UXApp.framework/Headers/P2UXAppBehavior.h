@@ -14,6 +14,7 @@
 @class P2UXAppLoadingView;
 @class P2UXAppDefinition;
 @class P2UXNavigationController;
+@class P2UXPanelController;
 
 extern NSString* const kServiceName;
 
@@ -88,9 +89,9 @@ extern NSString* const kServiceName;
 @param index An index value to pass to the view
 @param data Additional data to pass to the view. This data can be used with linking
 @param viewDelegate The current view delegate
-@return A P2UXViewController instance
+@return A P2UXPanelController instance
 */
-- (P2UXViewController*) createPanelControllerWithDef:(P2UXDefinition*)def cache:(BOOL)cache index:(id)index data:(id)data viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate;
+- (P2UXPanelController*) createPanelControllerWithDef:(P2UXDefinition*)def cache:(BOOL)cache index:(id)index data:(id)data viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate;
 
 /*!
  @brief Creates a navigation view controller for a view
@@ -174,9 +175,11 @@ extern NSString* const kServiceName;
 - (BOOL) handleSystemLocalNotification:(UNNotificationRequest*)notification active:(BOOL)active;
 - (UNNotificationPresentationOptions) handleSystemLocalNotificationInForeground:(UNNotification*)notification;
 - (void) handleSystemLocalNotificationResponse:(UNNotificationResponse *)response;
-- (void) handlePushNotificationWithResponse:(UNNotificationResponse*)response;
+- (BOOL) handlePushNotificationWithResponse:(UNNotificationResponse*)response;
 - (void) handlePushNotificationAuthorized;
 - (void) handlePushNotificationAuthorizationFailed:(NSError*)error;
+- (void) handleStartupPushNotificationsWithData:(NSDictionary*)data;
+- (void) handleStartupPushNotificationsWithData:(NSDictionary*)data delay:(CGFloat)delay;
 #endif
 
 #pragma mark - P2UXDataManagerDelegate
@@ -186,5 +189,6 @@ extern NSString* const kServiceName;
 - (id) valueForAuthParam:(NSString*)param forService:(NSString*)service;
 - (void) handlePushDeviceTokenRegistration:(NSString*)deviceToken;
 - (void) handlePushDeviceTokenRegistrationFailure:(NSError*)error;
+- (BOOL) handleDeepLinkData:(NSDictionary*)data;
 @end
 

@@ -2,7 +2,6 @@
 //  P2UXAppController.h
 //  P2UXApp
 //
-//  Created by Stephen Schalkhauser on 9/21/15.
 //  Copyright © 2015 Phase 2 Industries, LLC. All rights reserved.
 //
 
@@ -16,7 +15,7 @@
 
 @class P2UXEventTransition, P2UXScreenNavigation;
 
-extern NSString* const UPDATE_CONTENTS_NOW;
+extern NSString*  const _Nonnull UPDATE_CONTENTS_NOW;
 
 
 /*!
@@ -45,30 +44,30 @@ extern NSString* const UPDATE_CONTENTS_NOW;
 /*!
  The current view controller
  */
-@property (nonatomic, readonly) UIViewController* current;
+@property (nonatomic, readonly) UIViewController* _Nonnull current;
 /*!
  The home view controller
  */
-@property (nonatomic, readonly) UIViewController* home;
+@property (nonatomic, readonly) UIViewController* _Nonnull home;
 /*!
  The current application behavior
  */
-@property (nonatomic) P2UXAppBehavior* behavior;
+@property (nonatomic) P2UXAppBehavior* _Nonnull behavior;
 /*!
  The form factor (screens and views) associated with this device screen
  */
-@property (nonatomic, readonly) P2UXAppFormFactor* formFactor;
+@property (nonatomic, readonly) P2UXAppFormFactor* _Nonnull formFactor;
 /**
  Indicates whether or not this is a primary device screen.
  */
 @property (nonatomic) BOOL primary;
-@property (nonatomic, readonly) P2UXScreenNavigation* headerNavigation;
+@property (nonatomic, readonly) P2UXScreenNavigation* _Nonnull headerNavigation;
 @property (nonatomic) CGFloat scale;
 #ifdef LOCAL_NOTIFICATION_SUPPORT
 @property (nonatomic, readonly) UNAuthorizationOptions notifyOptions;
 #endif
-- (instancetype) initWithFrame:(CGRect)frame;
-- (instancetype) initWithExplicitSize:(CGRect)frame;
+- (nonnull instancetype) initWithFrame:(CGRect)frame;
+- (nonnull instancetype) initWithExplicitSize:(CGRect)frame;
 - (nonnull instancetype) initWithFormFactor:(nonnull P2UXAppFormFactor*)ff def:(nonnull P2UXAppDefinition*)def;
 - (nonnull instancetype) initWithFormFactor:(nonnull P2UXAppFormFactor*)ff def:(nonnull P2UXAppDefinition*)def size:(CGSize)size;
 
@@ -78,83 +77,85 @@ extern NSString* const UPDATE_CONTENTS_NOW;
 - (void) reloadContents:(nonnull P2UXAppFormFactor*)ff andDef:(nonnull P2UXAppDefinition*)def;
 - (void) setAppStateFromAction:(nonnull P2UXEventAction*)action;
 - (void) setAppState:(nonnull NSString*)state;
-- (NSString*) appState;
+- (nonnull NSString*) appState;
 
-- (NSArray*) eventsWithEventType:( P2UXElementEvent)eventType;
-- (BOOL) handleExternalEvent:(nonnull NSString*)eventType params:(id)params;
+- (BOOL) handleExternalEvent:(nonnull NSString*)eventType params:(nullable id)params;
 
 - (void) resetEvents;
 
-- (void) presentViewController:(UIViewController *)viewControllerToPresent animated:(BOOL)flag completion:(void (^)(void))completion;
+- (void) presentViewController:(nonnull UIViewController *)viewControllerToPresent animated:(BOOL)flag completion:(nullable void (^)(void))completion;
 
 #pragma mark - Navigation
-- (P2UXScreenNavigation*) headerNavigationWithName:(NSString*)name;
+- (nullable P2UXScreenNavigation*) headerNavigationWithName:(nonnull NSString*)name;
 
 #pragma mark - Event handlers
-- (void) handleEvents:(NSArray*)events element:(P2UXElementInstance*)element source:(id)source;
+- (void) handleEvents:(nonnull NSArray*)events element:(nullable P2UXElementInstance*)element source:(nullable id)source;
 
 #pragma mark - Variable access
-- (id) varForKey:(NSString*)key;
-- (BOOL) setVarValue:(id)value forKey:(NSString*)key usingIdent:(NSString*)ident notify:(BOOL)notify itemspec:(NSDictionary*)itemspec;
+- (nullable id) varForKey:(nonnull NSString*)key;
+- (BOOL) setVarValue:(nonnull id)value forKey:(nonnull NSString*)key usingIdent:(nullable NSString*)ident notify:(BOOL)notify itemspec:(nullable NSDictionary*)itemspec;
 
 #pragma mark - Current View methods
-- (BOOL) setCurrentView:(NSString*)viewId history:(P2UXEventBackHistory)history;
-- (BOOL) setCurrentView:(NSString*)viewId history:(P2UXEventBackHistory)history transition:(P2UXEventTransition*)transition;
-- (BOOL) setCurrentView:(NSString*)viewId history:(P2UXEventBackHistory)history data:(id)data transition:(P2UXEventTransition*)transition toggle:(BOOL)toggle index:(id)index rect:(NSDictionary*)rect modal:(BOOL)modal;
+- (BOOL) setCurrentView:(nonnull NSString*)viewId history:(P2UXEventBackHistory)history;
+- (BOOL) setCurrentView:(nonnull NSString*)viewId history:(P2UXEventBackHistory)history transition:(nullable P2UXEventTransition*)transition;
+- (BOOL) setCurrentView:(nonnull NSString*)viewId history:(P2UXEventBackHistory)history data:(nullable id)data transition:(nullable P2UXEventTransition*)transition toggle:(BOOL)toggle index:(nullable id)index rect:(nullable NSDictionary*)rect modal:(BOOL)modal;
 - (void) clearCachedViews;
 
 #pragma mark - Overlay methods
-- (P2UXPanel*) showPanel:(NSString*)ident timeout:(NSNumber*)timeout show:(NSInteger)show pos:(NSDictionary*)pos size:(NSDictionary*)size modalColor:(NSString*)modalColor transition:(P2UXEventTransition*)transition params:(NSDictionary*)params data:(id)data;
-- (void) showPanelFromAction:(P2UXEventAction*)action;
-- (P2UXPanelController*) visiblePanelWithIdent:(NSString*)ident;
-- (void) hidePanel:(NSString*)systemType transition:(P2UXEventTransition*)transition;
-- (void) hidePanel:(NSString*)ident fade:(BOOL)fade;
-- (void) hidePanelFromAction:(P2UXEventAction*)action;
+- (nullable P2UXPanel*) showPanel:(nonnull NSString*)ident timeout:(nullable NSNumber*)timeout show:(NSInteger)show pos:(nullable NSDictionary*)pos size:(nullable NSDictionary*)size modalColor:(nullable NSString*)modalColor transition:(nullable P2UXEventTransition*)transition params:(nullable NSDictionary*)params data:(nullable id)data;
+- (void) showPanelFromAction:(nonnull P2UXEventAction*)action;
+- (nullable P2UXPanelController*) visiblePanelWithIdent:(nonnull NSString*)ident;
+- (void) hidePanel:(nonnull NSString*)systemType transition:(nullable P2UXEventTransition*)transition;
+- (void) hidePanel:(nonnull NSString*)ident fade:(BOOL)fade;
+- (void) hidePanelFromAction:(nonnull P2UXEventAction*)action;
 
 #pragma mark - Modal Layer methods
-- (void) createModalLayer:(UIView*)view color:(NSString*)color fade:(float)fade;
+- (void) createModalLayer:(nonnull UIView*)view color:(nullable NSString*)color fade:(float)fade;
 
 #pragma mark - Back stack methods
 - (void) handleBack;
 - (void) clearBackStack;
-- (void) handleBackToView:(NSString*)viewId transition:(P2UXEventTransition*)transition;
-- (void) addLayoutToBackStack:(UIView*)view layout:(NSString*)layout transient:(BOOL)transient duration:(float)duration replace:(BOOL)replace clear:(BOOL)clear;
+- (void) handleBackToView:(nonnull NSString*)viewId transition:(nullable P2UXEventTransition*)transition;
+- (void) addLayoutToBackStack:(nonnull UIView*)view layout:(nonnull NSString*)layout transient:(BOOL)transient duration:(float)duration replace:(BOOL)replace clear:(BOOL)clear;
 - (void) removeLastOnBackStack;
 
 #pragma mark - P2UXEventHandlerDelegate
-- (void) eventsComplete:(id)handler;
+- (void) eventsComplete:(nonnull id)handler;
 
 #pragma mark - P2UXModalLayerDelegate
-- (void) layerTap:(P2UXModalLayer *)layer;
+- (void) layerTap:(nonnull P2UXModalLayer *)layer;
 
 #pragma mark - P2UXViewContainerDelegate
-- (void) setValue:(id)value forLink:(P2UXVarLink *)link withIndex:(id)index;
-- (P2UXDefinition*) screenDefWithIdentOrSystemType:(NSString*)ident;
-- (P2UXDefinition*) panelDefWithIdentOrSystemType:(NSString*)ident;
-- (P2UXView*) currentView;
-- (P2UXView*) cachedView:(NSString*) ident;
-- (void) cacheView:(P2UXView*)view;
-- (UIViewController*) currentController;
-- (NSDictionary*) nativeDialogWithIdent:(NSString*)ident;
+- (void) setValue:(nonnull id)value forLink:(nonnull P2UXVarLink *)link withIndex:(nullable id)index;
+- (nullable P2UXDefinition*) screenDefWithIdentOrSystemType:(nonnull NSString*)ident;
+- (nullable P2UXDefinition*) panelDefWithIdentOrSystemType:(nonnull NSString*)ident;
+- (nullable P2UXView*) currentView;
+- (nullable P2UXView*) cachedView:(nonnull NSString*) ident;
+- (void) cacheView:(nonnull P2UXView*)view;
+- (nonnull UIViewController*) currentController;
+- (nullable NSDictionary*) nativeDialogWithIdent:(nonnull NSString*)ident;
 - (CGRect)  containerBounds;
-- (OSColorClass*) colorWithId:(NSString*)colorWithId;
-- (NSDictionary*) gradientWithId:(NSString*)gradientWithId;
-- (UIView*) overlayParent;
-- (P2UXView*) createViewItemWithDef:(P2UXDefinition*)def rect:(CGRect)rect cache:(BOOL)cache index:(id)index data:(id)data;
+- (nullable OSColorClass*) colorWithId:(nonnull NSString*)colorWithId;
+- (nullable NSDictionary*) gradientWithId:(nonnull NSString*)gradientWithId;
+- (nonnull UIView*) overlayParent;
+- (nullable P2UXView*) createViewItemWithDef:(nonnull P2UXDefinition*)def rect:(CGRect)rect cache:(BOOL)cache index:(nullable id)index data:(nullable id)data;
 - (void) handleTimeUpdate;
-- (id<P2UXHelperDelegate>) helperDelegate;
+- (nonnull id<P2UXHelperDelegate>) helperDelegate;
 - (void) showOverlaysForCurrentView;
-- (void) removeOverlay:(NSString*)removeOverlay;
-- (void) peekScreen:(NSString*)ident spec:(NSDictionary*)spec index:(id)index data:(id)data transition:(P2UXEventTransition*)transition;
+- (void) removeOverlay:(nonnull NSString*)removeOverlay;
+- (void) peekScreen:(nonnull NSString*)ident spec:(nullable NSDictionary*)spec index:(nullable id)index data:(nullable id)data transition:(nullable P2UXEventTransition*)transition;
+- (nullable NSArray*) eventsWithEventType:( P2UXElementEvent)eventType;
 
 #pragma mark - P2UXPanelDelegate
-- (void) viewDidClose:(id)view;
+- (void) viewDidClose:(nonnull id)view;
 
 #ifdef LOCAL_NOTIFICATION_SUPPORT
-- (void) handleSystemLocalNotification:(UNNotification*)notification;
-- (void) handleRemoteNotificationRegistration:(NSData*)deviceToken;
-- (void) handleRemoteNotificationFailure:(NSError*)error;
+- (void) handleSystemLocalNotification:(nonnull UNNotification*)notification;
+- (void) handleRemoteNotificationRegistration:(nonnull NSData*)deviceToken;
+- (void) handleRemoteNotificationFailure:(nonnull NSError*)error;
 #endif
 
-- (void) setupWithFormFactor:(P2UXAppFormFactor*)formFactor def:(P2UXAppDefinition*)def;
+- (void) setupWithFormFactor:(nonnull P2UXAppFormFactor*)formFactor def:(nonnull P2UXAppDefinition*)def;
+- (BOOL) handleBinaryUpdate:(nullable NSString*)version;
+
 @end

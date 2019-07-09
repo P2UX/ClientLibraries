@@ -67,4 +67,6 @@ typedef NS_ENUM(NSInteger, P2UXCollectionView_DataType) {
 - (NSInteger) viewTemplateIndexForRow:(NSInteger)row;
 - (id) dataValueForRow:(NSInteger)row;
 - (id) dataContent;
+- (NSInteger) rowForIndexValue:(id)index;
+
 @end

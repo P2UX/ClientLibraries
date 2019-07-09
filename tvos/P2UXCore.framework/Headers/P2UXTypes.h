@@ -175,6 +175,7 @@ extern NSString* const P2UXElement_Attrib_CtrlLink;
 extern NSString* const P2UXElement_Attrib_Relative;
 extern NSString* const P2UXElement_Attrib_RadioBtn;
 extern NSString* const P2UXElement_Attrib_SafeArea;
+extern NSString* const P2UXElement_Attrib_Filter;
 
 extern NSString* const P2UXElement_Gradient_DefaultColor;
 
@@ -273,6 +274,49 @@ extern CGFloat const P2UXDefault_Fade_Out_Time;
 extern CGFloat const P2UXInvalid_Lat;
 extern CGFloat const P2UXInvalid_Lon;
 
+typedef NS_ENUM(NSInteger, P2UXElementEvent) {
+    P2UXElementEvent_Invalid = 0,
+    P2UXElementEvent_Tap,
+    P2UXElementEvent_LongPress,
+    P2UXElementEvent_Selected,
+    P2UXElementEvent_Deselected,
+    P2UXElementEvent_SwipeLeft,
+    P2UXElementEvent_SwipeRight,
+    P2UXElementEvent_SwipeUp,
+    P2UXElementEvent_SwipeDown,
+    P2UXElementEvent_LoadView,
+    P2UXElementEvent_Pan,
+    P2UXElementEvent_StateChanged,
+    P2UXElementEvent_Message,
+    P2UXElementEvent_AppLoaded,
+    P2UXElementEvent_Media,
+    P2UXElementEvent_ValueChanged,
+    P2UXElementEvent_FetchData_Start,
+    P2UXElementEvent_FetchData_Complete,
+    P2UXElementEvent_WillPullToRefresh,
+    P2UXElementEvent_CancelPullToRefresh,
+    P2UXElementEvent_PullToRefresh = 20,
+    P2UXElementEvent_ExternalRequest,
+    P2UXElementEvent_AttributeChanged,
+    P2UXElementEvent_SystemNotification,
+    P2UXElementEvent_Keyboard_Return,
+    P2UXElementEvent_FingerprintAuth,
+    P2UXElementEvent_AuthInput,
+    P2UXElementEvent_AuthComplete,
+    P2UXElementEvent_ShowView,
+    P2UXElementEvent_NotificationReceived,
+    P2UXElementEvent_LaunchSystemAppComplete = 30,
+    P2UXElementEvent_ViewDataChanged,
+    P2UXElementEvent_BinaryUpdate,
+    P2UXElementEvent_DeepLink = 60,
+    P2UXElementEvent_UserAuth = 200
+};
+
+typedef NS_ENUM(NSInteger, P2UXSystemNotificationType) {
+    P2UXSystemNotificationType_Unknown = -1,
+    P2UXSystemNotificationType_UserTapped = 0,
+    P2UXSystemNotificationType_Foreground
+};
 
 typedef NS_ENUM(NSInteger, P2UXBackgroundType) {
     P2UXBackgroundType_None = -1,
@@ -351,7 +395,8 @@ typedef NS_ENUM(NSInteger, P2UXControlType) {
     P2UXCtrlType_RadioButtonGroup,
     P2UXCtrlType_DatePicker = 40,
     P2UXCtrlType_TextView,
-    P2UXCtrlType_AnimationView
+    P2UXCtrlType_AnimationView,
+    P2UXCtrlType_TextFlow
 };
 
 typedef NS_ENUM(NSInteger, P2UXScrollStyle) {

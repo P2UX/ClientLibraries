@@ -22,6 +22,14 @@ extern NSString* const P2UXEventTransition_Default;
 extern NSString* const P2UXEventTransition_Parallax;
 extern NSString* const P2UXEventTransition_Peek;
 
+extern NSString* const P2UXEventTransition_BackHistory;
+extern NSString* const P2UXEventTransition_Attrib_Items;
+extern NSString* const P2UXEventTransition_Attrib_OutItems;
+extern NSString* const P2UXEventTransition_Attrib_Item;
+extern NSString* const P2UXEventTransition_Attrib_OutItem;
+extern NSString* const P2UXEventTransition_Attrib_Transition;
+extern NSString* const P2UXEventTransition_Attrib_Easing;
+
 typedef NS_ENUM(NSInteger, P2UXTransitionAttribute) {
     kP2UXTransitionAttribute_frame = 0,
     kP2UXTransitionAttribute_alpha

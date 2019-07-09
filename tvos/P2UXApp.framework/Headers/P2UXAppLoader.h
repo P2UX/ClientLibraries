@@ -12,17 +12,23 @@
 #import <P2UXCore/P2UXKeyConnectionManager.h>
 #import <P2UXCore/P2UXUserManager.h>
 
-typedef enum {
+typedef NS_ENUM(NSInteger, P2UXAppState){
     P2UXAppState_Unknown = 0,
     P2UXAppState_NoSpec,
     P2UXAppState_Initialized,
     P2UXAppState_Error_NotFound
-} P2UXAppState;
+};
+
+typedef NS_ENUM(NSInteger, P2UXBinaryCheck) {
+    P2UXBinaryCheck_None = 0,
+    P2UXBinaryCheck_Check
+};
 
 @protocol P2UXAppLoaderDelegate <NSObject>
 - (void) appInitialized;
 - (void) authStart;
 - (void) authComplete:(BOOL)success;
+- (void) binaryUpdateAvailable:(NSNumber*)appId version:(NSString*)version;
 @optional
 - (void) loadContentStart;
 - (void) loadContentComplete:(ContentManagerError)result;
@@ -53,6 +59,7 @@ typedef enum {
 @property (nonatomic) NSString* contentKey;
 @property (nonatomic, weak) id<P2UXAppLoaderDelegate> delegate;
 @property (nonatomic) NSString* env;
+@property (nonatomic) P2UXBinaryCheck binaryUpdates;
 
 - (void) reauth;
 - (void) requestUpdateCheck;

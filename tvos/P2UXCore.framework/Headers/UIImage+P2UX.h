@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^P2UXLoadImageCompletionBlock)(UIImage * image, NSError *  error, BOOL finished, NSURL * imageURL);
+
 @interface UIImage (P2UX)
 + (UIImage*) imageWithColor:(UIColor*)color;
 + (UIImage*) imageWithColor:(UIColor*)color rect:(CGRect)rect;
++ (void) loadImageURL:(NSString*)url completion:(P2UXLoadImageCompletionBlock)completion;
 - (UIImage*)convertToGrayscale;
 - (UIImage*)imageByNormalizingOrientation;
 @end

@@ -8,12 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import <P2UXApp/P2UXAppDefinition.h>
+#import <StoreKit/StoreKit.h>
 
 extern NSString* _Nonnull const P2UXAppCreator_Opt_Env;
 extern NSString* _Nonnull const P2UXAppCreator_Opt_Env_Production;
 extern NSString* _Nonnull const P2UXAppCreator_Opt_Env_Stage;
 extern NSString* _Nonnull const P2UXAppCreator_Opt_Env_Recent;
 extern NSString* _Nonnull const P2UXAppCreator_Opt_LogLevel;
+extern NSString* _Nonnull const P2UXAppCreator_Opt_Binary;
+extern NSString* _Nonnull const P2UXAppCreator_Opt_Binary_CheckNotify;
 
 @protocol P2UXAppCreatorDelegate <NSObject>
 
@@ -23,9 +26,10 @@ extern NSString* _Nonnull const P2UXAppCreator_Opt_LogLevel;
 - (P2UXAppErrorViewController* _Nonnull) createErrorViewController;
 - (void) loadedApplication:(nonnull P2UXAppDefinition*)appDef;
 - (BOOL) updateComplete:(BOOL)success manual:(BOOL)manual;
+- (BOOL) binaryUpdateAvailable:(nullable NSNumber*)appId version:(nullable NSString*)string;
 @end
 
-@interface P2UXAppCreator : NSObject<P2UXAppLoaderDelegate>
+@interface P2UXAppCreator : NSObject<P2UXAppLoaderDelegate,SKStoreProductViewControllerDelegate>
 @property (nonnull, nonatomic, readonly) P2UXAppController* appController;
 @property (nonnull, nonatomic, readonly) UIWindow* window;
 
@@ -53,6 +57,8 @@ extern NSString* _Nonnull const P2UXAppCreator_Opt_LogLevel;
 + (void) resetBundleVersion;
 + (void) checkForUpdates:(BOOL)userTriggered;
 + (void) updateOpts:(nonnull NSDictionary*)opts resetVersion:(BOOL)reset;
++ (void) retryFailedLoad;
++ (BOOL) displayProductPage;
 
 #if !TARGET_OS_TV
 /// :nodoc:

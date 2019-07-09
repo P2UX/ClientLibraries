@@ -33,7 +33,8 @@ typedef NS_ENUM(NSInteger, P2UXAuthResult) {
     P2UXAuthResult_Failed,
     P2UXAuthResult_NetworkError,
     P2UXAuthResult_Cancelled,
-    P2UXAuthResult_Retry
+    P2UXAuthResult_Retry,
+    P2UXAuthResult_RefreshFailed
 };
 
 typedef NS_ENUM(NSInteger, P2UXAuthType) {
@@ -82,7 +83,8 @@ typedef void (^P2UXAuthCallback)(P2UXAuthResult result, NSString* message);
 @property (nonatomic, weak) id<P2UXDataAuthDelegate> delegate;
 @property (nonatomic, copy) NSString* sourceDir;
 
-+(P2UXDataAuth*)authRequest:(NSDictionary*)authSpec forURL:(NSURL*)URL;
++(P2UXDataAuth*)authRequest:(NSDictionary*)authSpec forURL:(NSURL*)URL schemaTypes:(NSDictionary*)schemaTypes;
+- (id) initWithAuthSpec:(NSDictionary *)authSpec andURL:(NSURL*)URL schemaTypes:(NSDictionary*)schemaTypes;
 - (void) initialize;
 - (void)makeRequest:(NSString*)request fromSource:(id)source withOverrides:(NSDictionary *)authOverrides andCallback:(P2UXAuthCallback)callback;
 - (void)authorizeRequest:(NSMutableURLRequest*)request forSession:(NSURLSession*)session;
@@ -98,4 +100,5 @@ typedef void (^P2UXAuthCallback)(P2UXAuthResult result, NSString* message);
 - (NSString*) persistName;
 -(NSArray*)clearPendingAuths;
 - (P2UXSourcedData*) authData;
+- (void) authRetry;
 @end

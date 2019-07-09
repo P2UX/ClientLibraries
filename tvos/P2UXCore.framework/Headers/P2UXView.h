@@ -18,6 +18,7 @@
 #import <P2UXCore/P2UXScreenOrientation.h>
 
 extern NSString* const P2UXView_Attribute_DragHandle;
+extern NSString* const P2UXView_Message_SwipeComplete;
 
 @class P2UXBehavior, P2UXButton2, P2UXApplication, P2UXElementInstance, P2UXVarLinks, P2UXScreenOrientation;
 
@@ -76,6 +77,9 @@ extern NSString* const P2UXView_Attribute_DragHandle;
 @property (nonatomic) BOOL primary;
 @property (nonatomic, readonly) BOOL requiresSizeUpdate;
 @property (nonatomic, readonly) NSArray<UIView*> *overlays;
+
++ (void) setSwipePending:(BOOL)swipePending;
++ (void) notifyEndSwipe;
 
 + (P2UXView*) viewFromBundleResource:(NSBundle*)bundle name:(NSString*)name frame:(CGRect)frame viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate index:(id)index data:(id)data supportedOrientation:(P2UXOrientationType)supportedOrientation;
 
@@ -182,6 +186,7 @@ extern NSString* const P2UXView_Attribute_DragHandle;
 
 - (UIView*) contentContainer;
 - (UIViewController *) parentViewController;
+- (UIImage*) imageForView;
 
 #pragma mark - P2UXControl
 - (void) cleanup;

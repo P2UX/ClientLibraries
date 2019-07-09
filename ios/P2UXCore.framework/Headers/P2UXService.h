@@ -10,8 +10,8 @@
 #define P2UX_Service_h
 
 #define CONTENT_SERVICE_LIVE @"https://builder.p2ux.com/"
-#define CONTENT_SERVICE_DEV @"https://beta.p2ux.com/"
-#define CONTENT_SERVICE_STAGE @"https://beta.p2ux.com/"
+#define CONTENT_SERVICE_DEV @"https://p2qa.p2ux.com/"
+#define CONTENT_SERVICE_STAGE @"https://p2qa.p2ux.com/"
 
 #define DEFAULT_ANON_USER @"anonuser"
 #define DEFAULT_ANON_PWD @"anonuser.infoX"

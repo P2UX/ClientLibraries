@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <WebKit/WebKit.h>
 #import <P2UXCore/P2UXElement.h>
 #import <P2UXCore/P2UXControl.h>
 #import <P2UXCore/P2UXViewContainerDelegate.h>
@@ -32,7 +33,7 @@ typedef NS_ENUM(NSInteger, P2UXWebViewState) {
 
 extern NSString* const P2P2UXWebView_Attrib_State;
 
-@interface P2UXWebView : UIWebView<UIWebViewDelegate>
+@interface P2UXWebView : WKWebView<WKNavigationDelegate, WKUIDelegate>
 {
     P2UXWebViewSourceType _type;
     NSString*           _sourcePath;
@@ -42,7 +43,8 @@ extern NSString* const P2P2UXWebView_Attrib_State;
     P2UXWebViewState      _state;
 }
 
-- (id) initWithFrame:(CGRect)frame elemInst:(P2UXElementInstance*)elemInst uipath:(NSString*)path ext:(BOOL)ext viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate index:(NSString*)index;
+- (id) initWithFrame:(CGRect)frame elemInst:(P2UXElementInstance*)elemInst uipath:(NSString*)path ext:(BOOL)ext viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate index:(id)index;
+- (id) initWithFrame:(CGRect)frame configuration:(WKWebViewConfiguration*)configuration elemInst:(P2UXElementInstance*)elemInst uipath:(NSString *)path ext:(BOOL)ext viewDelegate:(id<P2UXViewContainerDelegate>)viewDelegate index:(id)index;
 
 
 @end

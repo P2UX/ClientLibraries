@@ -34,7 +34,8 @@ typedef NS_ENUM(NSInteger, P2UXVarLinkType)
     P2UXVarLinkType_Static,
     P2UXVarLinkType_UserEntry,
     P2UXVarLinkType_AuthValue,
-    P2UXVarLinkType_PayloadValue
+    P2UXVarLinkType_PayloadValue,
+    P2UXVarLinkType_ControlContent
 };
 
 typedef NS_ENUM(NSInteger, P2UXDataPolicy)
@@ -138,6 +139,7 @@ extern NSString* const P2UXVarLink_Message_OneParam_Fmt;
 @property (nonatomic)          BOOL deliminate;
 @property (nonatomic)          BOOL ctrlRetry;
 @property (nonatomic, weak)    id   ctrlContext;
+@property (nonatomic,readonly) BOOL valid;
 
 + (NSString*) notificationMsg:(NSInteger)itemType;
 + (P2UXVarMessageType) notificationMsgType:(NSInteger)itemType;

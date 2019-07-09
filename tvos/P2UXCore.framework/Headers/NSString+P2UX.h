@@ -14,5 +14,9 @@
 - (BOOL) isSVG;
 - (BOOL) hasSubstring:(NSString*)substring;
 - (id) numberOrString;
+- (NSString*) zbase32String;
+- (NSString*) base32String;
++ (NSString*) stringFromBase32String:(NSString *)base32String;
++ (NSString*) stringFromZbase32String:(NSString *)base32String;
 
 @end
